@@ -3,6 +3,7 @@
 #include "Animation.h"
 #include "Player.h"
 #include "Platform.h"
+#include <vector>
 
 static const float VIEW_HEIGHT = 512.0f;
 
@@ -22,16 +23,25 @@ int main()
 	playerTexture.loadFromFile("tux_from_linux.png");
 	
 
-	Player player(&playerTexture,sf::Vector2u(3,9),0.3f,100.0f);
+	Player player(&playerTexture,sf::Vector2u(3,9),0.3f,100.0f,200.0f);
+	
+	std::vector<Platform>platforms;
+	platforms.push_back(Platform(nullptr, sf::Vector2f(400.0f, 200.0f), sf::Vector2f(500.0f, 200.0f)));
+	platforms.push_back(Platform(nullptr, sf::Vector2f(400.0f, 200.0f), sf::Vector2f(500.0f, 0.0f)));
+	platforms.push_back(Platform(nullptr, sf::Vector2f(1000.0f, 200.0f), sf::Vector2f(500.0f, 500.0f)));
 
-	Platform platform1(nullptr, sf::Vector2f(400.0f, 200.0f), sf::Vector2f(500.0f, 200.0f));
-	Platform platform2(nullptr, sf::Vector2f(400.0f, 200.0f), sf::Vector2f(500.0f, 0.0f));
 	float deltaTime = 0.0f;
 	sf::Clock clock;
 
 	while (window.isOpen())
 	{
 		deltaTime=clock.restart().asSeconds();
+
+		if(deltaTime>1.0f/20.0f)
+		{
+			deltaTime = 1.0f/20.0f;
+		}
+
 
 		sf::Event e;
 		while (window.pollEvent(e))
@@ -51,9 +61,18 @@ int main()
 		}
 		
 		player.Update(deltaTime);
+		sf::Vector2f direction;
+
 		Collider col = player.GetCollider();
-		platform1.GetCollider().CheckCollision(col, 0.0f);
-		platform2.GetCollider().CheckCollision(col, 1.0f);
+
+		
+
+		for (Platform& platform : platforms)
+		{
+			if (platform.GetCollider().CheckCollision(col, direction, 1.0f))
+				player.OnCollision(direction);
+		}
+		
 
 		view.setCenter(player.GetPosition());
 		
@@ -63,8 +82,12 @@ int main()
 		window.setView(view);
 		
 		player.Draw(window);
-		platform1.Draw(window);
-		platform2.Draw(window);
+		
+		for (Platform& platform : platforms)
+		{
+			platform.Draw(window);
+		}
+
 		window.display();
 
 	}
