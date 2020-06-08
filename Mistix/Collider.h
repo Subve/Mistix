@@ -5,7 +5,7 @@ class Collider
 	Collider(sf::RectangleShape& body);
 	~Collider();
 
-	bool CheckCollision(Collider& other, float push);
+	bool CheckCollision(Collider& other,sf::Vector2f& direction, float push);
 
 	void Move(float dx, float dy) { body.move(dx, dy); }
 
