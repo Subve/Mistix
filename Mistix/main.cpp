@@ -1,8 +1,13 @@
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
 int main()
 {
-	std::cout << "Witaj nowy projekcie" << endl;
+	sf::RenderWindow window(sf::VideoMode(512, 512), "Mistix", sf::Style::Close | sf::Style::Titlebar);
+	while (window.isOpen())
+	{
+
+	}
 
 
 
