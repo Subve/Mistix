@@ -4,6 +4,10 @@
 int main()
 {
 	sf::RenderWindow window(sf::VideoMode(512, 512), "Mistix", sf::Style::Close | sf::Style::Resize);
+	
+	sf::RectangleShape player(sf::Vector2f(100.0f, 100.0f));
+	player.setFillColor(sf::Color::Red);
+
 	while (window.isOpen())
 	{
 		sf::Event e;
@@ -16,9 +20,30 @@ int main()
 			case sf::Event::Resized:
 				std::cout <<"New window width "<< e.size.width <<" New window height "<<e.size.height << std::endl;
 				break;
+				
 			}
 			
 		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A))
+		{
+			player.move(-0.1f,0.0f);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D))
+		{
+			player.move(0.1f, 0.0f);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W))
+		{
+			player.move(0.0f,-0.1f );
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S))
+		{
+			player.move(0.0f, 0.1f);
+		}
+		window.clear();
+
+		window.draw(player);
+		window.display();
 
 	}
 
