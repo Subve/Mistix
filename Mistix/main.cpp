@@ -4,6 +4,8 @@
 #include "Player.h"
 #include "Platform.h"
 #include <vector>
+#include <fstream>
+#include <cctype>
 
 static const float VIEW_HEIGHT = 512.0f;
 
