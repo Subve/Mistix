@@ -7,6 +7,7 @@ int main()
 	
 	sf::RectangleShape player(sf::Vector2f(100.0f, 100.0f));
 	player.setFillColor(sf::Color::Red);
+	player.setOrigin(50.0f, 50.0f);
 
 	while (window.isOpen())
 	{
@@ -40,13 +41,18 @@ int main()
 		{
 			player.move(0.0f, 0.1f);
 		}
+		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+	{
+		sf::Vector2i mousePos=sf::Mouse::getPosition(window);
+		player.setPosition((float)mousePos.x, (float)mousePos.y);
+	}
 		window.clear();
 
 		window.draw(player);
 		window.display();
 
 	}
-
+	
 
 
 	return 0;
