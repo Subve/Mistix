@@ -34,10 +34,10 @@ int main()
 			
 		}
 		
-		animation.Update(0, deltaTime);
+		animation.Update(0, deltaTime,false);
 		player.setTextureRect(animation.uvRect);
 
-		window.clear();
+		window.clear(sf::Color(150,150,150));
 
 		window.draw(player);
 		window.display();
