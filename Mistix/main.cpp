@@ -23,9 +23,10 @@ int main()
 	
 	sf::Texture playerTexture;
 	playerTexture.loadFromFile("tux_from_linux.png");
+	playerTexture.setSmooth(true);
 	
-
 	Player player(&playerTexture,sf::Vector2u(3,9),0.3f,100.0f,200.0f);
+	
 	
 	std::vector<Platform>platforms;
 	platforms.push_back(Platform(nullptr, sf::Vector2f(400.0f, 200.0f), sf::Vector2f(500.0f, 200.0f)));
