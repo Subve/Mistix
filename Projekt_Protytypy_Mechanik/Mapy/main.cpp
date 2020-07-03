@@ -3,14 +3,17 @@
 #include <fstream>
 #include <string>
 #include <cctype>
+#include <sstream>
 
 int main()
 {
 	sf::Texture tileTexture;
 	sf::Sprite tiles;
 
-	sf::Vector2i map[100][100];
-	sf::Vector2i loadCounter = sf::Vector2i(0, 0);
+	
+	std::vector<std::vector<sf::Vector2i>> map;
+	std::vector<sf::Vector2i> tempMap;
+	
 
 
 	std::ifstream openfile("Map1.txt");
@@ -23,36 +26,41 @@ int main()
 
 		while (!openfile.eof())
 		{
-			std::string str;
-			openfile >> str;
-			char x = str[0];
-			char y = str[2];
-
-			if (!isdigit(x) || !isdigit(y))
+			std::string str, value;
+			std::getline(openfile, str);
+			std::stringstream stream(str);
+			while (std::getline(stream, value, ' '))
 			{
-				map[loadCounter.x][loadCounter.y] = sf::Vector2i(-1, -1);
+				if (value.length() > 0)
+				{
+					std::string xx = value.substr(0, value.find(','));
+					std::string yy = value.substr(value.find(',') + 1);
 
-			}
-			else
-			{
+					int x, y, i, j;
+					for (i = 0; i < xx.length();i++)
+					{
+						if (!isdigit(xx[i]))
+							break;
+					}
+					for (j = 0;j < yy.length();j++)
+					{
+						if (!isdigit(yy[j]))
+							break;
+					}
+					x = (i == xx.length()) ? atoi(xx.c_str()) : -1;
+					y = (j == yy.length()) ? atoi(yy.c_str()) : -1;
 
-				map[loadCounter.x][loadCounter.y] = sf::Vector2i(x - '0', y - '0');
-
+					tempMap.push_back(sf::Vector2i(x, y));
+				}
 			}
-			if (openfile.peek() == '\n')
-			{
-				loadCounter.x = 0;
-				loadCounter.y++;
+			
+				map.push_back(tempMap);
+				tempMap.clear();
 			}
-			else
-			{
-				loadCounter.x++;
-			}
+			
 		}
 
-		loadCounter.y++;
-
-	}
+	
 
 	sf::RenderWindow window(sf::VideoMode(640, 480, 32), "Loading maps[easy]");
 	while (window.isOpen())
@@ -70,13 +78,13 @@ int main()
 
 		window.clear(sf::Color::Cyan);
 
-		for (int i = 0; i < loadCounter.x;i++)
+		for (int i = 0; i < map.size();i++)
 		{
-			for (int j = 0;j<loadCounter.y;j++)
+			for (int j = 0;j<map[i].size();j++)
 			{
 				if (map[i][j].x != -1 && map[i][j].y != -1)
 				{
-					tiles.setPosition(i *32, j * 32);
+					tiles.setPosition(j *32, i * 32);
 					tiles.setTextureRect(sf::IntRect(map[i][j].x * 32,
 						map[i][j].y * 32, 32, 32));
 					window.draw(tiles);
