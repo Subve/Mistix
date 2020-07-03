@@ -74,6 +74,7 @@ int main()
 				window.close();
 				break;
 			}
+
 		}
 
 		window.clear(sf::Color::Cyan);
