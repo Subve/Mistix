@@ -18,6 +18,7 @@ void Game::initWindow()
 void Game::initEnemies()
 {
 	this->enemy.setSize(sf::Vector2f(100.0f, 100.0f));
+	this->enemy.setScale(sf::Vector2f(0.5f,0.5f));
 	this->enemy.setFillColor(sf::Color::Blue);
 	this->enemy.setOutlineColor(sf::Color::Green);
 	this->enemy.setOutlineThickness(1.0f);
@@ -64,6 +65,14 @@ void Game::pollEvents()
 void Game::update()
 {
 	this->pollEvents();
+
+	//Update Mouse position
+	//Relative to the screen
+	/*std::cout << "Mouse pos: " << sf::Mouse::getPosition().x << " "
+		<< sf::Mouse::getPosition().y << std::endl;*/
+	//Relative to the window
+	std::cout << "Mouse pos: " << sf::Mouse::getPosition(*this->window).x << " "
+		<< sf::Mouse::getPosition(*this->window).y << std::endl;
 	
 }
 
