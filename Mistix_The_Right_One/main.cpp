@@ -5,6 +5,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
+#include "Menu.h"
 
 static const unsigned int VIEW_HEIGHT = 800.0f;
 static const unsigned int VIEW_WIDTH = 800.0f;
@@ -44,10 +45,11 @@ int main()
 {
 	//Creating player
 	Player player;
-	
+
 	//Creating window
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	window.setFramerateLimit(144);
+	Menu menu(VIEW_WIDTH,VIEW_HEIGHT);
 
 
 	//Timer
@@ -70,8 +72,8 @@ int main()
 		window.clear(sf::Color::Magenta);
 
 		//Draw current Frame
-		window.draw(player);
-
+		/*window.draw(player);*/
+		menu.draw(window);
 
 		//Display everything
 		window.display();
