@@ -6,15 +6,41 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 
-static const float VIEW_HEIGHT = 800.0f;
-static const float VIEW_WIDTH = 800.0f;
+static const unsigned int VIEW_HEIGHT = 800.0f;
+static const unsigned int VIEW_WIDTH = 800.0f;
 
+class Player :public sf::Sprite
+{
+private:
+	sf::Texture player_texture;
+	sf::Vector2f player_startPosition=sf::Vector2f(300.0f,300.0f);
+public:
+	Player() 
+	{
+		if(player_texture.loadFromFile("tekstury/Player1.png"))
+		{
 
+			std::cout << "Player1 texture loaded successfully! \n";
+		}
+
+		else
+		{
+			std::cout << "Player1 texture loaded FAILED!!!\n";
+		}
+		this->setTexture(player_texture);
+		this->setPosition(player_startPosition);
+		this->scale(0.125f,0.2f);
+		
+	};
+	
+};
 
 
 
 int main()
 {
+
+	Player player;
 	std::cout << "Nowe podejscie " << std::endl;
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 
@@ -37,7 +63,7 @@ int main()
 		window.clear(sf::Color::Magenta);
 
 		//Draw current Frame
-
+		window.draw(player);
 
 
 		//Display everything
