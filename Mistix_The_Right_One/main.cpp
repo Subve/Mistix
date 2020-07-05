@@ -76,6 +76,10 @@ public:
 		angle = -atan2(mouse.x - player_position.x, mouse.y - player_position.y) * 180 / 3.14159;
 		this->setRotation(angle+90);
 	}
+	void playerShot(sf::RenderWindow& window)
+	{
+
+	}
 	void playerUpdate(sf::RenderWindow& window)
 	{
 		this->playerMove();
