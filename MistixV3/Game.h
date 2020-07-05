@@ -6,6 +6,7 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 #include <ctime>
+#include "Player.h"
 //Class that acts as the game engine
 
 class Game
@@ -31,7 +32,7 @@ private:
 	//Game objects
 	sf::RectangleShape enemy;
 	std::vector<sf::RectangleShape> enemies;
-
+	
 
 	//Private functions
 	void initVariables();

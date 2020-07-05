@@ -36,6 +36,7 @@ Game::Game()
 	this->initVariables();
 	this->initWindow();
 	this->initEnemies();
+	
 }
 
 Game::~Game()
