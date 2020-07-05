@@ -13,9 +13,13 @@ static const unsigned int VIEW_WIDTH = 800.0f;
 class Player :public sf::Sprite
 {
 private:
+	sf::Vector2i mouse;
+	float angle;
 	sf::Texture player_texture;
 	sf::Vector2f player_startPosition=sf::Vector2f(300.0f,300.0f);
+	sf::Vector2f player_position;
 public:
+	
 	Player() 
 	{
 		if(player_texture.loadFromFile("tekstury/Player1.png"))
@@ -31,6 +35,8 @@ public:
 		this->setTexture(player_texture);
 		this->setPosition(player_startPosition);
 		this->scale(0.125f,0.2f);
+		this->rotate(30);
+		this->setOrigin(this->getGlobalBounds().width / 2, this->getGlobalBounds().height / 2);
 		
 	};
 	void playerMove()
@@ -51,6 +57,28 @@ public:
 		{
 			this->move(1.0f, 0.0f);
 		}
+	}
+	void playerRotate(sf::RenderWindow &window)
+	{
+		/*window.convertCoords(mouse);
+
+		//gets sprite origin coordinates and mouse coordinates
+		this->spritePosition = sprite.getPosition();
+		this->mouse = sf::Mouse::getPosition();
+
+		mouseAngle = -atan2(mouse.x - spritePosition.x, mouse.y - spritePosition.y) * 180 / 3.14159; //angle in degrees of rotation for sprite
+
+		playerSprite.setRotation(mouseAngle);*/
+		window.mapPixelToCoords(mouse);
+		this->mouse = sf::Mouse::getPosition(window);
+		this->player_position = this->getPosition();
+		angle = -atan2(mouse.x - player_position.x, mouse.y - player_position.y) * 180 / 3.14159;
+		this->setRotation(angle);
+	}
+	void playerUpdate(sf::RenderWindow& window)
+	{
+		this->playerMove();
+		this->playerRotate(window);
 	}
 };
 
@@ -127,7 +155,7 @@ int main()
 			}
 		//Update the game
 		
-		player.playerMove();
+		player.playerUpdate(window);
 
 		//Clear the window
 
