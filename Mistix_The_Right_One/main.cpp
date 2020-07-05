@@ -117,11 +117,22 @@ public:
 	sf::CircleShape bullet;
 	sf::Vector2f currVelocity;
 	float maxSpeed;
+	int bulletTimer=0;
+	int maxbulletTimer;
 	Bullet(float radius = 5.f) :currVelocity(0.f, 0.f), maxSpeed(15.f)
 	{
 		this->bullet.setRadius(radius);
 		this->bullet.setFillColor(sf::Color::White);
 		
+	}
+	//Setter
+	void setAmmo(int n)
+	{
+		maxbulletTimer = n;
+	};
+	void setSpeed(float n)
+	{
+		maxSpeed = n;
 	}
 	
 };
@@ -219,17 +230,28 @@ int main()
 
 		/*std::cout << aimDirNorm.x << " " << aimDirNorm.y << std::endl;*/
 		//Shooting
-		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+		b1.setAmmo(20);
+		b1.setSpeed(5.f);
+		if (b1.bulletTimer<b1.maxbulletTimer)
 		{
-			b1.bullet.setPosition(playerCenter);
-			b1.currVelocity = aimDirNorm * b1.maxSpeed;
+			b1.bulletTimer++;
+		}
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left)&&b1.bulletTimer>=b1.maxbulletTimer)
+			{
+				b1.bullet.setPosition(playerCenter);
+				b1.currVelocity = aimDirNorm * b1.maxSpeed;
 
-			bulets.push_back(Bullet(b1));
-		}
-		for (int i=0;i<bulets.size();i++)
-		{
-			bulets[i].bullet.move(bulets[i].currVelocity);
-		}
+				bulets.push_back(Bullet(b1));
+				b1.bulletTimer = 0;
+			}
+		
+			for (int i = 0;i < bulets.size();i++)
+			{
+				bulets[i].bullet.move(bulets[i].currVelocity);
+				if (bulets[i].bullet.getPosition().x < 0 || bulets[i].bullet.getPosition().x > 800 || bulets[i].bullet.getPosition().y < 0 || bulets[i].bullet.getPosition().y > 600)
+					bulets.erase(bulets.begin() + i);
+			}
+		
 		
 		
 		//Clear the window
