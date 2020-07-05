@@ -58,7 +58,25 @@ int main()
 		sf::Event ev;
 		while(window.pollEvent(ev))
 			switch (ev.type)
+			{	
+			//MENU Option switch
+			case sf::Event::KeyPressed:
+			{	switch (ev.key.code)
 			{
+			case sf::Keyboard::Up:
+					menu.MoveUp();
+					break;
+			case sf::Keyboard::Down:
+					menu.MoveDown();
+					break;
+			}
+				
+				break;
+			}
+			
+
+
+				//Closing the window
 			case sf::Event::Closed:
 				window.close();
 				break;

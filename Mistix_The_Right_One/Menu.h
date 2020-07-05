@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#pragma warning(disable : 4996)
+/*#pragma warning(disable : 4996)*/
 #define MAX_NUMBER_OF_ITEMS 3
 
 class Menu
