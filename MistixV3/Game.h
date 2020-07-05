@@ -5,7 +5,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
-
+#include <ctime>
 //Class that acts as the game engine
 
 class Game
@@ -20,8 +20,10 @@ private:
 
 	//Mouse Positions
 	sf::Vector2i mousePosWindow;
+	sf::Vector2f mousePosView;
 
 	//Game logic
+	int points;
 	float enemySpawnTimer;
 	float enemySpawnTimerMax;
 	int maxEnemies;

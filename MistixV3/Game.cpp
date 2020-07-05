@@ -71,7 +71,20 @@ void Game::pollEvents()
 
 void Game::spawnEnemy()
 {
-
+	/*
+	Spawns enemies and sets their color and positions
+	set a random position
+	set a random color
+	adds enemy to the vector
+	*/
+	this->enemy.setPosition(
+		static_cast<float>(rand()%static_cast<int>(this->window->getSize().x-this->enemy.getSize().x)),
+		0.0f
+	);
+	this->enemy.setFillColor(sf::Color::Green);
+	
+	//spawns the enemy
+	this->enemies.push_back(this->enemy);
 }
 
 void Game::updateMousePosition()
@@ -82,6 +95,7 @@ void Game::updateMousePosition()
 	mouse position relative to winow(vector 2i)
 		*/
 	this->mousePosWindow = sf::Mouse::getPosition(*this->window);
+	this->mousePosView = this->window->mapPixelToCoords(this->mousePosWindow);
 }
 
 void Game::updateEnemies()
@@ -89,6 +103,7 @@ void Game::updateEnemies()
 	Return void 
 	updates the enemy spawn timer and spawns enemies when the total amount
 	of enemies is smaller than max
+	moves the enemies downwards
 	*/
 {	//Updating the timer for enemy spawnining
 	if(this->enemies.size()<this->maxEnemies)
@@ -103,6 +118,11 @@ void Game::updateEnemies()
 			this->enemySpawnTimer += 1.0f;
 		}
 	}
+	//move the enemies
+	for (int i=0;i<this->enemies.size();i++)
+	{
+		this->enemies[i].move(0.0f, 5.0f);
+	}
 }
 
 void Game::update()
@@ -116,7 +136,7 @@ void Game::update()
 }
 
 void Game::renderEnemies()
-{
+{	//rendering all the enemies
 	for (auto& e : enemies)
 	{
 		this->window->draw(e);
