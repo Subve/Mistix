@@ -34,9 +34,10 @@ public:
 		}
 		this->setTexture(player_texture);
 		this->setPosition(player_startPosition);
-		this->scale(0.125f,0.2f);
-		this->rotate(30);
 		this->setOrigin(this->getGlobalBounds().width / 2, this->getGlobalBounds().height / 2);
+		this->scale(0.125f,0.2f);
+		
+		
 		
 	};
 	void playerMove()
@@ -73,7 +74,7 @@ public:
 		this->mouse = sf::Mouse::getPosition(window);
 		this->player_position = this->getPosition();
 		angle = -atan2(mouse.x - player_position.x, mouse.y - player_position.y) * 180 / 3.14159;
-		this->setRotation(angle);
+		this->setRotation(angle+90);
 	}
 	void playerUpdate(sf::RenderWindow& window)
 	{
