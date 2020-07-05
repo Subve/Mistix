@@ -9,7 +9,7 @@
 #include <cmath>
 #include <math.h>
 
-static const unsigned int VIEW_HEIGHT = 800.0f;
+static const unsigned int VIEW_HEIGHT = 600.0f;
 static const unsigned int VIEW_WIDTH = 800.0f;
 
 inline double deg2rad(double degrees) {
@@ -135,7 +135,14 @@ class StateMachine
 
 int main()
 {
-	
+	sf::Texture background;
+	if (background.loadFromFile("tekstury/Background_Desert.png"))
+	{
+		std::cout << "Background texture successfully loaded\n";
+	}
+	background.setSmooth(true);
+	sf::Sprite background_Sprite;
+	background_Sprite.setTexture(background);
 	//Creating player
 	Player player;
 	Bullet b1(5.f);
@@ -210,7 +217,7 @@ int main()
 		aimDirNorm = aimDir/ (sqrt(pow(aimDir.x, 2) + pow(aimDir.y, 2)));
 		
 
-		std::cout << aimDirNorm.x << " " << aimDirNorm.y << std::endl;
+		/*std::cout << aimDirNorm.x << " " << aimDirNorm.y << std::endl;*/
 		//Shooting
 		if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		{
@@ -227,8 +234,8 @@ int main()
 		
 		//Clear the window
 
-		window.clear(sf::Color::Magenta);
-		
+		window.clear();
+		window.draw(background_Sprite);
 		//Draw current Frame
 		
 
