@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Player.h"
 //Private Functions
 void Game::initVariables()
 {
@@ -30,12 +31,27 @@ void Game::initEnemies()
 	this->enemy.setOutlineColor(sf::Color::Green);
 	this->enemy.setOutlineThickness(1.0f);
 }
+void Game::initPlayer()
+{
+	
+	if(playerTexture.loadFromFile("tekstury/Player1.png"))
+		std::cout<<"Successfully loaded Player1 texture\n";
+	playerTexture.setSmooth(true);
+	auto player = new Player(&playerTexture);
+	/*this->player->body.setScale(0.5f, 0.5f);*/
+	player->body.setSize(sf::Vector2f(100.0f,100.0f));
+	/*this->player->body.setPosition(sf::Vector2f(300.0f, 300.0f));*/
+	/*this->player->body.setPosition(100.0f, 100.0f);*/
+	
+	
+}
 //Constructors					//Destructors
 Game::Game()
 {
 	this->initVariables();
 	this->initWindow();
 	this->initEnemies();
+	this->initPlayer();
 	
 }
 
@@ -144,6 +160,11 @@ void Game::renderEnemies()
 	}
 }
 
+void Game::renderPlayer()
+{
+	/*this->window->draw(player);*/
+}
+
 void Game::render()
 {
 	this->window->clear(sf::Color::Cyan);
@@ -151,6 +172,8 @@ void Game::render()
 	//draw game objects
 	this->window->draw(this->enemy);
 	this->renderEnemies();
-
+	
 	this->window->display();
 }
+
+

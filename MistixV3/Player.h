@@ -11,20 +11,23 @@ class Player
 {
 
 public:
+	Player() = default;
 	Player(sf::Texture* texture);
-	virtual ~Player() = 0;
-
+	~Player();
+	//Variables
+	sf::Vector2f startPlayerPos;
 	//Player 
 	sf::RectangleShape body;
 
 	//Init Player
 	void initPlayer();
+	void initPlayerVar();
 
 	//Player Update
 	void playerUpdate();
 
 	//Player Render
-	void playerRender(sf::RenderWindow&window);
+	void playerRender();
 
 
 };

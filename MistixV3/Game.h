@@ -8,12 +8,14 @@
 #include <ctime>
 #include "Player.h"
 //Class that acts as the game engine
-
+class Player;
 class Game
 {
 private:
+	
+public:
 	//Variables
-
+	
 	//Window
 	sf::RenderWindow* window;
 	sf::Event ev;
@@ -29,8 +31,13 @@ private:
 	float enemySpawnTimerMax;
 	int maxEnemies;
 
+
 	//Game objects
 	sf::RectangleShape enemy;
+	
+	sf::Texture playerTexture;
+	
+	
 	std::vector<sf::RectangleShape> enemies;
 	
 
@@ -38,6 +45,7 @@ private:
 	void initVariables();
 	void initWindow();
 	void initEnemies();
+	void initPlayer();
 
 
 
@@ -49,7 +57,7 @@ public:
 
 	//Accessors
 	const bool running() const;
-
+	std::vector<std::unique_ptr<Player>> players1;
 	//Functions
 	void pollEvents();
 	void spawnEnemy();
@@ -57,6 +65,9 @@ public:
 	void updateEnemies();
 	void update();
 	void renderEnemies();
+	void renderPlayer();
 	void render();
 };
+
+
 
