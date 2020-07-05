@@ -32,18 +32,25 @@ public:
 		this->scale(0.125f,0.2f);
 		
 	};
-	
+	void playerMove()
+	{
+
+	}
 };
 
 
 
 int main()
 {
-
+	//Creating player
 	Player player;
-	std::cout << "Nowe podejscie " << std::endl;
+	
+	//Creating window
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
+	window.setFramerateLimit(144);
 
+
+	//Timer
 	while (window.isOpen())
 	{
 		sf::Event ev;
