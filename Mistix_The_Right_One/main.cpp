@@ -35,32 +35,53 @@ public:
 	};
 	void playerMove()
 	{
-
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+		{
+			this->move(0.0f, -1.0f);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+		{
+			this->move(0.0f, 1.0f);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
+		{
+			this->move(-1.0f, 0.0f);
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
+		{
+			this->move(1.0f, 0.0f);
+		}
 	}
 };
 
+class StateMachine
+{
 
+};
 
 int main()
 {
 	//Creating player
 	Player player;
-
+	
+	
 	//Creating window
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	window.setFramerateLimit(144);
-	Menu menu(VIEW_WIDTH,VIEW_HEIGHT);
-
+	/*Menu menu(VIEW_WIDTH, VIEW_HEIGHT);*/
+	
+	
 
 	//Timer
 	while (window.isOpen())
 	{
+		
 		sf::Event ev;
 		while(window.pollEvent(ev))
 			switch (ev.type)
 			{	
 			//MENU Option switch
-			case sf::Event::KeyPressed:
+			/*case sf::Event::KeyPressed:
 			{	switch (ev.key.code)
 			{
 			case sf::Keyboard::Up:
@@ -69,10 +90,33 @@ int main()
 			case sf::Keyboard::Down:
 					menu.MoveDown();
 					break;
+			case sf::Keyboard::Return:
+				switch (menu.GetPressedItem())
+				{
+				case 0:
+					std::cout << "Play button has been pressed\n";
+					
+					break;
+				case 1:
+				{
+					std::cout << "Option button has been pressed\n";
+					
+
+					break;
+				}
+				case 2:
+					std::cout << "Quit button has been pressed\n";
+					window.close();
+					
+					break;
+
+				default:
+					break;
+				}
 			}
 				
 				break;
-			}
+			}*/
 			
 
 
@@ -82,18 +126,22 @@ int main()
 				break;
 			}
 		//Update the game
-
-
+		
+		player.playerMove();
 
 		//Clear the window
 
 		window.clear(sf::Color::Magenta);
-
+		
 		//Draw current Frame
-		/*window.draw(player);*/
-		menu.draw(window);
+
+
+		window.draw(player);
+
+		/*menu.draw(window);*/
 
 		//Display everything
+
 		window.display();
 
 	}
