@@ -9,18 +9,17 @@
 #include <cmath>
 #include <math.h>
 #include <memory>
+#include <sstream>
 
+#define VIEW_HEIGHT 600
 
-static const unsigned int VIEW_HEIGHT = 600.0f;
-static const unsigned int VIEW_WIDTH = 800.0f;
+#define  VIEW_WIDTH 800
 
 inline double deg2rad(double degrees) {
 	return degrees * 3,1429 / 360;
 }
-sf::Vector2f playerCenter;
-sf::Vector2f mousePosWindow;
-sf::Vector2f aimDir;
-sf::Vector2f aimDirNorm;
+
+
 class Player :public sf::Sprite
 {
 private:
@@ -107,6 +106,10 @@ public:
 		
 		
 	}
+	sf::Vector2f playerCenter;
+	sf::Vector2f mousePosWindow;
+	sf::Vector2f aimDir;
+	sf::Vector2f aimDirNorm;
 };
 
 
@@ -136,7 +139,10 @@ public:
 	{
 		maxSpeed = n;
 	}
-	
+	sf::Vector2f playerCenter;
+	sf::Vector2f mousePosWindow;
+	sf::Vector2f aimDir;
+	sf::Vector2f aimDirNorm;
 };
 class Enemy:public sf::Sprite
 {
@@ -150,6 +156,16 @@ public:
 	virtual void Follow() = 0;
 	virtual void Attack() = 0;
 	virtual void Rotate() = 0;
+	virtual void adMove(sf::Vector2f&vektorRuchu) = 0;
+	virtual void setDirection(sf::Vector2u& direction2) = 0;
+	virtual void setMove(sf::Vector2f& playermove) = 0;
+	
+	sf::Vector2u direction;
+	sf::Vector2f playerCenter;
+	sf::Vector2f mousePosWindow;
+	sf::Vector2f aimDir;
+	sf::Vector2f aimDirNorm;
+	
 };
 
 class LittleEnemy :public Enemy
@@ -168,15 +184,124 @@ public:
 		littleenemy_Texture.setRepeated(true);
 		this->setTexture(littleenemy_Texture);
 		this->setScale(sf::Vector2f(0.1f, 0.15f));
-
+		
 
 
 	};
 	virtual void Follow() {};
 	virtual void Attack() {};
-	virtual void Rotate() {};
+	virtual void Rotate() 
+	{
+	
+	};
+	virtual void adMove(sf::Vector2f &vektorRuchu)
+	{
+		this->move(-1*vektorRuchu.x,-1*vektorRuchu.y);
+	}
+	virtual void setDirection(sf::Vector2u &direction2)
+	{
+		direction.x = -1 *  direction2.x;
+		direction.y = -1 * direction2.y;
+	}
+	virtual void setMove(sf::Vector2f& playermove)
+	{
+		this->playerCenter = playermove;
+		this->mousePosWindow = this->getPosition();
+		this->aimDir =
+			this->mousePosWindow - this->playerCenter;
+		this->aimDirNorm = this->
+			aimDir / (sqrt(pow(this->aimDir.x, 2) + pow(this->aimDir.y, 2)));
+		/*enemies[i]->move(-1*(enemies[i]->aimDirNorm.x),-1*(enemies[i]->aimDirNorm.y));*/
+		this->adMove(this->aimDirNorm);
+	}
+	sf::Vector2f playerCenter;
+	sf::Vector2f mousePosWindow;
+	sf::Vector2f aimDir;
+	sf::Vector2f aimDirNorm;
+	sf::Vector2u direction;
 };
+class CustomMouse
+{
+	public:
+	sf::Texture m_mouseTexture;
+	sf::Sprite m_mouseSprite;
+	sf::Vector2f playerCenter;
+	sf::Vector2f mousePosWindow;
+	sf::Vector2f aimDir;
+	sf::Vector2f aimDirNorm;
+	
+	
+public:
+	
+	CustomMouse(){
+		m_mouseTexture.loadFromFile("tekstury/Aim.png");
+	  if(m_mouseTexture.loadFromFile("tekstury/Aim.png"))
+		{
+			std::cout << "Successfully loaded Cursor Texture \n";
 
+		}
+		m_mouseTexture.setRepeated(true);
+		this->m_mouseSprite.setTexture(m_mouseTexture);
+		this->m_mouseSprite.setOrigin(this->m_mouseSprite.getGlobalBounds().width / 2, this->m_mouseSprite.getGlobalBounds().height / 2);
+		this->m_mouseSprite.setScale(0.125f,0.125f);
+		this->m_mouseSprite.setPosition(mousePosWindow.x, mousePosWindow.y);
+	}
+	
+	void mouseUpdate()
+	{
+		this->m_mouseSprite.setPosition(mousePosWindow.x, mousePosWindow.y);
+	}
+	void mouseRender(sf::RenderWindow& window)
+	{
+		window.draw(this->m_mouseSprite);
+	}
+
+};
+class Score
+{
+private:
+	sf::Text score_Text;
+	int value;
+	sf::Font score_Font;
+	std::ostringstream ssScore;
+	int m_addValue;
+public:
+	Score()
+	{
+		score_Font.loadFromFile("fonts/arial.ttf");
+		if (score_Font.loadFromFile("fonts/arial.ttf"))
+		{
+			std::cout << "Score font loaded successfully \n";
+		}
+		else
+		{
+			std::cout << " Score font FAILED TO LOAD \n";
+		}
+		
+		this->ssScore<< "Points : "<<this->value;
+		this->score_Text.setFont(score_Font);
+		this->score_Text.setCharacterSize(24);
+		this->score_Text.setPosition(10, 10);
+		this->score_Text.setString(ssScore.str());
+	}
+	void setValue(int n)
+	{
+		value = n;
+	}
+	void pointsRender(sf::RenderWindow& window)
+	{
+		window.draw(this->score_Text);
+	}
+	void setaddPoint(float n)
+	{
+		m_addValue = n;
+	}
+
+	void addPoints()
+	{	
+		value += m_addValue;
+	}
+};
 class StateMachine
 {
 
@@ -208,7 +333,7 @@ int main()
 
 		while (iteracja_tworzenie_obiektow < 25)
 		{
-			int losowanie_x = rand() % 4;
+			int losowanie_x = rand() % 1+1;
 			if (losowanie_x == 0)
 			{
 				auto littleEnemy_pozycja_x =0;
@@ -216,6 +341,8 @@ int main()
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				/*sf::Vector2u e_direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow]->getPosition());*/
+				/*enemies[iteracja_tworzenie_obiektow]->move(enemies[iteracja_tworzenie_obiektow]->direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow].getPosition()));*/
 				iteracja_tworzenie_obiektow++;
 			}
 			if (losowanie_x == 1)
@@ -225,6 +352,7 @@ int main()
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				
 				iteracja_tworzenie_obiektow++;
 			}
 			if (losowanie_x == 2)
@@ -251,10 +379,17 @@ int main()
 	//Creating window
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	window.setFramerateLimit(144);
+
+	//Creating cursor
+	window.setMouseCursorVisible(false);
+	CustomMouse custom_mouse;
+
 	/*Menu menu(VIEW_WIDTH, VIEW_HEIGHT);*/
 	
-	
-
+	//Creating ScoreBoard
+	Score m_scorePoints;
+	m_scorePoints.setValue(0);
+	m_scorePoints.setaddPoint(1);
 	//Timer
 	while (window.isOpen())
 	{
@@ -311,10 +446,24 @@ int main()
 		//Update the game
 		
 		player.playerUpdate(window);
-		playerCenter = sf::Vector2f(player.getPosition().x, player.getPosition().y);
-		mousePosWindow = sf::Vector2f(sf::Mouse::getPosition(window));
-		aimDir = mousePosWindow - playerCenter;
-		aimDirNorm = aimDir/ (sqrt(pow(aimDir.x, 2) + pow(aimDir.y, 2)));
+		player.playerCenter = sf::Vector2f(player.getPosition().x, player.getPosition().y);
+		player.mousePosWindow = sf::Vector2f(sf::Mouse::getPosition(window));
+		player.aimDir = player.mousePosWindow - player.playerCenter;
+		player.aimDirNorm = player.aimDir/ (sqrt(pow(player.aimDir.x, 2) + pow(player.aimDir.y, 2)));
+
+		b1.playerCenter=player.playerCenter;
+		b1.mousePosWindow=player.mousePosWindow;
+		b1.aimDir =player.aimDir;
+		b1.aimDirNorm=player.aimDirNorm;
+
+		custom_mouse.playerCenter = player.playerCenter;
+		custom_mouse.mousePosWindow = player.mousePosWindow;
+		custom_mouse.aimDir = player.aimDir;
+		custom_mouse.aimDirNorm = player.aimDirNorm;
+
+
+		
+		
 		
 
 		/*std::cout << aimDirNorm.x << " " << aimDirNorm.y << std::endl;*/
@@ -327,8 +476,8 @@ int main()
 		}
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left)&&b1.bulletTimer>=b1.maxbulletTimer)
 			{
-				b1.bullet.setPosition(playerCenter);
-				b1.currVelocity = aimDirNorm * b1.maxSpeed;
+				b1.bullet.setPosition(b1.playerCenter);
+				b1.currVelocity = b1.aimDirNorm * b1.maxSpeed;
 
 				bulets.push_back(Bullet(b1));
 				b1.bulletTimer = 0;
@@ -340,26 +489,38 @@ int main()
 				if (bulets[i].bullet.getPosition().x < 0 || bulets[i].bullet.getPosition().x > 800 || bulets[i].bullet.getPosition().y < 0 || bulets[i].bullet.getPosition().y > 600)
 					bulets.erase(bulets.begin() + i);
 			}
-		
-		
+		//Update the mouse
+			custom_mouse.mouseUpdate();
+
+			//Update of Enemies
+			for (int i = 0;i < enemies.size();i++)
+			{
+				sf::Vector2f playerpos = sf::Vector2f(player.getPosition());
+				enemies[i]->setMove(playerpos);
+			}
 		
 		//Clear the window
 
 		window.clear();
 		window.draw(background_Sprite);
 		//Draw current Frame
-		
+		//Draw Player
 
 		window.draw(player);
 		for (int i = 0;i < bulets.size();i++)
 		{
 			window.draw(bulets[i].bullet);
 		}
+
+		//Draw Enemies
 		for (int i=0;i<enemies.size();i++)
 		{
 			window.draw(*enemies[i]);
 		}
-
+		//Draw the cursor
+		custom_mouse.mouseRender(window);
+		m_scorePoints.pointsRender(window);
+		//
 		/*menu.draw(window);*/
 
 		//Display everything
