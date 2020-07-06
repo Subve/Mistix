@@ -19,7 +19,58 @@ inline double deg2rad(double degrees) {
 	return degrees * 3,1429 / 360;
 }
 
+class Score
+{
+private:
+	sf::Text score_Text;
+	int value;
+	sf::Font score_Font;
+	std::ostringstream ssScore;
+	int m_addValue;
+public:
+	Score()
+	{
+		score_Font.loadFromFile("fonts/arial.ttf");
+		if (score_Font.loadFromFile("fonts/arial.ttf"))
+		{
+			std::cout << "Score font loaded successfully \n";
+		}
+		else
+		{
+			std::cout << " Score font FAILED TO LOAD \n";
+		}
 
+		
+		this->score_Text.setFont(score_Font);
+		this->score_Text.setCharacterSize(24);
+		this->score_Text.setPosition(10, 10);
+		this->updateText();
+	}
+	void updateText()
+	{
+		ssScore.str("");
+		ssScore.clear();
+		this->ssScore << "Points : " << this->value;
+		this->score_Text.setString(ssScore.str());
+	}
+	void setValue(int n)
+	{
+		value = n;
+	}
+	void pointsRender(sf::RenderWindow& window)
+	{
+		window.draw(this->score_Text);
+	}
+	void setaddPoint(float n)
+	{
+		m_addValue = static_cast<int>(n);
+	}
+
+	void addPoints()
+	{
+		value += m_addValue;
+	}
+};
 class Player :public sf::Sprite
 {
 private:
@@ -94,9 +145,10 @@ public:
 		/*this->mouse = sf::Mouse::getPosition(window);
 		this->player_position = this->getPosition();*/
 		this->updateMousePos(window);
-		angle = -atan2(mouse.x - player_position.x, mouse.y - player_position.y) * 180 / 3.14159;
+		angle = static_cast<float>(-atan2(mouse.x - player_position.x, mouse.y - player_position.y) * 180 / 3.14159);
 		this->setRotation(angle+90);
 	}
+	
 	
 	
 	void playerUpdate(sf::RenderWindow& window)
@@ -139,11 +191,13 @@ public:
 	{
 		maxSpeed = n;
 	}
+
 	sf::Vector2f playerCenter;
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;
 	sf::Vector2f aimDirNorm;
 };
+
 class Enemy:public sf::Sprite
 {
 
@@ -154,17 +208,22 @@ public:
 	Enemy():Sprite() {};
 	virtual ~Enemy() = default;
 	virtual void Follow() = 0;
-	virtual void Attack() = 0;
-	virtual void Rotate() = 0;
+	virtual void Attack(Player& gracz) = 0;
+	virtual void Rotate(sf::Vector2f& playermove) = 0;
 	virtual void adMove(sf::Vector2f&vektorRuchu) = 0;
 	virtual void setDirection(sf::Vector2u& direction2) = 0;
 	virtual void setMove(sf::Vector2f& playermove) = 0;
-	
+	virtual void killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vector<std::unique_ptr<Enemy>> &enemies) = 0;
+
+	float angle;
 	sf::Vector2u direction;
 	sf::Vector2f playerCenter;
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;
 	sf::Vector2f aimDirNorm;
+	sf::Vector2f enemyPos;
+	bool trafiony;
+	bool zabity;
 	
 };
 
@@ -176,7 +235,7 @@ private:
 public:
 	LittleEnemy() :Enemy() {
 
-		if (littleenemy_Texture.loadFromFile("tekstury/Zombie_Szablon.png"))
+		if (littleenemy_Texture.loadFromFile("tekstury/skeleton-attack_0.png"))
 		{
 			std::cout<<"Successfully loaded LittleEnemy Texture \n";
 
@@ -184,15 +243,17 @@ public:
 		littleenemy_Texture.setRepeated(true);
 		this->setTexture(littleenemy_Texture);
 		this->setScale(sf::Vector2f(0.1f, 0.15f));
-		
-
+		this->trafiony = false;
+		this->zabity = false;
 
 	};
 	virtual void Follow() {};
-	virtual void Attack() {};
-	virtual void Rotate() 
+	virtual void Attack(Player &gracz) {};
+	virtual void Rotate(sf::Vector2f& playerpos)
 	{
-	
+		this->enemyPos=this->getPosition();
+		angle = static_cast<float>(-atan2(enemyPos.x - playerpos.x, enemyPos.y - playerpos.y) * 180 / 3.14159);
+		this->setRotation(angle-90);
 	};
 	virtual void adMove(sf::Vector2f &vektorRuchu)
 	{
@@ -214,11 +275,52 @@ public:
 		/*enemies[i]->move(-1*(enemies[i]->aimDirNorm.x),-1*(enemies[i]->aimDirNorm.y));*/
 		this->adMove(this->aimDirNorm);
 	}
+	virtual void killedZombie(Score&wynik,std::vector<Bullet>&pociski, std::vector<std::unique_ptr<Enemy>> &enemies)
+	{
+		{
+			for (int j = 0;j < enemies.size();j++)
+			{
+				for (int i = 0;i < pociski.size();i++)
+				{
+					if (pociski[i].bullet.getGlobalBounds().intersects(this->getGlobalBounds()))
+					{
+						this->trafiony = true;
+						if (trafiony == true && zabity == false)
+						{
+							std::cout << "Trafiony zombiak" << "\n";
+							
+							
+							
+							
+							pociski.erase(pociski.begin() + i);
+							this->zabity = true;
+							if (zabity)
+							{
+								wynik.setaddPoint(1);
+								wynik.addPoints();
+								wynik.updateText();
+
+							}
+							/*enemies.erase(enemies.begin() + j);*/
+							
+
+						}
+						
+
+					}
+				}
+			}
+		}
+	}
 	sf::Vector2f playerCenter;
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;
 	sf::Vector2f aimDirNorm;
 	sf::Vector2u direction;
+	float angle;
+	sf::Vector2f enemyPos;
+	bool trafiony;
+	bool zabity;
 };
 class CustomMouse
 {
@@ -257,51 +359,7 @@ public:
 	}
 
 };
-class Score
-{
-private:
-	sf::Text score_Text;
-	int value;
-	sf::Font score_Font;
-	std::ostringstream ssScore;
-	int m_addValue;
-public:
-	Score()
-	{
-		score_Font.loadFromFile("fonts/arial.ttf");
-		if (score_Font.loadFromFile("fonts/arial.ttf"))
-		{
-			std::cout << "Score font loaded successfully \n";
-		}
-		else
-		{
-			std::cout << " Score font FAILED TO LOAD \n";
-		}
-		
-		this->ssScore<< "Points : "<<this->value;
-		this->score_Text.setFont(score_Font);
-		this->score_Text.setCharacterSize(24);
-		this->score_Text.setPosition(10, 10);
-		this->score_Text.setString(ssScore.str());
-	}
-	void setValue(int n)
-	{
-		value = n;
-	}
-	void pointsRender(sf::RenderWindow& window)
-	{
-		window.draw(this->score_Text);
-	}
-	void setaddPoint(float n)
-	{
-		m_addValue = n;
-	}
 
-	void addPoints()
-	{	
-		value += m_addValue;
-	}
-};
 class StateMachine
 {
 
@@ -336,8 +394,8 @@ int main()
 			int losowanie_x = rand() % 1+1;
 			if (losowanie_x == 0)
 			{
-				auto littleEnemy_pozycja_x =0;
-				auto littleEnemy_pozycja_y = rand() % 400+100;
+				auto littleEnemy_pozycja_x = static_cast<float>(0);
+				auto littleEnemy_pozycja_y = static_cast<float>(rand() % 400+100);
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
@@ -347,8 +405,8 @@ int main()
 			}
 			if (losowanie_x == 1)
 			{
-				auto littleEnemy_pozycja_x =700 ;
-				auto littleEnemy_pozycja_y = rand() % 400 + 100;
+				auto littleEnemy_pozycja_x = static_cast<float>(700) ;
+				auto littleEnemy_pozycja_y = static_cast<float>(rand() % 400 + 100);
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
@@ -357,8 +415,8 @@ int main()
 			}
 			if (losowanie_x == 2)
 			{
-				auto littleEnemy_pozycja_x = rand() % 600+100;
-				auto littleEnemy_pozycja_y =0;
+				auto littleEnemy_pozycja_x = static_cast<float>(rand() % 600+100);
+				auto littleEnemy_pozycja_y = static_cast<float>(0);
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
@@ -366,8 +424,8 @@ int main()
 			}
 			if (losowanie_x == 3)
 			{
-				auto littleEnemy_pozycja_x = rand() % 600+100;
-				auto littleEnemy_pozycja_y =500;
+				auto littleEnemy_pozycja_x = static_cast<float>(rand() % 600+100);
+				auto littleEnemy_pozycja_y = static_cast<float>(500);
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
@@ -483,7 +541,7 @@ int main()
 				b1.bulletTimer = 0;
 			}
 		
-			for (auto i = 0;i < bulets.size();i++)
+			for (int i = 0;i < bulets.size();i++)
 			{
 				bulets[i].bullet.move(bulets[i].currVelocity);
 				if (bulets[i].bullet.getPosition().x < 0 || bulets[i].bullet.getPosition().x > 800 || bulets[i].bullet.getPosition().y < 0 || bulets[i].bullet.getPosition().y > 600)
@@ -497,6 +555,9 @@ int main()
 			{
 				sf::Vector2f playerpos = sf::Vector2f(player.getPosition());
 				enemies[i]->setMove(playerpos);
+				enemies[i]->Rotate(playerpos);
+				enemies[i]->killedZombie(m_scorePoints, bulets,enemies);
+				
 			}
 		
 		//Clear the window
