@@ -8,6 +8,8 @@
 #include "Menu.h"
 #include <cmath>
 #include <math.h>
+#include <memory>
+
 
 static const unsigned int VIEW_HEIGHT = 600.0f;
 static const unsigned int VIEW_WIDTH = 800.0f;
@@ -136,19 +138,44 @@ public:
 	}
 	
 };
-class Enemy
+class Enemy:public sf::Sprite
 {
 
 private:
 
 public:
 
-	Enemy() {};
+	Enemy():Sprite() {};
 	virtual ~Enemy() = default;
 	virtual void Follow() = 0;
 	virtual void Attack() = 0;
+	virtual void Rotate() = 0;
 };
 
+class LittleEnemy :public Enemy
+{
+private:
+	sf::Texture littleenemy_Texture;
+
+public:
+	LittleEnemy() :Enemy() {
+
+		if (littleenemy_Texture.loadFromFile("tekstury/Zombie_Szablon.png"))
+		{
+			std::cout<<"Successfully loaded LittleEnemy Texture \n";
+
+		}
+		littleenemy_Texture.setRepeated(true);
+		this->setTexture(littleenemy_Texture);
+		this->setScale(sf::Vector2f(0.1f, 0.15f));
+
+
+
+	};
+	virtual void Follow() {};
+	virtual void Attack() {};
+	virtual void Rotate() {};
+};
 
 class StateMachine
 {
@@ -157,6 +184,7 @@ class StateMachine
 
 int main()
 {
+	std::srand(static_cast<unsigned>(time(NULL)));
 	sf::Texture background;
 	if (background.loadFromFile("tekstury/Background_Desert.png"))
 	{
@@ -167,9 +195,59 @@ int main()
 	background_Sprite.setTexture(background);
 	//Creating player
 	Player player;
+
+	//Creating bullets
 	Bullet b1(5.f);
 	std::vector<Bullet> bulets;
 	bulets.push_back(Bullet(b1));
+	//Creating enemies
+	std::vector<std::unique_ptr<Enemy>> enemies;
+	int iteracja_tworzenie_obiektow = 0;
+	while (iteracja_tworzenie_obiektow < 25)
+	{
+
+		while (iteracja_tworzenie_obiektow < 25)
+		{
+			int losowanie_x = rand() % 4;
+			if (losowanie_x == 0)
+			{
+				auto littleEnemy_pozycja_x =0;
+				auto littleEnemy_pozycja_y = rand() % 400+100;
+				
+				enemies.emplace_back(std::make_unique<LittleEnemy>());
+				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				iteracja_tworzenie_obiektow++;
+			}
+			if (losowanie_x == 1)
+			{
+				auto littleEnemy_pozycja_x =700 ;
+				auto littleEnemy_pozycja_y = rand() % 400 + 100;
+				
+				enemies.emplace_back(std::make_unique<LittleEnemy>());
+				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				iteracja_tworzenie_obiektow++;
+			}
+			if (losowanie_x == 2)
+			{
+				auto littleEnemy_pozycja_x = rand() % 600+100;
+				auto littleEnemy_pozycja_y =0;
+				
+				enemies.emplace_back(std::make_unique<LittleEnemy>());
+				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				iteracja_tworzenie_obiektow++;
+			}
+			if (losowanie_x == 3)
+			{
+				auto littleEnemy_pozycja_x = rand() % 600+100;
+				auto littleEnemy_pozycja_y =500;
+				
+				enemies.emplace_back(std::make_unique<LittleEnemy>());
+				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				iteracja_tworzenie_obiektow++;
+			}
+		}
+	}
+
 	//Creating window
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	window.setFramerateLimit(144);
@@ -256,7 +334,7 @@ int main()
 				b1.bulletTimer = 0;
 			}
 		
-			for (int i = 0;i < bulets.size();i++)
+			for (auto i = 0;i < bulets.size();i++)
 			{
 				bulets[i].bullet.move(bulets[i].currVelocity);
 				if (bulets[i].bullet.getPosition().x < 0 || bulets[i].bullet.getPosition().x > 800 || bulets[i].bullet.getPosition().y < 0 || bulets[i].bullet.getPosition().y > 600)
@@ -276,6 +354,10 @@ int main()
 		for (int i = 0;i < bulets.size();i++)
 		{
 			window.draw(bulets[i].bullet);
+		}
+		for (int i=0;i<enemies.size();i++)
+		{
+			window.draw(*enemies[i]);
 		}
 
 		/*menu.draw(window);*/
