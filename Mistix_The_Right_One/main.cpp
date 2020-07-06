@@ -136,7 +136,18 @@ public:
 	}
 	
 };
+class Enemy
+{
 
+private:
+
+public:
+
+	Enemy() {};
+	virtual ~Enemy() = default;
+	virtual void Follow() = 0;
+	virtual void Attack() = 0;
+};
 
 
 class StateMachine
