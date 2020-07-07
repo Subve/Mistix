@@ -446,7 +446,7 @@ int main()
 
 		while (iteracja_tworzenie_obiektow < 25)
 		{
-			int losowanie_x = rand() % 1+1;
+			int losowanie_x = rand() % 4;
 			if (losowanie_x == 0)
 			{
 				auto littleEnemy_pozycja_x = static_cast<float>(0);
