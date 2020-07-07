@@ -30,7 +30,8 @@ public:
 	virtual void setDirection(sf::Vector2u& direction2) = 0;
 	virtual void setMove(sf::Vector2f& playermove) = 0;
 	virtual void killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vector<std::unique_ptr<Enemy>>& enemies) = 0;
-
+	virtual void setTrafiony() = 0;
+	virtual void setZabity() = 0;
 	float angle;
 	sf::Vector2u direction;
 	sf::Vector2f playerCenter;

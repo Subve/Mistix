@@ -28,7 +28,8 @@ public:
 	virtual void setDirection(sf::Vector2u& direction2);
 	virtual void setMove(sf::Vector2f& playermove);
 	virtual void killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vector<std::unique_ptr<Enemy>>& enemies);
-	
+	virtual void setTrafiony();
+	virtual void setZabity();
 	sf::Vector2f playerCenter;
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;

@@ -601,6 +601,7 @@ int main()
 				bulets[i].bullet.move(bulets[i].currVelocity);
 				if (bulets[i].bullet.getPosition().x < 0 || bulets[i].bullet.getPosition().x > 800 || bulets[i].bullet.getPosition().y < 0 || bulets[i].bullet.getPosition().y > 600)
 					bulets.erase(bulets.begin() + i);
+
 			}
 		//Update the mouse
 			custom_mouse.mouseUpdate();
