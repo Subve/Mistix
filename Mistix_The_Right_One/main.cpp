@@ -16,6 +16,7 @@
 #include "Enemy.h"
 #include "LittleEnemy.h"
 #include "CustomMouse.h"
+#include "Background.h"
 #define VIEW_HEIGHT 600
 
 #define  VIEW_WIDTH 800
@@ -377,18 +378,59 @@ class StateMachine
 {
 
 };
-
-int main()
+/*
+class Background
 {
-	std::srand(static_cast<unsigned>(time(NULL)));
+private:
 	sf::Texture background;
-	if (background.loadFromFile("tekstury/Background_Desert.png"))
+	sf::Sprite background_Sprite;
+public:
+	/ *if (background.loadFromFile("tekstury/Background_Desert.png"))
 	{
 		std::cout << "Background texture successfully loaded\n";
 	}
 	background.setSmooth(true);
 	sf::Sprite background_Sprite;
-	background_Sprite.setTexture(background);
+	background_Sprite.setTexture(background);* /
+	Background()
+	{
+		this->initBackground();
+	};
+	void initBackground()
+	{
+		this->LoadBackgroundTexture();
+		this->SetBackgroundSprite();
+	}
+	void LoadBackgroundTexture()
+	{
+		this->background.loadFromFile("tekstury/Background_Desert.png");
+		if (this->background.loadFromFile("tekstury/Background_Desert.png"))
+		{
+			std::cout << "Background texture successfully loaded\n";
+		}
+		else
+		{
+			std::cout << "Background failed to LOAD \n";
+		}
+		this->background.setSmooth(true);
+		
+	}
+	void SetBackgroundSprite()
+	{
+		this->background_Sprite.setTexture(this->background);
+	}
+	void renderBackground(sf::RenderTarget&window)
+	{
+		window.draw(this->background_Sprite);
+	}
+	
+};*/
+int main()
+{
+	std::srand(static_cast<unsigned>(time(NULL)));
+	
+	Background background;
+	
 	//Creating player
 	Player player;
 
@@ -576,7 +618,7 @@ int main()
 		//Clear the window
 
 		window.clear();
-		window.draw(background_Sprite);
+		background.renderBackground(window);
 		//Draw current Frame
 		//Draw Player
 
