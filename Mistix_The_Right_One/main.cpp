@@ -10,7 +10,7 @@
 #include <math.h>
 #include <memory>
 #include <sstream>
-
+#include "Score.h"
 #define VIEW_HEIGHT 600
 
 #define  VIEW_WIDTH 800
@@ -19,6 +19,7 @@ inline double deg2rad(double degrees) {
 	return degrees * 3,1429 / 360;
 }
 
+/*
 class Score
 {
 private:
@@ -70,7 +71,7 @@ public:
 	{
 		value += m_addValue;
 	}
-};
+};*/
 class Player :public sf::Sprite
 {
 private:
@@ -224,6 +225,7 @@ public:
 	sf::Vector2f enemyPos;
 	bool trafiony;
 	bool zabity;
+	int HP;
 	
 };
 
@@ -321,6 +323,7 @@ public:
 	sf::Vector2f enemyPos;
 	bool trafiony;
 	bool zabity;
+	int HP;
 };
 class CustomMouse
 {
