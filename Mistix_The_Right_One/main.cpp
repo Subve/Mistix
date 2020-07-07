@@ -12,6 +12,10 @@
 #include <sstream>
 #include "Score.h"
 #include "Player.h"
+#include "Bullet.h"
+#include "Enemy.h"
+#include "LittleEnemy.h"
+#include "CustomMouse.h"
 #define VIEW_HEIGHT 600
 
 #define  VIEW_WIDTH 800
@@ -168,6 +172,7 @@ public:
 };*/
 
 
+/*
 class Bullet
 {
 private:
@@ -199,8 +204,9 @@ public:
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;
 	sf::Vector2f aimDirNorm;
-};
+};*/
 
+/*
 class Enemy:public sf::Sprite
 {
 
@@ -229,8 +235,9 @@ public:
 	bool zabity;
 	int HP;
 	
-};
+};*/
 
+/*
 class LittleEnemy :public Enemy
 {
 private:
@@ -276,7 +283,7 @@ public:
 			this->mousePosWindow - this->playerCenter;
 		this->aimDirNorm = this->
 			aimDir / (sqrt(pow(this->aimDir.x, 2) + pow(this->aimDir.y, 2)));
-		/*enemies[i]->move(-1*(enemies[i]->aimDirNorm.x),-1*(enemies[i]->aimDirNorm.y));*/
+		/ *enemies[i]->move(-1*(enemies[i]->aimDirNorm.x),-1*(enemies[i]->aimDirNorm.y));* /
 		this->adMove(this->aimDirNorm);
 	}
 	virtual void killedZombie(Score&wynik,std::vector<Bullet>&pociski, std::vector<std::unique_ptr<Enemy>> &enemies)
@@ -305,7 +312,7 @@ public:
 								wynik.updateText();
 
 							}
-							/*enemies.erase(enemies.begin() + j);*/
+							/ *enemies.erase(enemies.begin() + j);* /
 							
 
 						}
@@ -326,7 +333,8 @@ public:
 	bool trafiony;
 	bool zabity;
 	int HP;
-};
+};*/
+/*
 class CustomMouse
 {
 	public:
@@ -363,7 +371,7 @@ public:
 		window.draw(this->m_mouseSprite);
 	}
 
-};
+};*/
 
 class StateMachine
 {

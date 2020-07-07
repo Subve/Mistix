@@ -144,12 +144,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="CustomMouse.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="LittleEnemy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Score.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="CustomMouse.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="LittleEnemy.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Score.h" />
