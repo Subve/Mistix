@@ -11,6 +11,7 @@
 #include <memory>
 #include <sstream>
 #include "Score.h"
+#include "Player.h"
 #define VIEW_HEIGHT 600
 
 #define  VIEW_WIDTH 800
@@ -72,7 +73,8 @@ public:
 		value += m_addValue;
 	}
 };*/
-class Player :public sf::Sprite
+/*
+class Player1 :public sf::Sprite
 {
 private:
 	sf::Vector2i mouse;
@@ -133,7 +135,7 @@ public:
 	}
 	void playerRotate(sf::RenderWindow &window)
 	{
-		/*window.convertCoords(mouse);
+		/ *window.convertCoords(mouse);
 
 		//gets sprite origin coordinates and mouse coordinates
 		this->spritePosition = sprite.getPosition();
@@ -141,10 +143,10 @@ public:
 
 		mouseAngle = -atan2(mouse.x - spritePosition.x, mouse.y - spritePosition.y) * 180 / 3.14159; //angle in degrees of rotation for sprite
 
-		playerSprite.setRotation(mouseAngle);*/
+		playerSprite.setRotation(mouseAngle);* /
 		window.mapPixelToCoords(mouse);
-		/*this->mouse = sf::Mouse::getPosition(window);
-		this->player_position = this->getPosition();*/
+		/ *this->mouse = sf::Mouse::getPosition(window);
+		this->player_position = this->getPosition();* /
 		this->updateMousePos(window);
 		angle = static_cast<float>(-atan2(mouse.x - player_position.x, mouse.y - player_position.y) * 180 / 3.14159);
 		this->setRotation(angle+90);
@@ -163,7 +165,7 @@ public:
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;
 	sf::Vector2f aimDirNorm;
-};
+};*/
 
 
 class Bullet
