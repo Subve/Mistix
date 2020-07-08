@@ -438,8 +438,10 @@ int main()
 	Bullet b1(5.f);
 	std::vector<Bullet> bulets;
 	bulets.push_back(Bullet(b1));
+	int mobIDLicznik=0;
 	//Creating enemies
 	std::vector<std::unique_ptr<Enemy>> enemies;
+	
 	int iteracja_tworzenie_obiektow = 0;
 	while (iteracja_tworzenie_obiektow < 25)
 	{
@@ -454,6 +456,10 @@ int main()
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				enemies[iteracja_tworzenie_obiektow]->mobID = mobIDLicznik;
+				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
+				enemies[iteracja_tworzenie_obiektow]->HP = 1;
+				mobIDLicznik++;
 				/*sf::Vector2u e_direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow]->getPosition());*/
 				/*enemies[iteracja_tworzenie_obiektow]->move(enemies[iteracja_tworzenie_obiektow]->direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow].getPosition()));*/
 				iteracja_tworzenie_obiektow++;
@@ -463,9 +469,14 @@ int main()
 				auto littleEnemy_pozycja_x = static_cast<float>(700) ;
 				auto littleEnemy_pozycja_y = static_cast<float>(rand() % 400 + 100);
 				
-				enemies.emplace_back(std::make_unique<LittleEnemy>());
+				auto enemy = std::make_unique<LittleEnemy>();
+				enemies.emplace_back(std::move(enemy));
+				/*enemies.emplace_back(std::make_unique<LittleEnemy>());*/
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				
+				enemies[iteracja_tworzenie_obiektow]->mobID = mobIDLicznik;
+				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
+				enemies[iteracja_tworzenie_obiektow]->HP = 1;
+				mobIDLicznik++;
 				iteracja_tworzenie_obiektow++;
 			}
 			if (losowanie_x == 2)
@@ -475,6 +486,10 @@ int main()
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				enemies[iteracja_tworzenie_obiektow]->mobID = mobIDLicznik;
+				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
+				enemies[iteracja_tworzenie_obiektow]->HP = 1;
+				mobIDLicznik++;
 				iteracja_tworzenie_obiektow++;
 			}
 			if (losowanie_x == 3)
@@ -484,6 +499,10 @@ int main()
 				
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
+				enemies[iteracja_tworzenie_obiektow]->mobID = mobIDLicznik;
+				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
+				enemies[iteracja_tworzenie_obiektow]->HP = 1;
+				mobIDLicznik++;
 				iteracja_tworzenie_obiektow++;
 			}
 		}
@@ -555,6 +574,7 @@ int main()
 			case sf::Event::Closed:
 				window.close();
 				break;
+
 			}
 		//Update the game
 		
@@ -609,10 +629,31 @@ int main()
 			//Update of Enemies
 			for (int i = 0;i < enemies.size();i++)
 			{
+				
 				sf::Vector2f playerpos = sf::Vector2f(player.getPosition());
 				enemies[i]->setMove(playerpos);
 				enemies[i]->Rotate(playerpos);
+				/*enemies[i]->setID(enemies);*/
+				
+				
+				for (int j = 0;j < enemies.size();j++)
+				{
+					
+					if(enemies[i]->getLocalBounds().intersects(enemies[j]->getLocalBounds())&&(enemies[i]->mobID != enemies[j]->mobID)&&(!enemies[i]->polaczone)&&(!enemies[j]->polaczone))
+					{
+						
+						
+							std::cout << "Polaczone\n";
+							enemies[i]->polaczone = true;
+							enemies[j]->polaczone = true;
+							enemies.erase(enemies.begin() + j);
+							enemies[i]->HP = 2;
+							/*enemies[i]->setScale(2.0, 2.0);*/
+
+					}
+				}
 				enemies[i]->killedZombie(m_scorePoints, bulets,enemies);
+				
 				
 			}
 		

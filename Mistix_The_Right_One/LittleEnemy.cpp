@@ -13,7 +13,8 @@ LittleEnemy::LittleEnemy() :Enemy()
 	this->setScale(sf::Vector2f(0.1f, 0.15f));
 	this->trafiony = false;
 	this->zabity = false;
-
+	
+	this->polaczone = false;
 }
 
 void LittleEnemy::Follow()
@@ -68,15 +69,20 @@ void LittleEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::
 					{
 						std::cout << "Trafiony zombiak" << "\n";
 
-
+						
 
 
 						pociski.erase(pociski.begin() + i);
-						enemies[j]->setZabity();
+						enemies[j]->HP -= 1;;
+
 						
 						/*enemies.erase(enemies.begin() + j);*/
 
 
+					}
+					if (enemies[j]->HP == 0)
+					{
+						enemies[j]->setZabity();
 					}
 					if (trafiony && zabity)
 					{
@@ -104,4 +110,11 @@ void LittleEnemy::setZabity()
 {
 	if (trafiony && !zabity)
 		this->zabity = true;
+}
+
+void LittleEnemy::setID(int &i)
+{
+	
+	this->mobID = i;
+	
 }

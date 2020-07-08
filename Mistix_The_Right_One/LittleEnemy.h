@@ -30,15 +30,18 @@ public:
 	virtual void killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vector<std::unique_ptr<Enemy>>& enemies);
 	virtual void setTrafiony();
 	virtual void setZabity();
+	virtual void setID(int& i);
 	sf::Vector2f playerCenter;
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;
 	sf::Vector2f aimDirNorm;
 	sf::Vector2u direction;
 	float angle;
+	int mobID;
 	sf::Vector2f enemyPos;
 	bool trafiony;
 	bool zabity;
+	bool polaczone;
 	int HP;
 };
 

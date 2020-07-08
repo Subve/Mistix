@@ -13,6 +13,8 @@
 #include "Score.h"
 #include "Player.h"
 #include "Bullet.h"
+
+
 class Enemy :public sf::Sprite
 {
 
@@ -20,8 +22,7 @@ private:
 
 public:
 
-	Enemy() :Sprite() {}
-		;
+	Enemy() :Sprite() {};
 	virtual ~Enemy() = default;
 	virtual void Follow() = 0;
 	virtual void Attack(Player& gracz) = 0;
@@ -32,6 +33,10 @@ public:
 	virtual void killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vector<std::unique_ptr<Enemy>>& enemies) = 0;
 	virtual void setTrafiony() = 0;
 	virtual void setZabity() = 0;
+	virtual void setID(int& i) = 0;
+
+	
+	
 	float angle;
 	sf::Vector2u direction;
 	sf::Vector2f playerCenter;
@@ -39,8 +44,11 @@ public:
 	sf::Vector2f aimDir;
 	sf::Vector2f aimDirNorm;
 	sf::Vector2f enemyPos;
+	int mobID;
+	bool polaczone;
 	bool trafiony;
 	bool zabity;
+	
 	int HP;
 
 };
