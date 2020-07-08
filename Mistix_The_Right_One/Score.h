@@ -25,7 +25,7 @@ public:
 	void updateText();
 	void setValue(int n);
 	void pointsRender(sf::RenderWindow& window);
-	
+	int getScore();
 	void setaddPoint(float n);
 
 	void addPoints();

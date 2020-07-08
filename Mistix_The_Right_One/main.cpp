@@ -18,6 +18,7 @@
 #include "LittleEnemy.h"
 #include "CustomMouse.h"
 #include "Background.h"
+#include "HighScore.h"
 
 #define VIEW_HEIGHT 600
 
@@ -463,6 +464,7 @@ int main()
 	Score m_scorePoints;
 	m_scorePoints.setValue(0);
 	m_scorePoints.setaddPoint(1);
+	HighScore m_highscore;
 		b1.setAmmo(20);
 		b1.setSpeed(5.f);
 	//Timer
@@ -474,7 +476,7 @@ int main()
 	{
 		sf::Time delta_time = sf::milliseconds(1000);
 		elapsed_time += r.restart();
-		sf::Time delta_time_player = sf::milliseconds(2000);
+		sf::Time delta_time_player = sf::milliseconds(5000);
 		elapsed_time_player += r_player.restart();
 
 		
@@ -584,6 +586,7 @@ int main()
 			{
 				enemies[i]->killedZombie(m_scorePoints, bulets,enemies);
 
+
 			}
 			howmanyenemies = enemies.size();
 			/*entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);*/
@@ -653,15 +656,17 @@ int main()
 		//Draw the cursor
 		custom_mouse.mouseRender(window);
 		m_scorePoints.pointsRender(window);
+		m_highscore.updateHighScore(m_scorePoints);
+		m_highscore.renderHighscore(window);
 		//
 		/*menu.draw(window);*/
 
 		//Display everything
 
 		window.display();
-
+		
 	}
 
-
+	m_highscore.saveHighScore(m_scorePoints);
 	return 0;
 }

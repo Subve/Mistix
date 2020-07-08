@@ -145,9 +145,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Background.cpp" />
+    <ClCompile Include="BigEnemy.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="CustomMouse.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="HighScore.cpp" />
     <ClCompile Include="LittleEnemy.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -156,9 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Background.h" />
+    <ClInclude Include="BigEnemy.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="CustomMouse.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="HighScore.h" />
     <ClInclude Include="LittleEnemy.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Player.h" />

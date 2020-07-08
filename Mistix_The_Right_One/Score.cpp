@@ -37,6 +37,11 @@ void Score::pointsRender(sf::RenderWindow& window)
 	window.draw(this->score_Text);
 }
 
+int Score::getScore()
+{
+	return this->value;
+}
+
 void Score::setaddPoint(float n)
 {
 	m_addValue = static_cast<int>(n);
