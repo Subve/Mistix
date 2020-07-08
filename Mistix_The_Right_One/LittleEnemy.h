@@ -18,11 +18,12 @@ class LittleEnemy :public Enemy
 {
 private:
 	sf::Texture littleenemy_Texture;
+	
 
 public:
 	LittleEnemy();
 	virtual void Follow();
-	virtual void Attack(Player& gracz);
+	virtual void Attack(Player& gracz,sf::Time &elapsed_time, sf::Time &delta_time);
 	virtual void Rotate(sf::Vector2f& playerpos);
 	virtual void adMove(sf::Vector2f& vektorRuchu);
 	virtual void setDirection(sf::Vector2u& direction2);
@@ -31,6 +32,8 @@ public:
 	virtual void setTrafiony();
 	virtual void setZabity();
 	virtual void setID(int& i);
+	
+	
 	sf::Vector2f playerCenter;
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;
@@ -43,5 +46,7 @@ public:
 	bool zabity;
 	bool polaczone;
 	int HP;
+	
+	
 };
 

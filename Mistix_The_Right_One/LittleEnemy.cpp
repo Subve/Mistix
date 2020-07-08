@@ -1,6 +1,6 @@
 #include "LittleEnemy.h"
 
-LittleEnemy::LittleEnemy() :Enemy()
+LittleEnemy::LittleEnemy() : zabity(false),trafiony(false)
 {
 
 	if (littleenemy_Texture.loadFromFile("tekstury/skeleton-attack_0.png"))
@@ -8,6 +8,8 @@ LittleEnemy::LittleEnemy() :Enemy()
 		std::cout << "Successfully loaded LittleEnemy Texture \n";
 
 	}
+	
+
 	littleenemy_Texture.setRepeated(true);
 	this->setTexture(littleenemy_Texture);
 	this->setScale(sf::Vector2f(0.1f, 0.15f));
@@ -21,8 +23,17 @@ void LittleEnemy::Follow()
 {
 }
 
-void LittleEnemy::Attack(Player& gracz)
+void LittleEnemy::Attack(Player& gracz, sf::Time& elapsed_time, sf::Time& delta_time)
 {
+	if (this->getGlobalBounds().intersects(gracz.getGlobalBounds()))
+	{
+		if (elapsed_time >= delta_time)
+		{
+			gracz.m_playerHealth -= 1;
+			elapsed_time -= delta_time;
+		}
+		
+	}
 }
 
 void LittleEnemy::Rotate(sf::Vector2f& playerpos)
@@ -118,3 +129,7 @@ void LittleEnemy::setID(int &i)
 	this->mobID = i;
 	
 }
+
+
+
+

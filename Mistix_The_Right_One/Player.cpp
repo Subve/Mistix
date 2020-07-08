@@ -16,6 +16,7 @@ Player::Player()
 	this->setPosition(player_startPosition);
 	this->setOrigin(this->getGlobalBounds().width / 2, this->getGlobalBounds().height / 2);
 	this->scale(0.125f, 0.2f);
+	this->m_playerHealth = 100;
 
 
 

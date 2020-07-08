@@ -25,7 +25,7 @@ public:
 	Enemy() :Sprite() {};
 	virtual ~Enemy() = default;
 	virtual void Follow() = 0;
-	virtual void Attack(Player& gracz) = 0;
+	virtual void Attack(Player& gracz, sf::Time& elapsed_time, sf::Time& delta_time) = 0;
 	virtual void Rotate(sf::Vector2f& playermove) = 0;
 	virtual void adMove(sf::Vector2f& vektorRuchu) = 0;
 	virtual void setDirection(sf::Vector2u& direction2) = 0;
@@ -34,6 +34,8 @@ public:
 	virtual void setTrafiony() = 0;
 	virtual void setZabity() = 0;
 	virtual void setID(int& i) = 0;
+	
+
 
 	
 	

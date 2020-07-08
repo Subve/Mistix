@@ -38,5 +38,6 @@ public:
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;
 	sf::Vector2f aimDirNorm;
+	int m_playerHealth;
 };
 

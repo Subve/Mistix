@@ -5,6 +5,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
+#include "EntityManager.h"
 #include "Menu.h"
 #include <cmath>
 #include <math.h>
@@ -17,6 +18,7 @@
 #include "LittleEnemy.h"
 #include "CustomMouse.h"
 #include "Background.h"
+
 #define VIEW_HEIGHT 600
 
 #define  VIEW_WIDTH 800
@@ -425,10 +427,11 @@ public:
 	}
 	
 };*/
+
 int main()
 {
 	std::srand(static_cast<unsigned>(time(NULL)));
-	
+	EntityManager entityManager;
 	Background background;
 	
 	//Creating player
@@ -440,73 +443,11 @@ int main()
 	bulets.push_back(Bullet(b1));
 	int mobIDLicznik=0;
 	//Creating enemies
-	std::vector<std::unique_ptr<Enemy>> enemies;
-	
 	int iteracja_tworzenie_obiektow = 0;
-	while (iteracja_tworzenie_obiektow < 25)
-	{
-
-		while (iteracja_tworzenie_obiektow < 25)
-		{
-			int losowanie_x = rand() % 4;
-			if (losowanie_x == 0)
-			{
-				auto littleEnemy_pozycja_x = static_cast<float>(0);
-				auto littleEnemy_pozycja_y = static_cast<float>(rand() % 400+100);
-				
-				enemies.emplace_back(std::make_unique<LittleEnemy>());
-				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				enemies[iteracja_tworzenie_obiektow]->mobID = mobIDLicznik;
-				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
-				enemies[iteracja_tworzenie_obiektow]->HP = 1;
-				mobIDLicznik++;
-				/*sf::Vector2u e_direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow]->getPosition());*/
-				/*enemies[iteracja_tworzenie_obiektow]->move(enemies[iteracja_tworzenie_obiektow]->direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow].getPosition()));*/
-				iteracja_tworzenie_obiektow++;
-			}
-			if (losowanie_x == 1)
-			{
-				auto littleEnemy_pozycja_x = static_cast<float>(700) ;
-				auto littleEnemy_pozycja_y = static_cast<float>(rand() % 400 + 100);
-				
-				auto enemy = std::make_unique<LittleEnemy>();
-				enemies.emplace_back(std::move(enemy));
-				/*enemies.emplace_back(std::make_unique<LittleEnemy>());*/
-				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				enemies[iteracja_tworzenie_obiektow]->mobID = mobIDLicznik;
-				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
-				enemies[iteracja_tworzenie_obiektow]->HP = 1;
-				mobIDLicznik++;
-				iteracja_tworzenie_obiektow++;
-			}
-			if (losowanie_x == 2)
-			{
-				auto littleEnemy_pozycja_x = static_cast<float>(rand() % 600+100);
-				auto littleEnemy_pozycja_y = static_cast<float>(0);
-				
-				enemies.emplace_back(std::make_unique<LittleEnemy>());
-				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				enemies[iteracja_tworzenie_obiektow]->mobID = mobIDLicznik;
-				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
-				enemies[iteracja_tworzenie_obiektow]->HP = 1;
-				mobIDLicznik++;
-				iteracja_tworzenie_obiektow++;
-			}
-			if (losowanie_x == 3)
-			{
-				auto littleEnemy_pozycja_x = static_cast<float>(rand() % 600+100);
-				auto littleEnemy_pozycja_y = static_cast<float>(500);
-				
-				enemies.emplace_back(std::make_unique<LittleEnemy>());
-				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				enemies[iteracja_tworzenie_obiektow]->mobID = mobIDLicznik;
-				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
-				enemies[iteracja_tworzenie_obiektow]->HP = 1;
-				mobIDLicznik++;
-				iteracja_tworzenie_obiektow++;
-			}
-		}
-	}
+	std::vector<std::unique_ptr<Enemy>> enemies;
+	int newmobID;
+	int howmanyenemies;
+	entityManager.SpawnEnemy(enemies, mobIDLicznik,iteracja_tworzenie_obiektow);
 
 	//Creating window
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
@@ -522,9 +463,20 @@ int main()
 	Score m_scorePoints;
 	m_scorePoints.setValue(0);
 	m_scorePoints.setaddPoint(1);
+		b1.setAmmo(20);
+		b1.setSpeed(5.f);
 	//Timer
+		sf::Time elapsed_time;
+		sf::Clock r;
+		sf::Time elapsed_time_player;
+		sf::Clock r_player;
 	while (window.isOpen())
 	{
+		sf::Time delta_time = sf::milliseconds(1000);
+		elapsed_time += r.restart();
+		sf::Time delta_time_player = sf::milliseconds(2000);
+		elapsed_time_player += r_player.restart();
+
 		
 		sf::Event ev;
 		while(window.pollEvent(ev))
@@ -601,12 +553,13 @@ int main()
 
 		/*std::cout << aimDirNorm.x << " " << aimDirNorm.y << std::endl;*/
 		//Shooting
-		b1.setAmmo(20);
-		b1.setSpeed(5.f);
+		
 		if (b1.bulletTimer<b1.maxbulletTimer)
 		{
 			b1.bulletTimer++;
 		}
+
+		
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left)&&b1.bulletTimer>=b1.maxbulletTimer)
 			{
 				b1.bullet.setPosition(b1.playerCenter);
@@ -629,34 +582,56 @@ int main()
 			//Update of Enemies
 			for (int i = 0;i < enemies.size();i++)
 			{
+				enemies[i]->killedZombie(m_scorePoints, bulets,enemies);
+
+			}
+			howmanyenemies = enemies.size();
+			/*entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);*/
+			
+			for (int i = 0;i < enemies.size();i++)
+			{
+				enemies[i]->Attack(player, delta_time_player, delta_time_player);
+			}
+			for (int i = 0;i < enemies.size();i++)
+
+			{
+				for (int j = 0;j < enemies.size();j++)
+				{
+
+					if (enemies[i]->getLocalBounds().intersects(enemies[j]->getLocalBounds()) && (enemies[i]->mobID != enemies[j]->mobID) && (!enemies[i]->polaczone) && (!enemies[j]->polaczone))
+					{
+
+
+						std::cout << "Polaczone\n";
+						enemies[i]->polaczone = true;
+						enemies[j]->polaczone = true;
+						/*enemies.erase(enemies.begin()+j);*/
+
+						enemies[i]->HP += enemies[j]->HP;
+
+						/*enemies[i]->setScale(2.0, 2.0);*/
+
+					}
+
+				}
+			}
+			if (elapsed_time >= delta_time)
+			{
+				entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
+				elapsed_time -= delta_time;
+			}
+			for (int i = 0;i < enemies.size();i++)
+			{
 				
 				sf::Vector2f playerpos = sf::Vector2f(player.getPosition());
 				enemies[i]->setMove(playerpos);
 				enemies[i]->Rotate(playerpos);
+				
 				/*enemies[i]->setID(enemies);*/
 				
-				
-				for (int j = 0;j < enemies.size();j++)
-				{
-					
-					if(enemies[i]->getLocalBounds().intersects(enemies[j]->getLocalBounds())&&(enemies[i]->mobID != enemies[j]->mobID)&&(!enemies[i]->polaczone)&&(!enemies[j]->polaczone))
-					{
-						
-						
-							std::cout << "Polaczone\n";
-							enemies[i]->polaczone = true;
-							enemies[j]->polaczone = true;
-							enemies.erase(enemies.begin() + j);
-							enemies[i]->HP = 2;
-							/*enemies[i]->setScale(2.0, 2.0);*/
-
-					}
-				}
-				enemies[i]->killedZombie(m_scorePoints, bulets,enemies);
-				
-				
 			}
-		
+			
+
 		//Clear the window
 
 		window.clear();
