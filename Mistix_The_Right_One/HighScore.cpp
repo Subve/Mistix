@@ -33,7 +33,7 @@ void HighScore::updateHighScore(Score& obj)
 		 this->setHighscore(obj);
 		 ssHighScore.str("");
 		 ssHighScore.clear();
-		 this->ssHighScore << "Points : " << this->getHighscore();
+		 this->ssHighScore << "Best : " << this->getHighscore();
 		 this->highscore_Text.setString(ssHighScore.str());
 	}
 }
@@ -84,6 +84,6 @@ void HighScore::showText()
 {
 	ssHighScore.str("");
 	ssHighScore.clear();
-	this->ssHighScore << "Best  : " << this->getHighscore();
+	this->ssHighScore << "Best : " << this->getHighscore();
 	this->highscore_Text.setString(ssHighScore.str());
 }

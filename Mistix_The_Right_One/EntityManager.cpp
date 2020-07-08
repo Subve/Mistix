@@ -7,10 +7,10 @@ EntityManager::EntityManager()
 void EntityManager::SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID,int &iteracja_tworzenie_obiektow)
 {
 	
-	while (iteracja_tworzenie_obiektow < 25)
+	while (iteracja_tworzenie_obiektow < 5)
 	{
 
-		while (iteracja_tworzenie_obiektow < 25)
+		while (iteracja_tworzenie_obiektow < 5)
 		{
 			int losowanie_x = rand() % 4;
 			if (losowanie_x == 0)
