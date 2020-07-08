@@ -1,0 +1,27 @@
+#pragma once
+#include <iostream>
+#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
+#include <cmath>
+#include <math.h>
+#include <memory>
+#include <sstream>
+#include "Enemy.h"
+#include "LittleEnemy.h"
+class EntityManager
+{
+private:
+
+public:
+
+	EntityManager();
+
+	void SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies,int &mobID, int& iteracja_tworzenie_obiektow);
+	void RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID, int& iteracja_tworzenie_obiektow);
+	int enemyTimer;
+	int enemyTimerMax;
+};
+
