@@ -610,7 +610,7 @@ int main()
 						enemies[j]->polaczone = true;
 						/*enemies.erase(enemies.begin()+j);*/
 
-						enemies[i]->HP += enemies[j]->HP;
+						enemies[i]->HP +=1;
 
 						/*enemies[i]->setScale(2.0, 2.0);*/
 
@@ -618,6 +618,7 @@ int main()
 
 				}
 			}
+			
 			if (elapsed_time >= delta_time)
 			{
 				entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
