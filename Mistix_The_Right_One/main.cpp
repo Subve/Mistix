@@ -472,6 +472,7 @@ int main()
 		sf::Clock r;
 		sf::Time elapsed_time_player;
 		sf::Clock r_player;
+		bool pause=false;
 	while (window.isOpen())
 	{
 		sf::Time delta_time = sf::milliseconds(1000);
@@ -528,41 +529,61 @@ int main()
 			case sf::Event::Closed:
 				window.close();
 				break;
+			case sf::Event::KeyPressed:
+				
+			{
+				if (ev.key.code == sf::Keyboard::P&&!pause)
+				{
+					pause = true;
+					
+					
+				}
+				if (ev.key.code == sf::Keyboard::O&&pause)
+				{
+					pause = false;
+
+				}
+
+				break;
+			}
+				
+				
 
 			}
 		//Update the game
-		
-		player.playerUpdate(window);
-		player.playerCenter = sf::Vector2f(player.getPosition().x, player.getPosition().y);
-		player.mousePosWindow = sf::Vector2f(sf::Mouse::getPosition(window));
-		player.aimDir = player.mousePosWindow - player.playerCenter;
-		player.aimDirNorm = player.aimDir/ (sqrt(pow(player.aimDir.x, 2) + pow(player.aimDir.y, 2)));
-
-		b1.playerCenter=player.playerCenter;
-		b1.mousePosWindow=player.mousePosWindow;
-		b1.aimDir =player.aimDir;
-		b1.aimDirNorm=player.aimDirNorm;
-
-		custom_mouse.playerCenter = player.playerCenter;
-		custom_mouse.mousePosWindow = player.mousePosWindow;
-		custom_mouse.aimDir = player.aimDir;
-		custom_mouse.aimDirNorm = player.aimDirNorm;
-
-
-		
-		
-		
-
-		/*std::cout << aimDirNorm.x << " " << aimDirNorm.y << std::endl;*/
-		//Shooting
-		
-		if (b1.bulletTimer<b1.maxbulletTimer)
+		if(!pause)
 		{
-			b1.bulletTimer++;
-		}
+			player.playerUpdate(window);
+			player.playerCenter = sf::Vector2f(player.getPosition().x, player.getPosition().y);
+			player.mousePosWindow = sf::Vector2f(sf::Mouse::getPosition(window));
+			player.aimDir = player.mousePosWindow - player.playerCenter;
+			player.aimDirNorm = player.aimDir / (sqrt(pow(player.aimDir.x, 2) + pow(player.aimDir.y, 2)));
 
-		
-			if (sf::Mouse::isButtonPressed(sf::Mouse::Left)&&b1.bulletTimer>=b1.maxbulletTimer)
+			b1.playerCenter = player.playerCenter;
+			b1.mousePosWindow = player.mousePosWindow;
+			b1.aimDir = player.aimDir;
+			b1.aimDirNorm = player.aimDirNorm;
+
+			custom_mouse.playerCenter = player.playerCenter;
+			custom_mouse.mousePosWindow = player.mousePosWindow;
+			custom_mouse.aimDir = player.aimDir;
+			custom_mouse.aimDirNorm = player.aimDirNorm;
+
+
+
+
+
+
+			/*std::cout << aimDirNorm.x << " " << aimDirNorm.y << std::endl;*/
+			//Shooting
+
+			if (b1.bulletTimer < b1.maxbulletTimer)
+			{
+				b1.bulletTimer++;
+			}
+
+
+			if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && b1.bulletTimer >= b1.maxbulletTimer)
 			{
 				b1.bullet.setPosition(b1.playerCenter);
 				b1.currVelocity = b1.aimDirNorm * b1.maxSpeed;
@@ -570,7 +591,7 @@ int main()
 				bulets.push_back(Bullet(b1));
 				b1.bulletTimer = 0;
 			}
-		
+
 			for (int i = 0;i < bulets.size();i++)
 			{
 				bulets[i].bullet.move(bulets[i].currVelocity);
@@ -578,19 +599,19 @@ int main()
 					bulets.erase(bulets.begin() + i);
 
 			}
-		//Update the mouse
+			//Update the mouse
 			custom_mouse.mouseUpdate();
 
 			//Update of Enemies
 			for (int i = 0;i < enemies.size();i++)
 			{
-				enemies[i]->killedZombie(m_scorePoints, bulets,enemies);
+				enemies[i]->killedZombie(m_scorePoints, bulets, enemies);
 
 
 			}
 			howmanyenemies = enemies.size();
 			/*entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);*/
-			
+
 			for (int i = 0;i < enemies.size();i++)
 			{
 				enemies[i]->Attack(player, delta_time_player, delta_time_player);
@@ -610,7 +631,7 @@ int main()
 						enemies[j]->polaczone = true;
 						/*enemies.erase(enemies.begin()+j);*/
 
-						enemies[i]->HP +=1;
+						enemies[i]->HP += 1;
 
 						/*enemies[i]->setScale(2.0, 2.0);*/
 
@@ -618,7 +639,7 @@ int main()
 
 				}
 			}
-			
+
 			if (elapsed_time >= delta_time)
 			{
 				entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
@@ -626,15 +647,16 @@ int main()
 			}
 			for (int i = 0;i < enemies.size();i++)
 			{
-				
+
 				sf::Vector2f playerpos = sf::Vector2f(player.getPosition());
 				enemies[i]->setMove(playerpos);
 				enemies[i]->Rotate(playerpos);
-				
+
 				/*enemies[i]->setID(enemies);*/
-				
+
 			}
-			
+
+		}
 
 		//Clear the window
 
