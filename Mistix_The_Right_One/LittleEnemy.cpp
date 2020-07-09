@@ -91,17 +91,20 @@ void LittleEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::
 
 
 					}
-					if (enemies[j]->HP == 0)
+					if(enemies.size()>2)
 					{
-						enemies[j]->setZabity();
-					}
-					if (trafiony && zabity)
-					{
-						enemies.erase(enemies.begin() + j);
-						
-						wynik.setaddPoint(1);
-						wynik.addPoints();
-						wynik.updateText();
+						if (enemies[j]->HP <= 0)
+						{
+							enemies[j]->setZabity();
+						}
+						if (trafiony && zabity)
+						{
+							enemies.erase(enemies.begin() + j);
+
+							wynik.setaddPoint(1);
+							wynik.addPoints();
+							wynik.updateText();
+						}
 					}
 
 

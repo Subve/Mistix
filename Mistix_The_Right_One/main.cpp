@@ -620,7 +620,9 @@ int main()
 			//Update of Enemies
 			for (int i = 0;i < enemies.size();i++)
 			{
+				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 				enemies[i]->killedZombie(m_scorePoints, bulets, enemies);
+				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 
 
 			}
@@ -630,6 +632,7 @@ int main()
 			for (int i = 0;i < enemies.size();i++)
 			{
 				enemies[i]->Attack(player, delta_time_player, delta_time_player);
+				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 			}
 			for (int i = 0;i < enemies.size();i++)
 
@@ -647,6 +650,7 @@ int main()
 						enemies[i]->HP+=1;
 
 						enemies.erase(enemies.begin()+j);
+						entityManager.keepEnemies(enemies,newmobID,iteracja_tworzenie_obiektow);
 
 						
 						/*enemies[i]->setScale(2.0, 2.0);*/
@@ -669,6 +673,7 @@ int main()
 				{
 					enemies[i]->setMove(playerpos);
 					enemies[i]->Rotate(playerpos);
+					entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 				}
 
 				/*enemies[i]->setID(enemies);*/
