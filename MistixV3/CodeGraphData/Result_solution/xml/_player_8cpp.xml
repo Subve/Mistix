@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_player_8cpp" kind="file">
+    <compoundname>Player.cpp</compoundname>
+    <includes refid="_player_8h" local="yes">Player.h</includes>
+    <incdepgraph>
+      <node id="240">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="236">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="239">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="242">
+        <label>Game.h</label>
+        <link refid="_game_8h"/>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>C:/Users/milos/Documents/Mistix/MistixV3/Player.cpp</label>
+        <link refid="Player.cpp"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="241">
+        <label>ctime</label>
+      </node>
+      <node id="235">
+        <label>iostream</label>
+      </node>
+      <node id="234">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>SFML/System.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_8h" kindref="compound">Player.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//Create<sp/>Player</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="class_player_1af1d88b7ee66513d3426fc606ea88cb7f" refkind="member"><highlight class="normal"><ref refid="class_player_1aaa23b3bf80e8c0267cf08d4fe4d6ddc1" kindref="member">Player::Player</ref>(sf::Texture*<sp/>texture)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1a2273be994c99f1c86fa25147b6551e8b" kindref="member">initPlayer</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" kindref="member">body</ref>.setTexture(texture);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10" refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" refkind="member"><highlight class="normal"><ref refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" kindref="member">Player::~Player</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//Initialize<sp/>player</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_player_1a2273be994c99f1c86fa25147b6551e8b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a2273be994c99f1c86fa25147b6551e8b" kindref="member">Player::initPlayer</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" kindref="member">body</ref>.setSize(sf::Vector2f(100.0f,<sp/>100.0f));</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" kindref="member">body</ref>.setOrigin(<ref refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" kindref="member">body</ref>.getSize().x<sp/>/<sp/>2,<sp/><ref refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" kindref="member">body</ref>.getSize().y<sp/>/<sp/>2);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" kindref="member">body</ref>.setPosition(this-&gt;<ref refid="class_player_1ad10e0970807043d46ae4998a386794be" kindref="member">startPlayerPos</ref>);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23" refid="class_player_1a7733065f6843bba8b34d8174451ff39c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a7733065f6843bba8b34d8174451ff39c" kindref="member">Player::initPlayerVar</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1ad10e0970807043d46ae4998a386794be" kindref="member">startPlayerPos</ref><sp/>=<sp/>sf::Vector2f(400.0f,<sp/>400.0f);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//Update<sp/>the<sp/>player<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_player_1a1cccc32baac4cc44b690edd033afc97b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a1cccc32baac4cc44b690edd033afc97b" kindref="member">Player::playerUpdate</ref>()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//draw<sp/>player</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_player_1a6435413a88749e18e104df827ee5a97a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a6435413a88749e18e104df827ee5a97a" kindref="member">Player::playerRender</ref>()</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.cpp"/>
+  </compounddef>
+</doxygen>

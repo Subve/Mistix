@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_menu" kind="class" prot="public">
+    <compoundname>Menu</compoundname>
+    <includes refid="_menu_8h" local="no">Menu.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_menu_1a27e1dd40a9434618b7a7f8ef18cf65b4" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_menu" kindref="compound">Menu</ref> &gt;</type>
+        <definition>std::vector&lt;Menu&gt; Menu::menus</definition>
+        <argsstring></argsstring>
+        <name>menus</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="17" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_menu_1a464ef16fd28c0df35ee1d9f78c0ef895" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Menu::selectedItemIndex</definition>
+        <argsstring></argsstring>
+        <name>selectedItemIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="19" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_menu_1a8caa6100506d4b8e0d782e550dbc470e" compoundref="_menu_8cpp" startline="4" endline="33">Menu</referencedby>
+        <referencedby refid="class_menu_1a804da9a381bb6c633d5d2bc4f839ec62" compoundref="_menu_8cpp" startline="57" endline="65">MoveDown</referencedby>
+        <referencedby refid="class_menu_1acfb038bbd1050d6c55c86eec1f35dbdb" compoundref="_menu_8cpp" startline="47" endline="55">MoveUp</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1a2e58654dcca7aa1804e11aece3e9a0cb" prot="private" static="no" mutable="no">
+        <type>sf::Font</type>
+        <definition>sf::Font Menu::m_font</definition>
+        <argsstring></argsstring>
+        <name>m_font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="20" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_menu_1a8caa6100506d4b8e0d782e550dbc470e" compoundref="_menu_8cpp" startline="4" endline="33">Menu</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_menu_1ab6208eace45494b27d3dd32af72009ed" prot="private" static="no" mutable="no">
+        <type>sf::Text</type>
+        <definition>sf::Text Menu::m_menu[MAX_NUMBER_OF_ITEMS]</definition>
+        <argsstring>[MAX_NUMBER_OF_ITEMS]</argsstring>
+        <name>m_menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="21" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_menu_1a1443dcfd1c1c9844c40658d752c1fbab" compoundref="_menu_8cpp" startline="39" endline="45">draw</referencedby>
+        <referencedby refid="class_menu_1a8caa6100506d4b8e0d782e550dbc470e" compoundref="_menu_8cpp" startline="4" endline="33">Menu</referencedby>
+        <referencedby refid="class_menu_1a804da9a381bb6c633d5d2bc4f839ec62" compoundref="_menu_8cpp" startline="57" endline="65">MoveDown</referencedby>
+        <referencedby refid="class_menu_1acfb038bbd1050d6c55c86eec1f35dbdb" compoundref="_menu_8cpp" startline="47" endline="55">MoveUp</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_menu_1a8caa6100506d4b8e0d782e550dbc470e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Menu::Menu</definition>
+        <argsstring>(float width, float height)</argsstring>
+        <name>Menu</name>
+        <param>
+          <type>float</type>
+          <declname>width</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="10" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.cpp" bodystart="4" bodyend="33"/>
+        <references refid="class_menu_1a2e58654dcca7aa1804e11aece3e9a0cb" compoundref="_menu_8h" startline="20">m_font</references>
+        <references refid="class_menu_1ab6208eace45494b27d3dd32af72009ed" compoundref="_menu_8h" startline="21">m_menu</references>
+        <references refid="_menu_8h_1a34e819be6bb222b369578bb037bb3564" compoundref="_menu_8h" startline="5">MAX_NUMBER_OF_ITEMS</references>
+        <references refid="class_menu_1a464ef16fd28c0df35ee1d9f78c0ef895" compoundref="_menu_8h" startline="19">selectedItemIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1a831387f51358cfb88cd018e1777bc980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Menu::~Menu</definition>
+        <argsstring>()</argsstring>
+        <name>~Menu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="11" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1a1443dcfd1c1c9844c40658d752c1fbab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::draw</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>draw</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="13" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.cpp" bodystart="39" bodyend="45"/>
+        <references refid="class_menu_1ab6208eace45494b27d3dd32af72009ed" compoundref="_menu_8h" startline="21">m_menu</references>
+        <references refid="_menu_8h_1a34e819be6bb222b369578bb037bb3564" compoundref="_menu_8h" startline="5">MAX_NUMBER_OF_ITEMS</references>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1acfb038bbd1050d6c55c86eec1f35dbdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::MoveUp</definition>
+        <argsstring>()</argsstring>
+        <name>MoveUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="14" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.cpp" bodystart="47" bodyend="55"/>
+        <references refid="class_menu_1ab6208eace45494b27d3dd32af72009ed" compoundref="_menu_8h" startline="21">m_menu</references>
+        <references refid="class_menu_1a464ef16fd28c0df35ee1d9f78c0ef895" compoundref="_menu_8h" startline="19">selectedItemIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1a804da9a381bb6c633d5d2bc4f839ec62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Menu::MoveDown</definition>
+        <argsstring>()</argsstring>
+        <name>MoveDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="15" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.cpp" bodystart="57" bodyend="65"/>
+        <references refid="class_menu_1ab6208eace45494b27d3dd32af72009ed" compoundref="_menu_8h" startline="21">m_menu</references>
+        <references refid="_menu_8h_1a34e819be6bb222b369578bb037bb3564" compoundref="_menu_8h" startline="5">MAX_NUMBER_OF_ITEMS</references>
+        <references refid="class_menu_1a464ef16fd28c0df35ee1d9f78c0ef895" compoundref="_menu_8h" startline="19">selectedItemIndex</references>
+      </memberdef>
+      <memberdef kind="function" id="class_menu_1a81b2029bf7783f38be26000969e99e30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Menu::GetPressedItem</definition>
+        <argsstring>()</argsstring>
+        <name>GetPressedItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="16" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="34">
+        <label>Menu</label>
+        <link refid="class_menu"/>
+        <childnode refid="35" relation="usage">
+          <edgelabel>menus</edgelabel>
+        </childnode>
+      </node>
+      <node id="35">
+        <label>std::vector&lt; Menu &gt;</label>
+        <childnode refid="34" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" line="8" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Menu.h" bodystart="7" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_menu_1a1443dcfd1c1c9844c40658d752c1fbab" prot="public" virt="non-virtual"><scope>Menu</scope><name>draw</name></member>
+      <member refid="class_menu_1a81b2029bf7783f38be26000969e99e30" prot="public" virt="non-virtual"><scope>Menu</scope><name>GetPressedItem</name></member>
+      <member refid="class_menu_1a2e58654dcca7aa1804e11aece3e9a0cb" prot="private" virt="non-virtual"><scope>Menu</scope><name>m_font</name></member>
+      <member refid="class_menu_1ab6208eace45494b27d3dd32af72009ed" prot="private" virt="non-virtual"><scope>Menu</scope><name>m_menu</name></member>
+      <member refid="class_menu_1a8caa6100506d4b8e0d782e550dbc470e" prot="public" virt="non-virtual"><scope>Menu</scope><name>Menu</name></member>
+      <member refid="class_menu_1a27e1dd40a9434618b7a7f8ef18cf65b4" prot="public" virt="non-virtual"><scope>Menu</scope><name>menus</name></member>
+      <member refid="class_menu_1a804da9a381bb6c633d5d2bc4f839ec62" prot="public" virt="non-virtual"><scope>Menu</scope><name>MoveDown</name></member>
+      <member refid="class_menu_1acfb038bbd1050d6c55c86eec1f35dbdb" prot="public" virt="non-virtual"><scope>Menu</scope><name>MoveUp</name></member>
+      <member refid="class_menu_1a464ef16fd28c0df35ee1d9f78c0ef895" prot="private" virt="non-virtual"><scope>Menu</scope><name>selectedItemIndex</name></member>
+      <member refid="class_menu_1a831387f51358cfb88cd018e1777bc980" prot="public" virt="non-virtual"><scope>Menu</scope><name>~Menu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_state_machine" kind="class" prot="public">
+    <compoundname>StateMachine</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/main.cpp" line="381" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/main.cpp" bodystart="380" bodyend="383"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

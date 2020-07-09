@@ -20,7 +20,8 @@ public:
 	EntityManager();
 
 	void SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies,int &mobID, int& iteracja_tworzenie_obiektow);
-	void RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID, int& iteracja_tworzenie_obiektow);
+	void RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID1, int& iteracja_tworzenie_obiektow);
+	void InitEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID, int& iteracja_tworzenie_obiektow);
 	int enemyTimer;
 	int enemyTimerMax;
 };

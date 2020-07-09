@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_little_enemy" kind="class" prot="public">
+    <compoundname>LittleEnemy</compoundname>
+    <basecompoundref refid="class_enemy" prot="public" virt="non-virtual">Enemy</basecompoundref>
+    <includes refid="_little_enemy_8h" local="no">LittleEnemy.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_little_enemy_1aceef8fcbba7bb941db01288f590dc4d7" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture LittleEnemy::littleenemy_Texture</definition>
+        <argsstring></argsstring>
+        <name>littleenemy_Texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="20" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1af1aa6b38ee21b97ce3df8ba9e72628de" compoundref="_little_enemy_8cpp" startline="3" endline="20">LittleEnemy</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_little_enemy_1ab4ffae28b8ef978861155483d7cd3026" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f LittleEnemy::playerCenter</definition>
+        <argsstring></argsstring>
+        <name>playerCenter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="37" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c" compoundref="_little_enemy_8cpp" startline="57" endline="67">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1ad76a81f61da7b1757a2c46189fcfc270" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f LittleEnemy::mousePosWindow</definition>
+        <argsstring></argsstring>
+        <name>mousePosWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="38" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c" compoundref="_little_enemy_8cpp" startline="57" endline="67">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1abe9c4791ba3c847fc87bc7682ebdabc9" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f LittleEnemy::aimDir</definition>
+        <argsstring></argsstring>
+        <name>aimDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="39" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c" compoundref="_little_enemy_8cpp" startline="57" endline="67">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1a1c24e4cfc9de2d8fb3510de8238e8d85" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f LittleEnemy::aimDirNorm</definition>
+        <argsstring></argsstring>
+        <name>aimDirNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="40" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c" compoundref="_little_enemy_8cpp" startline="57" endline="67">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1a3fef11bdc3aa1519ca245d021fd2dd5d" prot="public" static="no" mutable="no">
+        <type>sf::Vector2u</type>
+        <definition>sf::Vector2u LittleEnemy::direction</definition>
+        <argsstring></argsstring>
+        <name>direction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="41" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1ad96627da6b5fc10e6964574d53242294" compoundref="_little_enemy_8cpp" startline="51" endline="55">setDirection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1a403f1c273df04bf41a3d8e91dab14e6a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float LittleEnemy::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="42" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1a70c299533aa817f311cd72640af7d52b" compoundref="_little_enemy_8cpp" startline="39" endline="44">Rotate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1acc5c7f5d033d3e330a89c5d6b214d050" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LittleEnemy::mobID</definition>
+        <argsstring></argsstring>
+        <name>mobID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="43" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1aea325e6e755a9b89d90fd93b6616a104" compoundref="_little_enemy_8cpp" startline="126" endline="131">setID</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1a1f14aafb4fb4e330cc673cf6d983ea77" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f LittleEnemy::enemyPos</definition>
+        <argsstring></argsstring>
+        <name>enemyPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="44" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1a70c299533aa817f311cd72640af7d52b" compoundref="_little_enemy_8cpp" startline="39" endline="44">Rotate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1a1c2ab9248ebb12c27e19070855e81e0f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LittleEnemy::trafiony</definition>
+        <argsstring></argsstring>
+        <name>trafiony</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="45" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1acf081ba5e86a4ea2834d13f02f633667" compoundref="_little_enemy_8cpp" startline="69" endline="112">killedZombie</referencedby>
+        <referencedby refid="class_little_enemy_1af1aa6b38ee21b97ce3df8ba9e72628de" compoundref="_little_enemy_8cpp" startline="3" endline="20">LittleEnemy</referencedby>
+        <referencedby refid="class_little_enemy_1a3998c9f6dceb8b77ea4b81baff61d534" compoundref="_little_enemy_8cpp" startline="114" endline="118">setTrafiony</referencedby>
+        <referencedby refid="class_little_enemy_1a26e35171350239289eecda211f37cc94" compoundref="_little_enemy_8cpp" startline="120" endline="124">setZabity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1abbce2ec48e6c31a8d63ab45a14b61ac9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LittleEnemy::zabity</definition>
+        <argsstring></argsstring>
+        <name>zabity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="46" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1acf081ba5e86a4ea2834d13f02f633667" compoundref="_little_enemy_8cpp" startline="69" endline="112">killedZombie</referencedby>
+        <referencedby refid="class_little_enemy_1af1aa6b38ee21b97ce3df8ba9e72628de" compoundref="_little_enemy_8cpp" startline="3" endline="20">LittleEnemy</referencedby>
+        <referencedby refid="class_little_enemy_1a3998c9f6dceb8b77ea4b81baff61d534" compoundref="_little_enemy_8cpp" startline="114" endline="118">setTrafiony</referencedby>
+        <referencedby refid="class_little_enemy_1a26e35171350239289eecda211f37cc94" compoundref="_little_enemy_8cpp" startline="120" endline="124">setZabity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1a485a475286d864a699565fad83ecf8a3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool LittleEnemy::polaczone</definition>
+        <argsstring></argsstring>
+        <name>polaczone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="47" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1af1aa6b38ee21b97ce3df8ba9e72628de" compoundref="_little_enemy_8cpp" startline="3" endline="20">LittleEnemy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_little_enemy_1adc43c196fdcf2637d371ccba3b17b071" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int LittleEnemy::HP</definition>
+        <argsstring></argsstring>
+        <name>HP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="48" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1acf081ba5e86a4ea2834d13f02f633667" compoundref="_little_enemy_8cpp" startline="69" endline="112">killedZombie</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_little_enemy_1af1aa6b38ee21b97ce3df8ba9e72628de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>LittleEnemy::LittleEnemy</definition>
+        <argsstring>()</argsstring>
+        <name>LittleEnemy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="24" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="3" bodyend="20"/>
+        <references refid="class_little_enemy_1aceef8fcbba7bb941db01288f590dc4d7" compoundref="_little_enemy_8h" startline="20">littleenemy_Texture</references>
+        <references refid="class_little_enemy_1a485a475286d864a699565fad83ecf8a3" compoundref="_little_enemy_8h" startline="47">polaczone</references>
+        <references refid="class_little_enemy_1a1c2ab9248ebb12c27e19070855e81e0f" compoundref="_little_enemy_8h" startline="45">trafiony</references>
+        <references refid="class_little_enemy_1abbce2ec48e6c31a8d63ab45a14b61ac9" compoundref="_little_enemy_8h" startline="46">zabity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1aa71d67b8c3a38aa82438a1a310dac5c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::Follow</definition>
+        <argsstring>()</argsstring>
+        <name>Follow</name>
+        <reimplements refid="class_enemy_1a6d512d3f2d4c47dbd8b9e7a35e8f2b48">Follow</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="25" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1a3c6a14f2d1ef17d12770f0ed7dd84b96" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::Attack</definition>
+        <argsstring>(Player &amp;gracz, sf::Time &amp;elapsed_time, sf::Time &amp;delta_time)</argsstring>
+        <name>Attack</name>
+        <reimplements refid="class_enemy_1a89a5afba8c05af383c988376056edbb7">Attack</reimplements>
+        <param>
+          <type><ref refid="class_player" kindref="compound">Player</ref> &amp;</type>
+          <declname>gracz</declname>
+        </param>
+        <param>
+          <type>sf::Time &amp;</type>
+          <declname>elapsed_time</declname>
+        </param>
+        <param>
+          <type>sf::Time &amp;</type>
+          <declname>delta_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="26" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="26" bodyend="37"/>
+        <references refid="class_player_1afe84e9ff73bc2d371d3f639c1ea185ed" compoundref="_player_8h" startline="41">Player::m_playerHealth</references>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1a70c299533aa817f311cd72640af7d52b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::Rotate</definition>
+        <argsstring>(sf::Vector2f &amp;playerpos)</argsstring>
+        <name>Rotate</name>
+        <reimplements refid="class_enemy_1a989db63499ca2dedc4c378e394716465">Rotate</reimplements>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>playerpos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="27" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="39" bodyend="44"/>
+        <references refid="class_little_enemy_1a403f1c273df04bf41a3d8e91dab14e6a" compoundref="_little_enemy_8h" startline="42">angle</references>
+        <references refid="class_little_enemy_1a1f14aafb4fb4e330cc673cf6d983ea77" compoundref="_little_enemy_8h" startline="44">enemyPos</references>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1a269580aa7291f3a173442abbb717d36f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::adMove</definition>
+        <argsstring>(sf::Vector2f &amp;vektorRuchu)</argsstring>
+        <name>adMove</name>
+        <reimplements refid="class_enemy_1a5354bf2928be395d73d250fa2ec47979">adMove</reimplements>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>vektorRuchu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="28" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="46" bodyend="49"/>
+        <referencedby refid="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c" compoundref="_little_enemy_8cpp" startline="57" endline="67">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1ad96627da6b5fc10e6964574d53242294" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::setDirection</definition>
+        <argsstring>(sf::Vector2u &amp;direction2)</argsstring>
+        <name>setDirection</name>
+        <reimplements refid="class_enemy_1a29e6dc0eb9a9a4a9885e741c0de2668a">setDirection</reimplements>
+        <param>
+          <type>sf::Vector2u &amp;</type>
+          <declname>direction2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="29" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="51" bodyend="55"/>
+        <references refid="class_little_enemy_1a3fef11bdc3aa1519ca245d021fd2dd5d" compoundref="_little_enemy_8h" startline="41">direction</references>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::setMove</definition>
+        <argsstring>(sf::Vector2f &amp;playermove)</argsstring>
+        <name>setMove</name>
+        <reimplements refid="class_enemy_1a13942e703c41473fe1dc20957cfc18e3">setMove</reimplements>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>playermove</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="30" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="57" bodyend="67"/>
+        <references refid="class_little_enemy_1a269580aa7291f3a173442abbb717d36f" compoundref="_little_enemy_8cpp" startline="46" endline="49">adMove</references>
+        <references refid="class_little_enemy_1abe9c4791ba3c847fc87bc7682ebdabc9" compoundref="_little_enemy_8h" startline="39">aimDir</references>
+        <references refid="class_little_enemy_1a1c24e4cfc9de2d8fb3510de8238e8d85" compoundref="_little_enemy_8h" startline="40">aimDirNorm</references>
+        <references refid="class_little_enemy_1ad76a81f61da7b1757a2c46189fcfc270" compoundref="_little_enemy_8h" startline="38">mousePosWindow</references>
+        <references refid="class_little_enemy_1ab4ffae28b8ef978861155483d7cd3026" compoundref="_little_enemy_8h" startline="37">playerCenter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1acf081ba5e86a4ea2834d13f02f633667" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::killedZombie</definition>
+        <argsstring>(Score &amp;wynik, std::vector&lt; Bullet &gt; &amp;pociski, std::vector&lt; std::unique_ptr&lt; Enemy &gt;&gt; &amp;enemies)</argsstring>
+        <name>killedZombie</name>
+        <reimplements refid="class_enemy_1afce1da6371d74ad0e152398d2534a96b">killedZombie</reimplements>
+        <param>
+          <type><ref refid="class_score" kindref="compound">Score</ref> &amp;</type>
+          <declname>wynik</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_bullet" kindref="compound">Bullet</ref> &gt; &amp;</type>
+          <declname>pociski</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::unique_ptr&lt; <ref refid="class_enemy" kindref="compound">Enemy</ref> &gt;&gt; &amp;</type>
+          <declname>enemies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="31" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="69" bodyend="112"/>
+        <references refid="class_score_1a4214e1c3774fc4eb7cf3b23c6e0eeef8" compoundref="_score_8cpp" startline="50" endline="53">Score::addPoints</references>
+        <references refid="class_little_enemy_1adc43c196fdcf2637d371ccba3b17b071" compoundref="_little_enemy_8h" startline="48">HP</references>
+        <references refid="class_score_1ae1508009aec07d5353ceb36c3c9a1ac8" compoundref="_score_8cpp" startline="45" endline="48">Score::setaddPoint</references>
+        <references refid="class_little_enemy_1a1c2ab9248ebb12c27e19070855e81e0f" compoundref="_little_enemy_8h" startline="45">trafiony</references>
+        <references refid="class_score_1acadffb62d3dac8295f0cd55b33e4e269" compoundref="_score_8cpp" startline="22" endline="28">Score::updateText</references>
+        <references refid="class_little_enemy_1abbce2ec48e6c31a8d63ab45a14b61ac9" compoundref="_little_enemy_8h" startline="46">zabity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1a3998c9f6dceb8b77ea4b81baff61d534" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::setTrafiony</definition>
+        <argsstring>()</argsstring>
+        <name>setTrafiony</name>
+        <reimplements refid="class_enemy_1ae3895590d7a7cbeaaa788be55f14e199">setTrafiony</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="32" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="114" bodyend="118"/>
+        <references refid="class_little_enemy_1a1c2ab9248ebb12c27e19070855e81e0f" compoundref="_little_enemy_8h" startline="45">trafiony</references>
+        <references refid="class_little_enemy_1abbce2ec48e6c31a8d63ab45a14b61ac9" compoundref="_little_enemy_8h" startline="46">zabity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1a26e35171350239289eecda211f37cc94" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::setZabity</definition>
+        <argsstring>()</argsstring>
+        <name>setZabity</name>
+        <reimplements refid="class_enemy_1a57f288226e09d333e9f01a31580eb393">setZabity</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="33" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="120" bodyend="124"/>
+        <references refid="class_little_enemy_1a1c2ab9248ebb12c27e19070855e81e0f" compoundref="_little_enemy_8h" startline="45">trafiony</references>
+        <references refid="class_little_enemy_1abbce2ec48e6c31a8d63ab45a14b61ac9" compoundref="_little_enemy_8h" startline="46">zabity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_little_enemy_1aea325e6e755a9b89d90fd93b6616a104" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void LittleEnemy::setID</definition>
+        <argsstring>(int &amp;i)</argsstring>
+        <name>setID</name>
+        <reimplements refid="class_enemy_1a7127d2dccfe0e9162b564575e9377095">setID</reimplements>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="34" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.cpp" bodystart="126" bodyend="131"/>
+        <references refid="class_little_enemy_1acc5c7f5d033d3e330a89c5d6b214d050" compoundref="_little_enemy_8h" startline="43">mobID</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="27">
+        <label>LittleEnemy</label>
+        <link refid="class_little_enemy"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>sf::Sprite</label>
+      </node>
+      <node id="28">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="30">
+        <label>LittleEnemy</label>
+        <link refid="class_little_enemy"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>sf::Sprite</label>
+      </node>
+      <node id="31">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" line="18" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/LittleEnemy.h" bodystart="17" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_little_enemy_1a269580aa7291f3a173442abbb717d36f" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>adMove</name></member>
+      <member refid="class_little_enemy_1abe9c4791ba3c847fc87bc7682ebdabc9" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>aimDir</name></member>
+      <member refid="class_little_enemy_1a1c24e4cfc9de2d8fb3510de8238e8d85" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>aimDirNorm</name></member>
+      <member refid="class_little_enemy_1a403f1c273df04bf41a3d8e91dab14e6a" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>angle</name></member>
+      <member refid="class_little_enemy_1a3c6a14f2d1ef17d12770f0ed7dd84b96" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>Attack</name></member>
+      <member refid="class_little_enemy_1a3fef11bdc3aa1519ca245d021fd2dd5d" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>direction</name></member>
+      <member refid="class_enemy_1a94f30d348b6d2840fd71675472ba38dd" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>Enemy</name></member>
+      <member refid="class_little_enemy_1a1f14aafb4fb4e330cc673cf6d983ea77" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>enemyPos</name></member>
+      <member refid="class_little_enemy_1aa71d67b8c3a38aa82438a1a310dac5c8" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>Follow</name></member>
+      <member refid="class_little_enemy_1adc43c196fdcf2637d371ccba3b17b071" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>HP</name></member>
+      <member refid="class_little_enemy_1acf081ba5e86a4ea2834d13f02f633667" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>killedZombie</name></member>
+      <member refid="class_little_enemy_1af1aa6b38ee21b97ce3df8ba9e72628de" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>LittleEnemy</name></member>
+      <member refid="class_little_enemy_1aceef8fcbba7bb941db01288f590dc4d7" prot="private" virt="non-virtual"><scope>LittleEnemy</scope><name>littleenemy_Texture</name></member>
+      <member refid="class_little_enemy_1acc5c7f5d033d3e330a89c5d6b214d050" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>mobID</name></member>
+      <member refid="class_little_enemy_1ad76a81f61da7b1757a2c46189fcfc270" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>mousePosWindow</name></member>
+      <member refid="class_little_enemy_1ab4ffae28b8ef978861155483d7cd3026" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>playerCenter</name></member>
+      <member refid="class_little_enemy_1a485a475286d864a699565fad83ecf8a3" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>polaczone</name></member>
+      <member refid="class_little_enemy_1a70c299533aa817f311cd72640af7d52b" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>Rotate</name></member>
+      <member refid="class_little_enemy_1ad96627da6b5fc10e6964574d53242294" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>setDirection</name></member>
+      <member refid="class_little_enemy_1aea325e6e755a9b89d90fd93b6616a104" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>setID</name></member>
+      <member refid="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>setMove</name></member>
+      <member refid="class_little_enemy_1a3998c9f6dceb8b77ea4b81baff61d534" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>setTrafiony</name></member>
+      <member refid="class_little_enemy_1a26e35171350239289eecda211f37cc94" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>setZabity</name></member>
+      <member refid="class_little_enemy_1a1c2ab9248ebb12c27e19070855e81e0f" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>trafiony</name></member>
+      <member refid="class_little_enemy_1abbce2ec48e6c31a8d63ab45a14b61ac9" prot="public" virt="non-virtual"><scope>LittleEnemy</scope><name>zabity</name></member>
+      <member refid="class_enemy_1aafb628c66008e33afdd750e2f492bd98" prot="public" virt="virtual"><scope>LittleEnemy</scope><name>~Enemy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_custom_mouse" kind="class" prot="public">
+    <compoundname>CustomMouse</compoundname>
+    <includes refid="_custom_mouse_8h" local="no">CustomMouse.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_custom_mouse_1a0f8f088ed4bbb7f170c5fd086f0b17b7" prot="public" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture CustomMouse::m_mouseTexture</definition>
+        <argsstring></argsstring>
+        <name>m_mouseTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="27" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_custom_mouse_1a2b10a9c240c3eb34108229816716cb31" compoundref="_custom_mouse_8cpp" startline="3" endline="16">CustomMouse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" prot="public" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite CustomMouse::m_mouseSprite</definition>
+        <argsstring></argsstring>
+        <name>m_mouseSprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="28" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_custom_mouse_1a2b10a9c240c3eb34108229816716cb31" compoundref="_custom_mouse_8cpp" startline="3" endline="16">CustomMouse</referencedby>
+        <referencedby refid="class_custom_mouse_1ae5d0cdd67189a7f4a6ad06e2b146a3dd" compoundref="_custom_mouse_8cpp" startline="23" endline="26">mouseRender</referencedby>
+        <referencedby refid="class_custom_mouse_1a6084dfa4b65a1ef5c71c335273fedbab" compoundref="_custom_mouse_8cpp" startline="18" endline="21">mouseUpdate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_mouse_1a1b3e5c282d1cc125df9eb10cd23715f6" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f CustomMouse::playerCenter</definition>
+        <argsstring></argsstring>
+        <name>playerCenter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="29" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f CustomMouse::mousePosWindow</definition>
+        <argsstring></argsstring>
+        <name>mousePosWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="30" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_custom_mouse_1a2b10a9c240c3eb34108229816716cb31" compoundref="_custom_mouse_8cpp" startline="3" endline="16">CustomMouse</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+        <referencedby refid="class_custom_mouse_1a6084dfa4b65a1ef5c71c335273fedbab" compoundref="_custom_mouse_8cpp" startline="18" endline="21">mouseUpdate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_mouse_1a6ce7abe8c4aadb8558ffb6df12b41857" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f CustomMouse::aimDir</definition>
+        <argsstring></argsstring>
+        <name>aimDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="31" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_custom_mouse_1a342345ea3c75c5e7b641f6243dd37faa" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f CustomMouse::aimDirNorm</definition>
+        <argsstring></argsstring>
+        <name>aimDirNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="32" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_custom_mouse_1a2b10a9c240c3eb34108229816716cb31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CustomMouse::CustomMouse</definition>
+        <argsstring>()</argsstring>
+        <name>CustomMouse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="22" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.cpp" bodystart="3" bodyend="16"/>
+        <references refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" compoundref="_custom_mouse_8h" startline="28">m_mouseSprite</references>
+        <references refid="class_custom_mouse_1a0f8f088ed4bbb7f170c5fd086f0b17b7" compoundref="_custom_mouse_8h" startline="27">m_mouseTexture</references>
+        <references refid="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" compoundref="_custom_mouse_8h" startline="30">mousePosWindow</references>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_mouse_1a6084dfa4b65a1ef5c71c335273fedbab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomMouse::mouseUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>mouseUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="24" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.cpp" bodystart="18" bodyend="21"/>
+        <references refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" compoundref="_custom_mouse_8h" startline="28">m_mouseSprite</references>
+        <references refid="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" compoundref="_custom_mouse_8h" startline="30">mousePosWindow</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_custom_mouse_1ae5d0cdd67189a7f4a6ad06e2b146a3dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CustomMouse::mouseRender</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>mouseRender</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="25" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.cpp" bodystart="23" bodyend="26"/>
+        <references refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" compoundref="_custom_mouse_8h" startline="28">m_mouseSprite</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" line="15" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.h" bodystart="14" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_custom_mouse_1a6ce7abe8c4aadb8558ffb6df12b41857" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>aimDir</name></member>
+      <member refid="class_custom_mouse_1a342345ea3c75c5e7b641f6243dd37faa" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>aimDirNorm</name></member>
+      <member refid="class_custom_mouse_1a2b10a9c240c3eb34108229816716cb31" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>CustomMouse</name></member>
+      <member refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>m_mouseSprite</name></member>
+      <member refid="class_custom_mouse_1a0f8f088ed4bbb7f170c5fd086f0b17b7" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>m_mouseTexture</name></member>
+      <member refid="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>mousePosWindow</name></member>
+      <member refid="class_custom_mouse_1ae5d0cdd67189a7f4a6ad06e2b146a3dd" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>mouseRender</name></member>
+      <member refid="class_custom_mouse_1a6084dfa4b65a1ef5c71c335273fedbab" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>mouseUpdate</name></member>
+      <member refid="class_custom_mouse_1a1b3e5c282d1cc125df9eb10cd23715f6" prot="public" virt="non-virtual"><scope>CustomMouse</scope><name>playerCenter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

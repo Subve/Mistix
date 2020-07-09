@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_background" kind="class"><name>Background</name>
+    <member refid="class_background_1aca47e53286316c3a8fe956deb0932049" kind="variable"><name>background</name></member>
+    <member refid="class_background_1ad365ec9188ecea80e96a86a2a00dabbe" kind="variable"><name>background_Sprite</name></member>
+    <member refid="class_background_1a05b686e4ce0cbdb3b1fa14a93fdf98a1" kind="function"><name>Background</name></member>
+    <member refid="class_background_1ad2b44598e222312315e21420b2933033" kind="function"><name>initBackground</name></member>
+    <member refid="class_background_1a0b0c31363be83b72b9a1d7cb57a891cc" kind="function"><name>LoadBackgroundTexture</name></member>
+    <member refid="class_background_1a63befa27a1056aec139d9e77d535370f" kind="function"><name>SetBackgroundSprite</name></member>
+    <member refid="class_background_1a9ebc35d6bcd689a305f7bb4043b39e89" kind="function"><name>renderBackground</name></member>
+  </compound>
+  <compound refid="class_big_enemy" kind="class"><name>BigEnemy</name>
+    <member refid="class_big_enemy_1a50fe75bdf076626a1d3cc8de7ce423f6" kind="variable"><name>bigenemy_Texture</name></member>
+    <member refid="class_big_enemy_1ac0ff78acbb91f42a0ab16519063bf955" kind="variable"><name>playerCenter</name></member>
+    <member refid="class_big_enemy_1a09a8824ea6f508de798edbf9e341c7d5" kind="variable"><name>mousePosWindow</name></member>
+    <member refid="class_big_enemy_1a3740e7c91a2ab137c044fdb5da747df7" kind="variable"><name>aimDir</name></member>
+    <member refid="class_big_enemy_1ac4b58f65d73829820a87d6804a25ed73" kind="variable"><name>aimDirNorm</name></member>
+    <member refid="class_big_enemy_1ab30d600cd7cd1d42e85e966f27375723" kind="variable"><name>direction</name></member>
+    <member refid="class_big_enemy_1a3bb8997c9b54bddfc63a964721cb2028" kind="variable"><name>angle</name></member>
+    <member refid="class_big_enemy_1a287b1b9bc82075f5278d67d7a9582a6a" kind="variable"><name>mobID</name></member>
+    <member refid="class_big_enemy_1afbe230aed662695bdc8431b352968f9d" kind="variable"><name>enemyPos</name></member>
+    <member refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" kind="variable"><name>trafiony</name></member>
+    <member refid="class_big_enemy_1a249253104d447747a14456d54598a328" kind="variable"><name>zabity</name></member>
+    <member refid="class_big_enemy_1accd9e2f20446de038a12165653d6d1fb" kind="variable"><name>polaczone</name></member>
+    <member refid="class_big_enemy_1acb0bf9c1e6df878c10ad217e3da9c798" kind="variable"><name>HP</name></member>
+    <member refid="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" kind="function"><name>BigEnemy</name></member>
+    <member refid="class_big_enemy_1a433204c917f741f9cfbf0d087112bd62" kind="function"><name>Follow</name></member>
+    <member refid="class_big_enemy_1a982ff240a64026b39fb8f6719ba7e583" kind="function"><name>Attack</name></member>
+    <member refid="class_big_enemy_1aa1e36855d1e88a6291780c4e3fe45d9a" kind="function"><name>Rotate</name></member>
+    <member refid="class_big_enemy_1a30b0f40e972e43572ab6ae8732fec414" kind="function"><name>adMove</name></member>
+    <member refid="class_big_enemy_1ad3b6c09752f9db99a5e637547d28502b" kind="function"><name>setDirection</name></member>
+    <member refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" kind="function"><name>setMove</name></member>
+    <member refid="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673" kind="function"><name>killedZombie</name></member>
+    <member refid="class_big_enemy_1ada8c70420d450b49bb5507f86032b85c" kind="function"><name>setTrafiony</name></member>
+    <member refid="class_big_enemy_1a8f9c5357aa54aab0748898d5f9b3a217" kind="function"><name>setZabity</name></member>
+    <member refid="class_big_enemy_1a37e93b3c57c659ef81747eb78658cd1c" kind="function"><name>setID</name></member>
+  </compound>
+  <compound refid="class_bullet" kind="class"><name>Bullet</name>
+    <member refid="class_bullet_1ac019b9e3d96fdc34a20f375c604cd626" kind="variable"><name>bullet</name></member>
+    <member refid="class_bullet_1aa2087d2259cdf16ebb99727e108ab408" kind="variable"><name>currVelocity</name></member>
+    <member refid="class_bullet_1a35d8cf63489cff15a4d7f4440ce078e3" kind="variable"><name>maxSpeed</name></member>
+    <member refid="class_bullet_1ad898f0b72f77039c1127925f872bd2de" kind="variable"><name>bulletTimer</name></member>
+    <member refid="class_bullet_1a6cf592cdcd5b81ca640d4151eebc902f" kind="variable"><name>maxbulletTimer</name></member>
+    <member refid="class_bullet_1a2976a1d229513f664b8a6c6f682f4caf" kind="variable"><name>playerCenter</name></member>
+    <member refid="class_bullet_1a9946e8a2dff22f46fd0d41d1bd0179d5" kind="variable"><name>mousePosWindow</name></member>
+    <member refid="class_bullet_1adacb827f7fc87ef0a5b219cd7849a8e8" kind="variable"><name>aimDir</name></member>
+    <member refid="class_bullet_1a321d807b3888253bfd01287a71fd450d" kind="variable"><name>aimDirNorm</name></member>
+    <member refid="class_bullet_1acfbb7387f8d53940b313192417e7ff73" kind="function"><name>Bullet</name></member>
+    <member refid="class_bullet_1a9634c75730c3bcad18567e3fc6c262e6" kind="function"><name>setAmmo</name></member>
+    <member refid="class_bullet_1a046b280041c1f9aeff6a4babc2d37122" kind="function"><name>setSpeed</name></member>
+  </compound>
+  <compound refid="class_custom_mouse" kind="class"><name>CustomMouse</name>
+    <member refid="class_custom_mouse_1a0f8f088ed4bbb7f170c5fd086f0b17b7" kind="variable"><name>m_mouseTexture</name></member>
+    <member refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kind="variable"><name>m_mouseSprite</name></member>
+    <member refid="class_custom_mouse_1a1b3e5c282d1cc125df9eb10cd23715f6" kind="variable"><name>playerCenter</name></member>
+    <member refid="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" kind="variable"><name>mousePosWindow</name></member>
+    <member refid="class_custom_mouse_1a6ce7abe8c4aadb8558ffb6df12b41857" kind="variable"><name>aimDir</name></member>
+    <member refid="class_custom_mouse_1a342345ea3c75c5e7b641f6243dd37faa" kind="variable"><name>aimDirNorm</name></member>
+    <member refid="class_custom_mouse_1a2b10a9c240c3eb34108229816716cb31" kind="function"><name>CustomMouse</name></member>
+    <member refid="class_custom_mouse_1a6084dfa4b65a1ef5c71c335273fedbab" kind="function"><name>mouseUpdate</name></member>
+    <member refid="class_custom_mouse_1ae5d0cdd67189a7f4a6ad06e2b146a3dd" kind="function"><name>mouseRender</name></member>
+  </compound>
+  <compound refid="class_enemy" kind="class"><name>Enemy</name>
+    <member refid="class_enemy_1a2a442a2db9ac5a6996125c71d1ee9ff1" kind="variable"><name>angle</name></member>
+    <member refid="class_enemy_1ab213cf1ef15c2b8e477d1c69ff2b8960" kind="variable"><name>direction</name></member>
+    <member refid="class_enemy_1a41c22aa9871eab6e369347f8f55fbbae" kind="variable"><name>playerCenter</name></member>
+    <member refid="class_enemy_1a86f57cef74842f9d0ef8ca59aa8c3c74" kind="variable"><name>mousePosWindow</name></member>
+    <member refid="class_enemy_1a8755a8d710930ee778ef842e30ea8ba6" kind="variable"><name>aimDir</name></member>
+    <member refid="class_enemy_1a2c8973bb137c37ce4214d0b444bb3eda" kind="variable"><name>aimDirNorm</name></member>
+    <member refid="class_enemy_1a7b6fb644ed8f128e12cd250e528b44da" kind="variable"><name>enemyPos</name></member>
+    <member refid="class_enemy_1a851f386dd173895ba6d221529b1b3b15" kind="variable"><name>mobID</name></member>
+    <member refid="class_enemy_1a878e39c9cbe9eadcfef712dd8df9695a" kind="variable"><name>polaczone</name></member>
+    <member refid="class_enemy_1a58dd78c40c9a16f4dd66101b79519e57" kind="variable"><name>trafiony</name></member>
+    <member refid="class_enemy_1aa239e6ce106e54f02750c13650c69c9a" kind="variable"><name>zabity</name></member>
+    <member refid="class_enemy_1a408105b89fbc65723fc1e1208b7fe2bc" kind="variable"><name>HP</name></member>
+    <member refid="class_enemy_1a94f30d348b6d2840fd71675472ba38dd" kind="function"><name>Enemy</name></member>
+    <member refid="class_enemy_1aafb628c66008e33afdd750e2f492bd98" kind="function"><name>~Enemy</name></member>
+    <member refid="class_enemy_1a6d512d3f2d4c47dbd8b9e7a35e8f2b48" kind="function"><name>Follow</name></member>
+    <member refid="class_enemy_1a89a5afba8c05af383c988376056edbb7" kind="function"><name>Attack</name></member>
+    <member refid="class_enemy_1a989db63499ca2dedc4c378e394716465" kind="function"><name>Rotate</name></member>
+    <member refid="class_enemy_1a5354bf2928be395d73d250fa2ec47979" kind="function"><name>adMove</name></member>
+    <member refid="class_enemy_1a29e6dc0eb9a9a4a9885e741c0de2668a" kind="function"><name>setDirection</name></member>
+    <member refid="class_enemy_1a13942e703c41473fe1dc20957cfc18e3" kind="function"><name>setMove</name></member>
+    <member refid="class_enemy_1afce1da6371d74ad0e152398d2534a96b" kind="function"><name>killedZombie</name></member>
+    <member refid="class_enemy_1ae3895590d7a7cbeaaa788be55f14e199" kind="function"><name>setTrafiony</name></member>
+    <member refid="class_enemy_1a57f288226e09d333e9f01a31580eb393" kind="function"><name>setZabity</name></member>
+    <member refid="class_enemy_1a7127d2dccfe0e9162b564575e9377095" kind="function"><name>setID</name></member>
+  </compound>
+  <compound refid="class_entity_manager" kind="class"><name>EntityManager</name>
+    <member refid="class_entity_manager_1ad293a12747a8a15c01dc5ed862d17a62" kind="variable"><name>enemyTimer</name></member>
+    <member refid="class_entity_manager_1a5c4b573f82a3f9e03e5b3b0e67e959b8" kind="variable"><name>enemyTimerMax</name></member>
+    <member refid="class_entity_manager_1a7555637657d090171be6ceee8451de0a" kind="function"><name>EntityManager</name></member>
+    <member refid="class_entity_manager_1aba0224abe55e63bf5cefa6629bf0df14" kind="function"><name>SpawnEnemy</name></member>
+    <member refid="class_entity_manager_1aa36b659d5623fdbb4b679d589f8bee3f" kind="function"><name>RespawnEnemy</name></member>
+    <member refid="class_entity_manager_1a45d98ff6b1151f86631fefe97ee592fa" kind="function"><name>InitEnemy</name></member>
+  </compound>
+  <compound refid="class_high_score" kind="class"><name>HighScore</name>
+    <member refid="class_high_score_1ae8a1add24aee3f91635ef49cb0fbdbf7" kind="variable"><name>highscore_Text</name></member>
+    <member refid="class_high_score_1ad5274eb747a5103eb142791d2d4de766" kind="variable"><name>highscore_Font</name></member>
+    <member refid="class_high_score_1aa02b27cf163a6bc93c3c05d6ba9a5894" kind="variable"><name>ssHighScore</name></member>
+    <member refid="class_high_score_1ada0177d6b2e4c3d417abca91ebfa5afa" kind="variable"><name>m_highscore</name></member>
+    <member refid="class_high_score_1a6cfc43d60f28ed3d18946a2b4034d4de" kind="function"><name>HighScore</name></member>
+    <member refid="class_high_score_1a979a1776ad5fc85a1b92215861e4db65" kind="function"><name>~HighScore</name></member>
+    <member refid="class_high_score_1a3a21152668a9dea4dba208a7327738b7" kind="function"><name>updateHighScore</name></member>
+    <member refid="class_high_score_1a765c6ecdb4f47e1336fd214cdcf0a229" kind="function"><name>renderHighscore</name></member>
+    <member refid="class_high_score_1acf041876228e67891bd1241c5b56ba47" kind="function"><name>getHighscore</name></member>
+    <member refid="class_high_score_1a43f2d2d8a75a691856653f4dfd6e3f72" kind="function"><name>setHighscore</name></member>
+    <member refid="class_high_score_1acb8f7b9008b12d882f5d4950aeb58ec9" kind="function"><name>loadHighscore</name></member>
+    <member refid="class_high_score_1a8a7b778b93c0cd9b8cd5d63fca33af1a" kind="function"><name>saveHighScore</name></member>
+    <member refid="class_high_score_1aef99986d4ef5e0daf4eebd16c603930e" kind="function"><name>showText</name></member>
+  </compound>
+  <compound refid="class_little_enemy" kind="class"><name>LittleEnemy</name>
+    <member refid="class_little_enemy_1aceef8fcbba7bb941db01288f590dc4d7" kind="variable"><name>littleenemy_Texture</name></member>
+    <member refid="class_little_enemy_1ab4ffae28b8ef978861155483d7cd3026" kind="variable"><name>playerCenter</name></member>
+    <member refid="class_little_enemy_1ad76a81f61da7b1757a2c46189fcfc270" kind="variable"><name>mousePosWindow</name></member>
+    <member refid="class_little_enemy_1abe9c4791ba3c847fc87bc7682ebdabc9" kind="variable"><name>aimDir</name></member>
+    <member refid="class_little_enemy_1a1c24e4cfc9de2d8fb3510de8238e8d85" kind="variable"><name>aimDirNorm</name></member>
+    <member refid="class_little_enemy_1a3fef11bdc3aa1519ca245d021fd2dd5d" kind="variable"><name>direction</name></member>
+    <member refid="class_little_enemy_1a403f1c273df04bf41a3d8e91dab14e6a" kind="variable"><name>angle</name></member>
+    <member refid="class_little_enemy_1acc5c7f5d033d3e330a89c5d6b214d050" kind="variable"><name>mobID</name></member>
+    <member refid="class_little_enemy_1a1f14aafb4fb4e330cc673cf6d983ea77" kind="variable"><name>enemyPos</name></member>
+    <member refid="class_little_enemy_1a1c2ab9248ebb12c27e19070855e81e0f" kind="variable"><name>trafiony</name></member>
+    <member refid="class_little_enemy_1abbce2ec48e6c31a8d63ab45a14b61ac9" kind="variable"><name>zabity</name></member>
+    <member refid="class_little_enemy_1a485a475286d864a699565fad83ecf8a3" kind="variable"><name>polaczone</name></member>
+    <member refid="class_little_enemy_1adc43c196fdcf2637d371ccba3b17b071" kind="variable"><name>HP</name></member>
+    <member refid="class_little_enemy_1af1aa6b38ee21b97ce3df8ba9e72628de" kind="function"><name>LittleEnemy</name></member>
+    <member refid="class_little_enemy_1aa71d67b8c3a38aa82438a1a310dac5c8" kind="function"><name>Follow</name></member>
+    <member refid="class_little_enemy_1a3c6a14f2d1ef17d12770f0ed7dd84b96" kind="function"><name>Attack</name></member>
+    <member refid="class_little_enemy_1a70c299533aa817f311cd72640af7d52b" kind="function"><name>Rotate</name></member>
+    <member refid="class_little_enemy_1a269580aa7291f3a173442abbb717d36f" kind="function"><name>adMove</name></member>
+    <member refid="class_little_enemy_1ad96627da6b5fc10e6964574d53242294" kind="function"><name>setDirection</name></member>
+    <member refid="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c" kind="function"><name>setMove</name></member>
+    <member refid="class_little_enemy_1acf081ba5e86a4ea2834d13f02f633667" kind="function"><name>killedZombie</name></member>
+    <member refid="class_little_enemy_1a3998c9f6dceb8b77ea4b81baff61d534" kind="function"><name>setTrafiony</name></member>
+    <member refid="class_little_enemy_1a26e35171350239289eecda211f37cc94" kind="function"><name>setZabity</name></member>
+    <member refid="class_little_enemy_1aea325e6e755a9b89d90fd93b6616a104" kind="function"><name>setID</name></member>
+  </compound>
+  <compound refid="class_menu" kind="class"><name>Menu</name>
+    <member refid="class_menu_1a27e1dd40a9434618b7a7f8ef18cf65b4" kind="variable"><name>menus</name></member>
+    <member refid="class_menu_1a464ef16fd28c0df35ee1d9f78c0ef895" kind="variable"><name>selectedItemIndex</name></member>
+    <member refid="class_menu_1a2e58654dcca7aa1804e11aece3e9a0cb" kind="variable"><name>m_font</name></member>
+    <member refid="class_menu_1ab6208eace45494b27d3dd32af72009ed" kind="variable"><name>m_menu</name></member>
+    <member refid="class_menu_1a8caa6100506d4b8e0d782e550dbc470e" kind="function"><name>Menu</name></member>
+    <member refid="class_menu_1a831387f51358cfb88cd018e1777bc980" kind="function"><name>~Menu</name></member>
+    <member refid="class_menu_1a1443dcfd1c1c9844c40658d752c1fbab" kind="function"><name>draw</name></member>
+    <member refid="class_menu_1acfb038bbd1050d6c55c86eec1f35dbdb" kind="function"><name>MoveUp</name></member>
+    <member refid="class_menu_1a804da9a381bb6c633d5d2bc4f839ec62" kind="function"><name>MoveDown</name></member>
+    <member refid="class_menu_1a81b2029bf7783f38be26000969e99e30" kind="function"><name>GetPressedItem</name></member>
+  </compound>
+  <compound refid="class_player" kind="class"><name>Player</name>
+    <member refid="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" kind="variable"><name>mouse</name></member>
+    <member refid="class_player_1acdf217201e6fe6ed898c2e15292ef252" kind="variable"><name>angle</name></member>
+    <member refid="class_player_1af172f5419b96c2eff0ceda3e811d561a" kind="variable"><name>player_texture</name></member>
+    <member refid="class_player_1a33415a8ba44768cade0e2e5285af9d0c" kind="variable"><name>player_startPosition</name></member>
+    <member refid="class_player_1a335a9024e30836f6a2b34ab04897fa77" kind="variable"><name>player_position</name></member>
+    <member refid="class_player_1a2d0002782e8988efd903ea94eb20c34e" kind="variable"><name>bullet_startPos</name></member>
+    <member refid="class_player_1a13605f26121059ac4ded558731b7a892" kind="variable"><name>playerCenter</name></member>
+    <member refid="class_player_1ac3079b42e9fefa07912504b3d2481b36" kind="variable"><name>mousePosWindow</name></member>
+    <member refid="class_player_1ae041a56e63d392bfda3c7049e212a21f" kind="variable"><name>aimDir</name></member>
+    <member refid="class_player_1adbd2a2da5ae75160190996ed35e2ebb2" kind="variable"><name>aimDirNorm</name></member>
+    <member refid="class_player_1afe84e9ff73bc2d371d3f639c1ea185ed" kind="variable"><name>m_playerHealth</name></member>
+    <member refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" kind="function"><name>Player</name></member>
+    <member refid="class_player_1a229682eedeae71a66cd9dc5945225438" kind="function"><name>playerMove</name></member>
+    <member refid="class_player_1aee37a6a830cd71d1629fe2979c10b54b" kind="function"><name>updateMousePos</name></member>
+    <member refid="class_player_1adaa164efaced79188b42e3df82119614" kind="function"><name>playerRotate</name></member>
+    <member refid="class_player_1a2df419182d09c3c85109b3e7114d736a" kind="function"><name>playerUpdate</name></member>
+  </compound>
+  <compound refid="class_score" kind="class"><name>Score</name>
+    <member refid="class_score_1a79de7d8d70858b847b0a71c247696655" kind="variable"><name>score_Text</name></member>
+    <member refid="class_score_1a43673f1f88d6d44ae71b98116f33c9ed" kind="variable"><name>value</name></member>
+    <member refid="class_score_1a4ab40038c546a552a3620bcf2baeecf4" kind="variable"><name>score_Font</name></member>
+    <member refid="class_score_1a2a4e2c875122e6459a701e2703eb8ff3" kind="variable"><name>ssScore</name></member>
+    <member refid="class_score_1a21809111f4e494b810f49ff5a4c14f87" kind="variable"><name>m_addValue</name></member>
+    <member refid="class_score_1a039c99843551e5e4b512ecee99e46617" kind="function"><name>Score</name></member>
+    <member refid="class_score_1acadffb62d3dac8295f0cd55b33e4e269" kind="function"><name>updateText</name></member>
+    <member refid="class_score_1acaeff9e6a1f902619cee9cdb83c682a3" kind="function"><name>setValue</name></member>
+    <member refid="class_score_1a3a232b9bb260de0c3a6a985f902d88b2" kind="function"><name>pointsRender</name></member>
+    <member refid="class_score_1a8627c93270c188a3fd28a25b1d07a9e7" kind="function"><name>getScore</name></member>
+    <member refid="class_score_1ae1508009aec07d5353ceb36c3c9a1ac8" kind="function"><name>setaddPoint</name></member>
+    <member refid="class_score_1a4214e1c3774fc4eb7cf3b23c6e0eeef8" kind="function"><name>addPoints</name></member>
+  </compound>
+  <compound refid="class_state_machine" kind="class"><name>StateMachine</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_background_8cpp" kind="file"><name>Background.cpp</name>
+  </compound>
+  <compound refid="_background_8h" kind="file"><name>Background.h</name>
+  </compound>
+  <compound refid="_big_enemy_8cpp" kind="file"><name>BigEnemy.cpp</name>
+  </compound>
+  <compound refid="_big_enemy_8h" kind="file"><name>BigEnemy.h</name>
+  </compound>
+  <compound refid="_bullet_8cpp" kind="file"><name>Bullet.cpp</name>
+  </compound>
+  <compound refid="_bullet_8h" kind="file"><name>Bullet.h</name>
+  </compound>
+  <compound refid="_custom_mouse_8cpp" kind="file"><name>CustomMouse.cpp</name>
+  </compound>
+  <compound refid="_custom_mouse_8h" kind="file"><name>CustomMouse.h</name>
+  </compound>
+  <compound refid="_enemy_8cpp" kind="file"><name>Enemy.cpp</name>
+  </compound>
+  <compound refid="_enemy_8h" kind="file"><name>Enemy.h</name>
+  </compound>
+  <compound refid="_entity_manager_8cpp" kind="file"><name>EntityManager.cpp</name>
+  </compound>
+  <compound refid="_entity_manager_8h" kind="file"><name>EntityManager.h</name>
+  </compound>
+  <compound refid="_high_score_8cpp" kind="file"><name>HighScore.cpp</name>
+  </compound>
+  <compound refid="_high_score_8h" kind="file"><name>HighScore.h</name>
+  </compound>
+  <compound refid="_little_enemy_8cpp" kind="file"><name>LittleEnemy.cpp</name>
+  </compound>
+  <compound refid="_little_enemy_8h" kind="file"><name>LittleEnemy.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1a656a0c6dd88b9c342b605bd37f3f0f03" kind="define"><name>VIEW_HEIGHT</name></member>
+    <member refid="main_8cpp_1aa055c0f2d81cb3bff317989e39238e72" kind="define"><name>VIEW_WIDTH</name></member>
+    <member refid="main_8cpp_1af35bb275d1a55f131c558f847308bcfc" kind="function"><name>deg2rad</name></member>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_menu_8cpp" kind="file"><name>Menu.cpp</name>
+  </compound>
+  <compound refid="_menu_8h" kind="file"><name>Menu.h</name>
+    <member refid="_menu_8h_1a34e819be6bb222b369578bb037bb3564" kind="define"><name>MAX_NUMBER_OF_ITEMS</name></member>
+  </compound>
+  <compound refid="_player_8cpp" kind="file"><name>Player.cpp</name>
+  </compound>
+  <compound refid="_player_8h" kind="file"><name>Player.h</name>
+  </compound>
+  <compound refid="_score_8cpp" kind="file"><name>Score.cpp</name>
+  </compound>
+  <compound refid="_score_8h" kind="file"><name>Score.h</name>
+  </compound>
+  <compound refid="dir_0b05f1f7051b89356c1d279ee3eecc9e" kind="dir"><name>C:/Users/milos/Documents</name>
+  </compound>
+  <compound refid="dir_3051034868ceb19d0117e2b2701e3a39" kind="dir"><name>C:/Users/milos</name>
+  </compound>
+  <compound refid="dir_ab61f4bfc4f326c23915636d5f76f596" kind="dir"><name>C:/Users/milos/Documents/Mistix</name>
+  </compound>
+  <compound refid="dir_6193b07a2240d10a30c62c0c632dd7ce" kind="dir"><name>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One</name>
+  </compound>
+  <compound refid="dir_d522931ffa1371640980b621734a4381" kind="dir"><name>C:/Users</name>
+  </compound>
+</doxygenindex>

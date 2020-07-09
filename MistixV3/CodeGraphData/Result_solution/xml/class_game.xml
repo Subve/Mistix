@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_game" kind="class" prot="public">
+    <compoundname>Game</compoundname>
+    <includes refid="_game_8h" local="no">Game.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_game_1af00d15651edd39b7c28262b23bb50c7a" prot="public" static="no" mutable="no">
+        <type>sf::RenderWindow *</type>
+        <definition>sf::RenderWindow* Game::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="20" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" compoundref="_game_8cpp" startline="4" endline="14">initVariables</referencedby>
+        <referencedby refid="class_game_1a15f85bb1959ffeae84f17c7f08db9018" compoundref="_game_8cpp" startline="16" endline="25">initWindow</referencedby>
+        <referencedby refid="class_game_1a8ea4777fdc751b40f778997b76ee7cf9" compoundref="_game_8cpp" startline="71" endline="87">pollEvents</referencedby>
+        <referencedby refid="class_game_1a15ddd769261d923827a3cdf41499c843" compoundref="_game_8cpp" startline="168" endline="177">render</referencedby>
+        <referencedby refid="class_game_1a703667da880dedf23935cef5427eec71" compoundref="_game_8cpp" startline="155" endline="161">renderEnemies</referencedby>
+        <referencedby refid="class_game_1afe97e9b7e83b19ab7e1502329e9aeab6" compoundref="_game_8cpp" startline="64" endline="67">running</referencedby>
+        <referencedby refid="class_game_1ad7a4181414089729ddea00c053f822c4" compoundref="_game_8cpp" startline="89" endline="105">spawnEnemy</referencedby>
+        <referencedby refid="class_game_1a178767c8170eaf60bc566b4b67b1d622" compoundref="_game_8cpp" startline="107" endline="116">updateMousePosition</referencedby>
+        <referencedby refid="class_game_1ae3d112ca6e0e55150d2fdbc704474530" compoundref="_game_8cpp" startline="58" endline="61">~Game</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a0e54df902021fbf68140e4bee81ff369" prot="public" static="no" mutable="no">
+        <type>sf::Event</type>
+        <definition>sf::Event Game::ev</definition>
+        <argsstring></argsstring>
+        <name>ev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="21" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_game_1a8ea4777fdc751b40f778997b76ee7cf9" compoundref="_game_8cpp" startline="71" endline="87">pollEvents</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a65ca549b63b1bd9bc6dcb31cd840a9a3" prot="public" static="no" mutable="no">
+        <type>sf::VideoMode</type>
+        <definition>sf::VideoMode Game::videMode</definition>
+        <argsstring></argsstring>
+        <name>videMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="22" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_game_1a15f85bb1959ffeae84f17c7f08db9018" compoundref="_game_8cpp" startline="16" endline="25">initWindow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ac375edce1ef244a1b4a0f9cceff950d3" prot="public" static="no" mutable="no">
+        <type>sf::Vector2i</type>
+        <definition>sf::Vector2i Game::mousePosWindow</definition>
+        <argsstring></argsstring>
+        <name>mousePosWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="25" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_game_1a178767c8170eaf60bc566b4b67b1d622" compoundref="_game_8cpp" startline="107" endline="116">updateMousePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a29e8570bcdc28dcc7ade33fd388bb313" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Game::mousePosView</definition>
+        <argsstring></argsstring>
+        <name>mousePosView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="26" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_game_1a178767c8170eaf60bc566b4b67b1d622" compoundref="_game_8cpp" startline="107" endline="116">updateMousePosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a3d3e4d68aca0adb6422ea5799cf5ec18" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game::points</definition>
+        <argsstring></argsstring>
+        <name>points</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="29" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" compoundref="_game_8cpp" startline="4" endline="14">initVariables</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a0a464b2dee4b5e28d3313782324695e8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Game::enemySpawnTimer</definition>
+        <argsstring></argsstring>
+        <name>enemySpawnTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="30" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" compoundref="_game_8cpp" startline="4" endline="14">initVariables</referencedby>
+        <referencedby refid="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" compoundref="_game_8cpp" startline="118" endline="143">updateEnemies</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1aefb74723bcc4c5ad21ed4037fc4066b0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Game::enemySpawnTimerMax</definition>
+        <argsstring></argsstring>
+        <name>enemySpawnTimerMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="31" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" compoundref="_game_8cpp" startline="4" endline="14">initVariables</referencedby>
+        <referencedby refid="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" compoundref="_game_8cpp" startline="118" endline="143">updateEnemies</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a059ae97b6e1a991e807f2ccefb9b9e7d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Game::maxEnemies</definition>
+        <argsstring></argsstring>
+        <name>maxEnemies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="32" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" compoundref="_game_8cpp" startline="4" endline="14">initVariables</referencedby>
+        <referencedby refid="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" compoundref="_game_8cpp" startline="118" endline="143">updateEnemies</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a0704e238be545284943a9706fefde427" prot="public" static="no" mutable="no">
+        <type>sf::RectangleShape</type>
+        <definition>sf::RectangleShape Game::enemy</definition>
+        <argsstring></argsstring>
+        <name>enemy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="36" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_game_1aa79b8b669c7035b9bf95214be209743e" compoundref="_game_8cpp" startline="26" endline="33">initEnemies</referencedby>
+        <referencedby refid="class_game_1a15ddd769261d923827a3cdf41499c843" compoundref="_game_8cpp" startline="168" endline="177">render</referencedby>
+        <referencedby refid="class_game_1ad7a4181414089729ddea00c053f822c4" compoundref="_game_8cpp" startline="89" endline="105">spawnEnemy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1ac8413021c19dac3b7cc32aa0d87cdbc9" prot="public" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture Game::playerTexture</definition>
+        <argsstring></argsstring>
+        <name>playerTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="38" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_game_1a405c0bb8156590c93304f11cf1f08065" compoundref="_game_8cpp" startline="34" endline="47">initPlayer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1a26302add415e319e52451fb74e55bafa" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; sf::RectangleShape &gt;</type>
+        <definition>std::vector&lt;sf::RectangleShape&gt; Game::enemies</definition>
+        <argsstring></argsstring>
+        <name>enemies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="41" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_game_1a703667da880dedf23935cef5427eec71" compoundref="_game_8cpp" startline="155" endline="161">renderEnemies</referencedby>
+        <referencedby refid="class_game_1ad7a4181414089729ddea00c053f822c4" compoundref="_game_8cpp" startline="89" endline="105">spawnEnemy</referencedby>
+        <referencedby refid="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" compoundref="_game_8cpp" startline="118" endline="143">updateEnemies</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_game_1adc16d4f982df0419f695c691f734ee6b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; <ref refid="class_player" kindref="compound">Player</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;Player&gt; &gt; Game::players1</definition>
+        <argsstring></argsstring>
+        <name>players1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="60" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::initVariables</definition>
+        <argsstring>()</argsstring>
+        <name>initVariables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="45" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="4" bodyend="14"/>
+        <references refid="class_game_1a0a464b2dee4b5e28d3313782324695e8" compoundref="_game_8h" startline="30">enemySpawnTimer</references>
+        <references refid="class_game_1aefb74723bcc4c5ad21ed4037fc4066b0" compoundref="_game_8h" startline="31">enemySpawnTimerMax</references>
+        <references refid="class_game_1a059ae97b6e1a991e807f2ccefb9b9e7d" compoundref="_game_8h" startline="32">maxEnemies</references>
+        <references refid="class_game_1a3d3e4d68aca0adb6422ea5799cf5ec18" compoundref="_game_8h" startline="29">points</references>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+        <referencedby refid="class_game_1ad59df6562a58a614fda24622d3715b65" compoundref="_game_8cpp" startline="49" endline="56">Game</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a15f85bb1959ffeae84f17c7f08db9018" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::initWindow</definition>
+        <argsstring>()</argsstring>
+        <name>initWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="46" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="16" bodyend="25"/>
+        <references refid="class_game_1a65ca549b63b1bd9bc6dcb31cd840a9a3" compoundref="_game_8h" startline="22">videMode</references>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+        <referencedby refid="class_game_1ad59df6562a58a614fda24622d3715b65" compoundref="_game_8cpp" startline="49" endline="56">Game</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1aa79b8b669c7035b9bf95214be209743e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::initEnemies</definition>
+        <argsstring>()</argsstring>
+        <name>initEnemies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="47" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="26" bodyend="33"/>
+        <references refid="class_game_1a0704e238be545284943a9706fefde427" compoundref="_game_8h" startline="36">enemy</references>
+        <referencedby refid="class_game_1ad59df6562a58a614fda24622d3715b65" compoundref="_game_8cpp" startline="49" endline="56">Game</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a405c0bb8156590c93304f11cf1f08065" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::initPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>initPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="48" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="34" bodyend="47"/>
+        <references refid="class_game_1ac8413021c19dac3b7cc32aa0d87cdbc9" compoundref="_game_8h" startline="38">playerTexture</references>
+        <referencedby refid="class_game_1ad59df6562a58a614fda24622d3715b65" compoundref="_game_8cpp" startline="49" endline="56">Game</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1ad59df6562a58a614fda24622d3715b65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Game::Game</definition>
+        <argsstring>()</argsstring>
+        <name>Game</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="55" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="49" bodyend="56"/>
+        <references refid="class_game_1aa79b8b669c7035b9bf95214be209743e" compoundref="_game_8cpp" startline="26" endline="33">initEnemies</references>
+        <references refid="class_game_1a405c0bb8156590c93304f11cf1f08065" compoundref="_game_8cpp" startline="34" endline="47">initPlayer</references>
+        <references refid="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" compoundref="_game_8cpp" startline="4" endline="14">initVariables</references>
+        <references refid="class_game_1a15f85bb1959ffeae84f17c7f08db9018" compoundref="_game_8cpp" startline="16" endline="25">initWindow</references>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1ae3d112ca6e0e55150d2fdbc704474530" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Game::~Game</definition>
+        <argsstring>()</argsstring>
+        <name>~Game</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="56" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="58" bodyend="61"/>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1afe97e9b7e83b19ab7e1502329e9aeab6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const bool</type>
+        <definition>const bool Game::running</definition>
+        <argsstring>() const </argsstring>
+        <name>running</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="59" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="64" bodyend="67"/>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="2" endline="31">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a8ea4777fdc751b40f778997b76ee7cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::pollEvents</definition>
+        <argsstring>()</argsstring>
+        <name>pollEvents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="62" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="71" bodyend="87"/>
+        <references refid="class_game_1a0e54df902021fbf68140e4bee81ff369" compoundref="_game_8h" startline="21">ev</references>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+        <referencedby refid="class_game_1a79df6376b332d63c9eca0dcee30305c3" compoundref="_game_8cpp" startline="145" endline="153">update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1ad7a4181414089729ddea00c053f822c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::spawnEnemy</definition>
+        <argsstring>()</argsstring>
+        <name>spawnEnemy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="63" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="89" bodyend="105"/>
+        <references refid="class_game_1a26302add415e319e52451fb74e55bafa" compoundref="_game_8h" startline="41">enemies</references>
+        <references refid="class_game_1a0704e238be545284943a9706fefde427" compoundref="_game_8h" startline="36">enemy</references>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+        <referencedby refid="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" compoundref="_game_8cpp" startline="118" endline="143">updateEnemies</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a178767c8170eaf60bc566b4b67b1d622" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::updateMousePosition</definition>
+        <argsstring>()</argsstring>
+        <name>updateMousePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="64" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="107" bodyend="116"/>
+        <references refid="class_game_1a29e8570bcdc28dcc7ade33fd388bb313" compoundref="_game_8h" startline="26">mousePosView</references>
+        <references refid="class_game_1ac375edce1ef244a1b4a0f9cceff950d3" compoundref="_game_8h" startline="25">mousePosWindow</references>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+        <referencedby refid="class_game_1a79df6376b332d63c9eca0dcee30305c3" compoundref="_game_8cpp" startline="145" endline="153">update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::updateEnemies</definition>
+        <argsstring>()</argsstring>
+        <name>updateEnemies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="65" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="118" bodyend="143"/>
+        <references refid="class_game_1a26302add415e319e52451fb74e55bafa" compoundref="_game_8h" startline="41">enemies</references>
+        <references refid="class_game_1a0a464b2dee4b5e28d3313782324695e8" compoundref="_game_8h" startline="30">enemySpawnTimer</references>
+        <references refid="class_game_1aefb74723bcc4c5ad21ed4037fc4066b0" compoundref="_game_8h" startline="31">enemySpawnTimerMax</references>
+        <references refid="class_game_1a059ae97b6e1a991e807f2ccefb9b9e7d" compoundref="_game_8h" startline="32">maxEnemies</references>
+        <references refid="class_game_1ad7a4181414089729ddea00c053f822c4" compoundref="_game_8cpp" startline="89" endline="105">spawnEnemy</references>
+        <referencedby refid="class_game_1a79df6376b332d63c9eca0dcee30305c3" compoundref="_game_8cpp" startline="145" endline="153">update</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a79df6376b332d63c9eca0dcee30305c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="66" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="145" bodyend="153"/>
+        <references refid="class_game_1a8ea4777fdc751b40f778997b76ee7cf9" compoundref="_game_8cpp" startline="71" endline="87">pollEvents</references>
+        <references refid="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" compoundref="_game_8cpp" startline="118" endline="143">updateEnemies</references>
+        <references refid="class_game_1a178767c8170eaf60bc566b4b67b1d622" compoundref="_game_8cpp" startline="107" endline="116">updateMousePosition</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="2" endline="31">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a703667da880dedf23935cef5427eec71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::renderEnemies</definition>
+        <argsstring>()</argsstring>
+        <name>renderEnemies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="67" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="155" bodyend="161"/>
+        <references refid="class_game_1a26302add415e319e52451fb74e55bafa" compoundref="_game_8h" startline="41">enemies</references>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+        <referencedby refid="class_game_1a15ddd769261d923827a3cdf41499c843" compoundref="_game_8cpp" startline="168" endline="177">render</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a2b4b0c9e3b4ac5ad789ec2e764b3d8f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::renderPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>renderPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="68" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_game_1a15ddd769261d923827a3cdf41499c843" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Game::render</definition>
+        <argsstring>()</argsstring>
+        <name>render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="69" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.cpp" bodystart="168" bodyend="177"/>
+        <references refid="class_game_1a0704e238be545284943a9706fefde427" compoundref="_game_8h" startline="36">enemy</references>
+        <references refid="class_game_1a703667da880dedf23935cef5427eec71" compoundref="_game_8cpp" startline="155" endline="161">renderEnemies</references>
+        <references refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" compoundref="_game_8h" startline="20">window</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="2" endline="31">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="4">
+        <label>std::unique_ptr&lt; Player &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::vector&lt; sf::RectangleShape &gt;</label>
+      </node>
+      <node id="1">
+        <label>Game</label>
+        <link refid="class_game"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>enemies</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>players1</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::vector&lt; std::unique_ptr&lt; Player &gt; &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Player</label>
+        <link refid="class_player"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" line="13" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Game.h" bodystart="12" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_game_1a26302add415e319e52451fb74e55bafa" prot="public" virt="non-virtual"><scope>Game</scope><name>enemies</name></member>
+      <member refid="class_game_1a0704e238be545284943a9706fefde427" prot="public" virt="non-virtual"><scope>Game</scope><name>enemy</name></member>
+      <member refid="class_game_1a0a464b2dee4b5e28d3313782324695e8" prot="public" virt="non-virtual"><scope>Game</scope><name>enemySpawnTimer</name></member>
+      <member refid="class_game_1aefb74723bcc4c5ad21ed4037fc4066b0" prot="public" virt="non-virtual"><scope>Game</scope><name>enemySpawnTimerMax</name></member>
+      <member refid="class_game_1a0e54df902021fbf68140e4bee81ff369" prot="public" virt="non-virtual"><scope>Game</scope><name>ev</name></member>
+      <member refid="class_game_1ad59df6562a58a614fda24622d3715b65" prot="public" virt="non-virtual"><scope>Game</scope><name>Game</name></member>
+      <member refid="class_game_1aa79b8b669c7035b9bf95214be209743e" prot="public" virt="non-virtual"><scope>Game</scope><name>initEnemies</name></member>
+      <member refid="class_game_1a405c0bb8156590c93304f11cf1f08065" prot="public" virt="non-virtual"><scope>Game</scope><name>initPlayer</name></member>
+      <member refid="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" prot="public" virt="non-virtual"><scope>Game</scope><name>initVariables</name></member>
+      <member refid="class_game_1a15f85bb1959ffeae84f17c7f08db9018" prot="public" virt="non-virtual"><scope>Game</scope><name>initWindow</name></member>
+      <member refid="class_game_1a059ae97b6e1a991e807f2ccefb9b9e7d" prot="public" virt="non-virtual"><scope>Game</scope><name>maxEnemies</name></member>
+      <member refid="class_game_1a29e8570bcdc28dcc7ade33fd388bb313" prot="public" virt="non-virtual"><scope>Game</scope><name>mousePosView</name></member>
+      <member refid="class_game_1ac375edce1ef244a1b4a0f9cceff950d3" prot="public" virt="non-virtual"><scope>Game</scope><name>mousePosWindow</name></member>
+      <member refid="class_game_1adc16d4f982df0419f695c691f734ee6b" prot="public" virt="non-virtual"><scope>Game</scope><name>players1</name></member>
+      <member refid="class_game_1ac8413021c19dac3b7cc32aa0d87cdbc9" prot="public" virt="non-virtual"><scope>Game</scope><name>playerTexture</name></member>
+      <member refid="class_game_1a3d3e4d68aca0adb6422ea5799cf5ec18" prot="public" virt="non-virtual"><scope>Game</scope><name>points</name></member>
+      <member refid="class_game_1a8ea4777fdc751b40f778997b76ee7cf9" prot="public" virt="non-virtual"><scope>Game</scope><name>pollEvents</name></member>
+      <member refid="class_game_1a15ddd769261d923827a3cdf41499c843" prot="public" virt="non-virtual"><scope>Game</scope><name>render</name></member>
+      <member refid="class_game_1a703667da880dedf23935cef5427eec71" prot="public" virt="non-virtual"><scope>Game</scope><name>renderEnemies</name></member>
+      <member refid="class_game_1a2b4b0c9e3b4ac5ad789ec2e764b3d8f0" prot="public" virt="non-virtual"><scope>Game</scope><name>renderPlayer</name></member>
+      <member refid="class_game_1afe97e9b7e83b19ab7e1502329e9aeab6" prot="public" virt="non-virtual"><scope>Game</scope><name>running</name></member>
+      <member refid="class_game_1ad7a4181414089729ddea00c053f822c4" prot="public" virt="non-virtual"><scope>Game</scope><name>spawnEnemy</name></member>
+      <member refid="class_game_1a79df6376b332d63c9eca0dcee30305c3" prot="public" virt="non-virtual"><scope>Game</scope><name>update</name></member>
+      <member refid="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" prot="public" virt="non-virtual"><scope>Game</scope><name>updateEnemies</name></member>
+      <member refid="class_game_1a178767c8170eaf60bc566b4b67b1d622" prot="public" virt="non-virtual"><scope>Game</scope><name>updateMousePosition</name></member>
+      <member refid="class_game_1a65ca549b63b1bd9bc6dcb31cd840a9a3" prot="public" virt="non-virtual"><scope>Game</scope><name>videMode</name></member>
+      <member refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" prot="public" virt="non-virtual"><scope>Game</scope><name>window</name></member>
+      <member refid="class_game_1ae3d112ca6e0e55150d2fdbc704474530" prot="public" virt="virtual"><scope>Game</scope><name>~Game</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_bullet_8cpp" kind="file">
+    <compoundname>Bullet.cpp</compoundname>
+    <includes refid="_bullet_8h" local="yes">Bullet.h</includes>
+    <incdepgraph>
+      <node id="253">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="249">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="260">
+        <label>Score.h</label>
+        <link refid="_score_8h"/>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="256">
+        <label>cmath</label>
+      </node>
+      <node id="252">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="251">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="246">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.cpp</label>
+        <link refid="Bullet.cpp"/>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>vector</label>
+      </node>
+      <node id="259">
+        <label>sstream</label>
+      </node>
+      <node id="257">
+        <label>math.h</label>
+      </node>
+      <node id="248">
+        <label>iostream</label>
+      </node>
+      <node id="250">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="258">
+        <label>memory</label>
+      </node>
+      <node id="247">
+        <label>Bullet.h</label>
+        <link refid="_bullet_8h"/>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="254" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bullet_8h" kindref="compound">Bullet.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_bullet_1acfbb7387f8d53940b313192417e7ff73" refkind="member"><highlight class="normal"><ref refid="class_bullet_1acfbb7387f8d53940b313192417e7ff73" kindref="member">Bullet::Bullet</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>radius):currVelocity(0.f,<sp/>0.f),<sp/>maxSpeed(15.f),maxbulletTimer(1)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_bullet_1ac019b9e3d96fdc34a20f375c604cd626" kindref="member">bullet</ref>.setRadius(radius);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_bullet_1ac019b9e3d96fdc34a20f375c604cd626" kindref="member">bullet</ref>.setFillColor(sf::Color::White);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_bullet_1a9634c75730c3bcad18567e3fc6c262e6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bullet_1a9634c75730c3bcad18567e3fc6c262e6" kindref="member">Bullet::setAmmo</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bullet_1a6cf592cdcd5b81ca640d4151eebc902f" kindref="member">maxbulletTimer</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17" refid="class_bullet_1a046b280041c1f9aeff6a4babc2d37122" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_bullet_1a046b280041c1f9aeff6a4babc2d37122" kindref="member">Bullet::setSpeed</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_bullet_1a35d8cf63489cff15a4d7f4440ce078e3" kindref="member">maxSpeed</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">;</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.cpp"/>
+  </compounddef>
+</doxygen>

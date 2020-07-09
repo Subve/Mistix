@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_high_score_8h" kind="file">
+    <compoundname>HighScore.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">SFML/System.hpp</includes>
+    <includes local="no">SFML/Window.hpp</includes>
+    <includes local="no">SFML/Audio.hpp</includes>
+    <includes local="no">SFML/Network.hpp</includes>
+    <includes refid="_entity_manager_8h" local="yes">EntityManager.h</includes>
+    <includes refid="_menu_8h" local="yes">Menu.h</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">sstream</includes>
+    <includes refid="_score_8h" local="yes">Score.h</includes>
+    <includes refid="_player_8h" local="yes">Player.h</includes>
+    <includes refid="_bullet_8h" local="yes">Bullet.h</includes>
+    <includes refid="_enemy_8h" local="yes">Enemy.h</includes>
+    <includes refid="_little_enemy_8h" local="yes">LittleEnemy.h</includes>
+    <includes refid="_custom_mouse_8h" local="yes">CustomMouse.h</includes>
+    <includes refid="_background_8h" local="yes">Background.h</includes>
+    <includes local="no">fstream</includes>
+    <includedby refid="_high_score_8cpp" local="yes">C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/HighScore.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/main.cpp</includedby>
+    <incdepgraph>
+      <node id="444">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="440">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="453">
+        <label>Score.h</label>
+        <link refid="_score_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="454">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="446">
+        <label>cmath</label>
+      </node>
+      <node id="445">
+        <label>EntityManager.h</label>
+        <link refid="_entity_manager_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="459">
+        <label>fstream</label>
+      </node>
+      <node id="438">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/HighScore.h</label>
+        <link refid="HighScore.h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="442">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="456">
+        <label>LittleEnemy.h</label>
+        <link refid="_little_enemy_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+      </node>
+      <node id="450">
+        <label>Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+      </node>
+      <node id="457">
+        <label>CustomMouse.h</label>
+        <link refid="_custom_mouse_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="452">
+        <label>vector</label>
+      </node>
+      <node id="449">
+        <label>sstream</label>
+      </node>
+      <node id="447">
+        <label>math.h</label>
+      </node>
+      <node id="439">
+        <label>iostream</label>
+      </node>
+      <node id="458">
+        <label>Background.h</label>
+        <link refid="_background_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+      </node>
+      <node id="441">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="448">
+        <label>memory</label>
+      </node>
+      <node id="455">
+        <label>Bullet.h</label>
+        <link refid="_bullet_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="442" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="460">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/HighScore.h</label>
+        <link refid="HighScore.h"/>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+      </node>
+      <node id="462">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="461">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/HighScore.cpp</label>
+        <link refid="_high_score_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_high_score" prot="public">HighScore</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/System.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Window.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Audio.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Network.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_entity_manager_8h" kindref="compound">EntityManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_menu_8h" kindref="compound">Menu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;math.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_score_8h" kindref="compound">Score.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_8h" kindref="compound">Player.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bullet_8h" kindref="compound">Bullet.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_enemy_8h" kindref="compound">Enemy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_little_enemy_8h" kindref="compound">LittleEnemy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_custom_mouse_8h" kindref="compound">CustomMouse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_background_8h" kindref="compound">Background.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_high_score" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_high_score" kindref="compound">HighScore</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26" refid="class_high_score_1ae8a1add24aee3f91635ef49cb0fbdbf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Text<sp/><ref refid="class_high_score_1ae8a1add24aee3f91635ef49cb0fbdbf7" kindref="member">highscore_Text</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="class_high_score_1ad5274eb747a5103eb142791d2d4de766" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Font<sp/><ref refid="class_high_score_1ad5274eb747a5103eb142791d2d4de766" kindref="member">highscore_Font</ref>;</highlight></codeline>
+<codeline lineno="29" refid="class_high_score_1aa02b27cf163a6bc93c3c05d6ba9a5894" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/><ref refid="class_high_score_1aa02b27cf163a6bc93c3c05d6ba9a5894" kindref="member">ssHighScore</ref>;</highlight></codeline>
+<codeline lineno="30" refid="class_high_score_1ada0177d6b2e4c3d417abca91ebfa5afa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_high_score_1ada0177d6b2e4c3d417abca91ebfa5afa" kindref="member">m_highscore</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_high_score_1a6cfc43d60f28ed3d18946a2b4034d4de" kindref="member">HighScore</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_high_score_1a979a1776ad5fc85a1b92215861e4db65" kindref="member">~HighScore</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_high_score_1a3a21152668a9dea4dba208a7327738b7" kindref="member">updateHighScore</ref>(<ref refid="class_score" kindref="compound">Score</ref>&amp;obj);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_high_score_1a765c6ecdb4f47e1336fd214cdcf0a229" kindref="member">renderHighscore</ref>(sf::RenderTarget<sp/>&amp;window);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_high_score_1acf041876228e67891bd1241c5b56ba47" kindref="member">getHighscore</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_high_score_1a43f2d2d8a75a691856653f4dfd6e3f72" kindref="member">setHighscore</ref>(<ref refid="class_score" kindref="compound">Score</ref>&amp;obj);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_high_score_1acb8f7b9008b12d882f5d4950aeb58ec9" kindref="member">loadHighscore</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_high_score_1a8a7b778b93c0cd9b8cd5d63fca33af1a" kindref="member">saveHighScore</ref>(<ref refid="class_score" kindref="compound">Score</ref><sp/>&amp;obj);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_high_score_1aef99986d4ef5e0daf4eebd16c603930e" kindref="member">showText</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/HighScore.h"/>
+  </compounddef>
+</doxygen>

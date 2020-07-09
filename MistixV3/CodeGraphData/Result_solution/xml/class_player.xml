@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_player" kind="class" prot="public">
+    <compoundname>Player</compoundname>
+    <includes refid="_player_8h" local="no">Player.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_player_1ad10e0970807043d46ae4998a386794be" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Player::startPlayerPos</definition>
+        <argsstring></argsstring>
+        <name>startPlayerPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="18" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_player_1a2273be994c99f1c86fa25147b6551e8b" compoundref="_player_8cpp" startline="16" endline="22">initPlayer</referencedby>
+        <referencedby refid="class_player_1a7733065f6843bba8b34d8174451ff39c" compoundref="_player_8cpp" startline="23" endline="26">initPlayerVar</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a31b816df6cf3796054e2055cf9f2a85c" prot="public" static="no" mutable="no">
+        <type>sf::RectangleShape</type>
+        <definition>sf::RectangleShape Player::body</definition>
+        <argsstring></argsstring>
+        <name>body</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="20" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_player_1a2273be994c99f1c86fa25147b6551e8b" compoundref="_player_8cpp" startline="16" endline="22">initPlayer</referencedby>
+        <referencedby refid="class_player_1af1d88b7ee66513d3426fc606ea88cb7f" compoundref="_player_8cpp" startline="4" endline="9">Player</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_1aaa23b3bf80e8c0267cf08d4fe4d6ddc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::Player</definition>
+        <argsstring>()=default</argsstring>
+        <name>Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1af1d88b7ee66513d3426fc606ea88cb7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::Player</definition>
+        <argsstring>(sf::Texture *texture)</argsstring>
+        <name>Player</name>
+        <param>
+          <type>sf::Texture *</type>
+          <declname>texture</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="15" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.cpp" bodystart="4" bodyend="9"/>
+        <references refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" compoundref="_player_8h" startline="20">body</references>
+        <references refid="class_player_1a2273be994c99f1c86fa25147b6551e8b" compoundref="_player_8cpp" startline="16" endline="22">initPlayer</references>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::~Player</definition>
+        <argsstring>()</argsstring>
+        <name>~Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="16" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a2273be994c99f1c86fa25147b6551e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::initPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>initPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="23" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.cpp" bodystart="16" bodyend="22"/>
+        <references refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" compoundref="_player_8h" startline="20">body</references>
+        <references refid="class_player_1ad10e0970807043d46ae4998a386794be" compoundref="_player_8h" startline="18">startPlayerPos</references>
+        <referencedby refid="class_player_1af1d88b7ee66513d3426fc606ea88cb7f" compoundref="_player_8cpp" startline="4" endline="9">Player</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a7733065f6843bba8b34d8174451ff39c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::initPlayerVar</definition>
+        <argsstring>()</argsstring>
+        <name>initPlayerVar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="24" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.cpp" bodystart="23" bodyend="26"/>
+        <references refid="class_player_1ad10e0970807043d46ae4998a386794be" compoundref="_player_8h" startline="18">startPlayerPos</references>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a1cccc32baac4cc44b690edd033afc97b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::playerUpdate</definition>
+        <argsstring>()</argsstring>
+        <name>playerUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="27" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a6435413a88749e18e104df827ee5a97a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::playerRender</definition>
+        <argsstring>()</argsstring>
+        <name>playerRender</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="30" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" line="11" column="1" bodyfile="C:/Users/milos/Documents/Mistix/MistixV3/Player.h" bodystart="10" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" prot="public" virt="non-virtual"><scope>Player</scope><name>body</name></member>
+      <member refid="class_player_1a2273be994c99f1c86fa25147b6551e8b" prot="public" virt="non-virtual"><scope>Player</scope><name>initPlayer</name></member>
+      <member refid="class_player_1a7733065f6843bba8b34d8174451ff39c" prot="public" virt="non-virtual"><scope>Player</scope><name>initPlayerVar</name></member>
+      <member refid="class_player_1aaa23b3bf80e8c0267cf08d4fe4d6ddc1" prot="public" virt="non-virtual"><scope>Player</scope><name>Player</name></member>
+      <member refid="class_player_1af1d88b7ee66513d3426fc606ea88cb7f" prot="public" virt="non-virtual"><scope>Player</scope><name>Player</name></member>
+      <member refid="class_player_1a6435413a88749e18e104df827ee5a97a" prot="public" virt="non-virtual"><scope>Player</scope><name>playerRender</name></member>
+      <member refid="class_player_1a1cccc32baac4cc44b690edd033afc97b" prot="public" virt="non-virtual"><scope>Player</scope><name>playerUpdate</name></member>
+      <member refid="class_player_1ad10e0970807043d46ae4998a386794be" prot="public" virt="non-virtual"><scope>Player</scope><name>startPlayerPos</name></member>
+      <member refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" prot="public" virt="non-virtual"><scope>Player</scope><name>~Player</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

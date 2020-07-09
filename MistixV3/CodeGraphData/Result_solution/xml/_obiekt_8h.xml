@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_obiekt_8h" kind="file">
+    <compoundname>Obiekt.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">SFML/Graphics.hpp</includes>
+    <includes local="no">SFML/System.hpp</includes>
+    <includes local="no">SFML/Window.hpp</includes>
+    <includes local="no">SFML/Audio.hpp</includes>
+    <includes local="no">SFML/Network.hpp</includes>
+    <includes local="no">ctime</includes>
+    <includedby refid="_obiekt_8cpp" local="yes">C:/Users/milos/Documents/Mistix/MistixV3/Obiekt.cpp</includedby>
+    <incdepgraph>
+      <node id="227">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="223">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="226">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="221">
+        <label>C:/Users/milos/Documents/Mistix/MistixV3/Obiekt.h</label>
+        <link refid="Obiekt.h"/>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="228">
+        <label>ctime</label>
+      </node>
+      <node id="222">
+        <label>iostream</label>
+      </node>
+      <node id="224">
+        <label>SFML/System.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="229">
+        <label>C:/Users/milos/Documents/Mistix/MistixV3/Obiekt.h</label>
+        <link refid="Obiekt.h"/>
+        <childnode refid="230" relation="include">
+        </childnode>
+      </node>
+      <node id="230">
+        <label>C:/Users/milos/Documents/Mistix/MistixV3/Obiekt.cpp</label>
+        <link refid="_obiekt_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_obiekt" prot="public">Obiekt</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Graphics.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/System.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Window.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Audio.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Network.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_obiekt" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_obiekt" kindref="compound">Obiekt</ref><sp/>:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>sf::Sprite</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13" refid="class_obiekt_1ac8e27a872226e2b55c6f42c0677e5d00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_obiekt_1ac8e27a872226e2b55c6f42c0677e5d00" kindref="member">Obiekt</ref>()<sp/>:Sprite()<sp/>{};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_obiekt_1a73430fdfcdf4b72dec57cd283bc833b0" kindref="member">~Obiekt</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_obiekt_1a65f1741902d00509064eef5f552c9bb8" kindref="member">Ruszaj</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed_x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed_y)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/MistixV3/Obiekt.h"/>
+  </compounddef>
+</doxygen>

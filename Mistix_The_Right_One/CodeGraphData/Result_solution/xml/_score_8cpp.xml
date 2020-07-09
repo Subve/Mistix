@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_score_8cpp" kind="file">
+    <compoundname>Score.cpp</compoundname>
+    <includes refid="_score_8h" local="yes">Score.h</includes>
+    <incdepgraph>
+      <node id="613">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="609">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="607">
+        <label>Score.h</label>
+        <link refid="_score_8h"/>
+        <childnode refid="608" relation="include">
+        </childnode>
+        <childnode refid="609" relation="include">
+        </childnode>
+        <childnode refid="610" relation="include">
+        </childnode>
+        <childnode refid="611" relation="include">
+        </childnode>
+        <childnode refid="612" relation="include">
+        </childnode>
+        <childnode refid="613" relation="include">
+        </childnode>
+        <childnode refid="614" relation="include">
+        </childnode>
+        <childnode refid="616" relation="include">
+        </childnode>
+        <childnode refid="617" relation="include">
+        </childnode>
+        <childnode refid="618" relation="include">
+        </childnode>
+        <childnode refid="619" relation="include">
+        </childnode>
+      </node>
+      <node id="606">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Score.cpp</label>
+        <link refid="Score.cpp"/>
+        <childnode refid="607" relation="include">
+        </childnode>
+      </node>
+      <node id="614">
+        <label>Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="609" relation="include">
+        </childnode>
+        <childnode refid="615" relation="include">
+        </childnode>
+      </node>
+      <node id="616">
+        <label>cmath</label>
+      </node>
+      <node id="612">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="611">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="615">
+        <label>vector</label>
+      </node>
+      <node id="619">
+        <label>sstream</label>
+      </node>
+      <node id="617">
+        <label>math.h</label>
+      </node>
+      <node id="608">
+        <label>iostream</label>
+      </node>
+      <node id="610">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="618">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_score_8h" kindref="compound">Score.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_score_1a039c99843551e5e4b512ecee99e46617" refkind="member"><highlight class="normal"><ref refid="class_score_1a039c99843551e5e4b512ecee99e46617" kindref="member">Score::Score</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_score_1a4ab40038c546a552a3620bcf2baeecf4" kindref="member">score_Font</ref>.loadFromFile(</highlight><highlight class="stringliteral">&quot;fonts/arial.ttf&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_score_1a4ab40038c546a552a3620bcf2baeecf4" kindref="member">score_Font</ref>.loadFromFile(</highlight><highlight class="stringliteral">&quot;fonts/arial.ttf&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Score<sp/>font<sp/>loaded<sp/>successfully<sp/>\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Score<sp/>font<sp/>FAILED<sp/>TO<sp/>LOAD<sp/>\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_score_1a79de7d8d70858b847b0a71c247696655" kindref="member">score_Text</ref>.setFont(<ref refid="class_score_1a4ab40038c546a552a3620bcf2baeecf4" kindref="member">score_Font</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_score_1a79de7d8d70858b847b0a71c247696655" kindref="member">score_Text</ref>.setCharacterSize(24);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_score_1a79de7d8d70858b847b0a71c247696655" kindref="member">score_Text</ref>.setPosition(10,<sp/>10);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_score_1acadffb62d3dac8295f0cd55b33e4e269" kindref="member">updateText</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="class_score_1acadffb62d3dac8295f0cd55b33e4e269" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_score_1acadffb62d3dac8295f0cd55b33e4e269" kindref="member">Score::updateText</ref>()</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_score_1a2a4e2c875122e6459a701e2703eb8ff3" kindref="member">ssScore</ref>.str(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_score_1a2a4e2c875122e6459a701e2703eb8ff3" kindref="member">ssScore</ref>.clear();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_score_1a2a4e2c875122e6459a701e2703eb8ff3" kindref="member">ssScore</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Points<sp/>:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>this-&gt;<ref refid="class_score_1a43673f1f88d6d44ae71b98116f33c9ed" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_score_1a79de7d8d70858b847b0a71c247696655" kindref="member">score_Text</ref>.setString(<ref refid="class_score_1a2a4e2c875122e6459a701e2703eb8ff3" kindref="member">ssScore</ref>.str());</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_score_1acaeff9e6a1f902619cee9cdb83c682a3" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_score_1acaeff9e6a1f902619cee9cdb83c682a3" kindref="member">Score::setValue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_score_1a43673f1f88d6d44ae71b98116f33c9ed" kindref="member">value</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_score_1a3a232b9bb260de0c3a6a985f902d88b2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_score_1a3a232b9bb260de0c3a6a985f902d88b2" kindref="member">Score::pointsRender</ref>(sf::RenderWindow&amp;<sp/>window)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>window.draw(this-&gt;<ref refid="class_score_1a79de7d8d70858b847b0a71c247696655" kindref="member">score_Text</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_score_1a8627c93270c188a3fd28a25b1d07a9e7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_score_1a8627c93270c188a3fd28a25b1d07a9e7" kindref="member">Score::getScore</ref>()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="class_score_1a43673f1f88d6d44ae71b98116f33c9ed" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_score_1ae1508009aec07d5353ceb36c3c9a1ac8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_score_1ae1508009aec07d5353ceb36c3c9a1ac8" kindref="member">Score::setaddPoint</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_score_1a21809111f4e494b810f49ff5a4c14f87" kindref="member">m_addValue</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(n);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="class_score_1a4214e1c3774fc4eb7cf3b23c6e0eeef8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_score_1a4214e1c3774fc4eb7cf3b23c6e0eeef8" kindref="member">Score::addPoints</ref>()</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_score_1a43673f1f88d6d44ae71b98116f33c9ed" kindref="member">value</ref><sp/>+=<sp/><ref refid="class_score_1a21809111f4e494b810f49ff5a4c14f87" kindref="member">m_addValue</ref>;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Score.cpp"/>
+  </compounddef>
+</doxygen>

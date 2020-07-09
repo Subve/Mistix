@@ -4,7 +4,7 @@ EntityManager::EntityManager()
 {
 }
 
-void EntityManager::SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID,int &iteracja_tworzenie_obiektow)
+void EntityManager::SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID1,int &iteracja_tworzenie_obiektow)
 {
 	
 	while (iteracja_tworzenie_obiektow < 5)
@@ -20,10 +20,11 @@ void EntityManager::SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int
 
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				enemies[iteracja_tworzenie_obiektow]->mobID = mobID;
+				enemies[iteracja_tworzenie_obiektow]->mobID = mobID1;
 				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
+				enemies[iteracja_tworzenie_obiektow]->ableToMove = true;
 				enemies[iteracja_tworzenie_obiektow]->HP = 1;
-				mobID++;
+				mobID1++;
 				/*sf::Vector2u e_direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow]->getPosition());*/
 				/*enemies[iteracja_tworzenie_obiektow]->move(enemies[iteracja_tworzenie_obiektow]->direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow].getPosition()));*/
 				iteracja_tworzenie_obiektow++;
@@ -36,10 +37,11 @@ void EntityManager::SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				/*enemies.emplace_back(std::make_unique<LittleEnemy>());*/
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				enemies[iteracja_tworzenie_obiektow]->mobID = mobID;
+				enemies[iteracja_tworzenie_obiektow]->mobID = mobID1;
 				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
+				enemies[iteracja_tworzenie_obiektow]->ableToMove = true;
 				enemies[iteracja_tworzenie_obiektow]->HP = 1;
-				mobID++;
+				mobID1++;
 				iteracja_tworzenie_obiektow++;
 			}
 			if (losowanie_x == 2)
@@ -49,10 +51,11 @@ void EntityManager::SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int
 
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				enemies[iteracja_tworzenie_obiektow]->mobID = mobID;
+				enemies[iteracja_tworzenie_obiektow]->mobID = mobID1;
 				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
+				enemies[iteracja_tworzenie_obiektow]->ableToMove = true;
 				enemies[iteracja_tworzenie_obiektow]->HP = 1;
-				mobID++;
+				mobID1++;
 				iteracja_tworzenie_obiektow++;
 			}
 			if (losowanie_x == 3)
@@ -62,19 +65,22 @@ void EntityManager::SpawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int
 
 				enemies.emplace_back(std::make_unique<LittleEnemy>());
 				enemies[iteracja_tworzenie_obiektow]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-				enemies[iteracja_tworzenie_obiektow]->mobID = mobID;
+				enemies[iteracja_tworzenie_obiektow]->mobID = mobID1;
 				enemies[iteracja_tworzenie_obiektow]->polaczone = false;
+				enemies[iteracja_tworzenie_obiektow]->ableToMove = true;
 				enemies[iteracja_tworzenie_obiektow]->HP = 1;
-				mobID++;
+				mobID1++;
 				iteracja_tworzenie_obiektow++;
 			}
 		}
 	}
+	
+
 }
 
-void EntityManager::RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID, int& iteracja_tworzenie_obiektow)
+void EntityManager::RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID1, int& iteracja_tworzenie_obiektow)
 {
-	int numer=enemies.size() - 1;
+	int numer=enemies.size() ;
 	if (numer < 0) numer = 0;
 		int losowanie_x = rand() % 4;
 		if (losowanie_x == 0)
@@ -84,10 +90,11 @@ void EntityManager::RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, i
 			 
 			enemies.push_back(std::make_unique<LittleEnemy>());
 			enemies[numer]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-			enemies[numer]->mobID = mobID;
+			enemies[numer]->mobID = mobID1;
 			enemies[numer]->polaczone = false;
+			enemies[numer]->ableToMove = true;
 			enemies[numer]->HP = 1;
-			mobID += 1;
+			mobID1 += 1;
 			/*sf::Vector2u e_direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow]->getPosition());*/
 			/*enemies[iteracja_tworzenie_obiektow]->move(enemies[iteracja_tworzenie_obiektow]->direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow].getPosition()));*/
 			iteracja_tworzenie_obiektow += 1;
@@ -100,10 +107,11 @@ void EntityManager::RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, i
 			
 			enemies.push_back(std::make_unique<LittleEnemy>());
 			enemies[numer]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-			enemies[numer]->mobID = mobID;
+			enemies[numer]->mobID = mobID1;
 			enemies[numer]->polaczone = false;
+			enemies[numer]->ableToMove = true;
 			enemies[numer]->HP = 1;
-			mobID += 1;
+			mobID1 += 1;
 			iteracja_tworzenie_obiektow += 1;
 		}
 		if (losowanie_x == 2)
@@ -113,10 +121,11 @@ void EntityManager::RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, i
 
 			enemies.push_back(std::make_unique<LittleEnemy>());
 			enemies[numer]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-			enemies[numer]->mobID = mobID;
+			enemies[numer]->mobID = mobID1;
 			enemies[numer]->polaczone = false;
+			enemies[numer]->ableToMove = true;
 			enemies[numer]->HP = 1;
-			mobID += 1;
+			mobID1 += 1;
 			iteracja_tworzenie_obiektow += 1;
 		}
 		if (losowanie_x == 3)
@@ -126,13 +135,20 @@ void EntityManager::RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, i
 
 			enemies.push_back(std::make_unique<LittleEnemy>());
 			enemies[numer]->setPosition(littleEnemy_pozycja_x, littleEnemy_pozycja_y);
-			enemies[numer]->mobID = mobID;
+			enemies[numer]->mobID = mobID1;
 			enemies[numer]->polaczone = false;
+			enemies[numer]->ableToMove = true;
 			enemies[numer]->HP = 1;
-			mobID +=1;
+			mobID1 += 1;
 			iteracja_tworzenie_obiektow += 1;
 		}
+		
+		
 	
+}
+
+void EntityManager::InitEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID, int& iteracja_tworzenie_obiektow)
+{
 	
 }
 	

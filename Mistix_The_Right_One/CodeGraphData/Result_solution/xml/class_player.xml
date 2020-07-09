@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_player" kind="class" prot="public">
+    <compoundname>Player</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Sprite</basecompoundref>
+    <includes refid="_player_8h" local="no">Player.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" prot="private" static="no" mutable="no">
+        <type>sf::Vector2i</type>
+        <definition>sf::Vector2i Player::mouse</definition>
+        <argsstring></argsstring>
+        <name>mouse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="17" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_player_1adaa164efaced79188b42e3df82119614" compoundref="_player_8cpp" startline="51" endline="68">playerRotate</referencedby>
+        <referencedby refid="class_player_1aee37a6a830cd71d1629fe2979c10b54b" compoundref="_player_8cpp" startline="45" endline="49">updateMousePos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1acdf217201e6fe6ed898c2e15292ef252" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Player::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="18" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_player_1adaa164efaced79188b42e3df82119614" compoundref="_player_8cpp" startline="51" endline="68">playerRotate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1af172f5419b96c2eff0ceda3e811d561a" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture Player::player_texture</definition>
+        <argsstring></argsstring>
+        <name>player_texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="19" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" compoundref="_player_8cpp" startline="3" endline="23">Player</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a33415a8ba44768cade0e2e5285af9d0c" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Player::player_startPosition</definition>
+        <argsstring></argsstring>
+        <name>player_startPosition</name>
+        <initializer>= sf::Vector2f(300.0f, 300.0f)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="20" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" compoundref="_player_8cpp" startline="3" endline="23">Player</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a335a9024e30836f6a2b34ab04897fa77" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Player::player_position</definition>
+        <argsstring></argsstring>
+        <name>player_position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="21" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_player_1adaa164efaced79188b42e3df82119614" compoundref="_player_8cpp" startline="51" endline="68">playerRotate</referencedby>
+        <referencedby refid="class_player_1aee37a6a830cd71d1629fe2979c10b54b" compoundref="_player_8cpp" startline="45" endline="49">updateMousePos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1a2d0002782e8988efd903ea94eb20c34e" prot="private" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Player::bullet_startPos</definition>
+        <argsstring></argsstring>
+        <name>bullet_startPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="22" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_player_1a13605f26121059ac4ded558731b7a892" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Player::playerCenter</definition>
+        <argsstring></argsstring>
+        <name>playerCenter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="37" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1ac3079b42e9fefa07912504b3d2481b36" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Player::mousePosWindow</definition>
+        <argsstring></argsstring>
+        <name>mousePosWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="38" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1ae041a56e63d392bfda3c7049e212a21f" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Player::aimDir</definition>
+        <argsstring></argsstring>
+        <name>aimDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="39" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1adbd2a2da5ae75160190996ed35e2ebb2" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Player::aimDirNorm</definition>
+        <argsstring></argsstring>
+        <name>aimDirNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="40" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_1afe84e9ff73bc2d371d3f639c1ea185ed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Player::m_playerHealth</definition>
+        <argsstring></argsstring>
+        <name>m_playerHealth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="41" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_little_enemy_1a3c6a14f2d1ef17d12770f0ed7dd84b96" compoundref="_little_enemy_8cpp" startline="26" endline="37">LittleEnemy::Attack</referencedby>
+        <referencedby refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" compoundref="_player_8cpp" startline="3" endline="23">Player</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::Player</definition>
+        <argsstring>()</argsstring>
+        <name>Player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="29" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.cpp" bodystart="3" bodyend="23"/>
+        <references refid="class_player_1afe84e9ff73bc2d371d3f639c1ea185ed" compoundref="_player_8h" startline="41">m_playerHealth</references>
+        <references refid="class_player_1a33415a8ba44768cade0e2e5285af9d0c" compoundref="_player_8h" startline="20">player_startPosition</references>
+        <references refid="class_player_1af172f5419b96c2eff0ceda3e811d561a" compoundref="_player_8h" startline="19">player_texture</references>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a229682eedeae71a66cd9dc5945225438" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::playerMove</definition>
+        <argsstring>()</argsstring>
+        <name>playerMove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="30" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.cpp" bodystart="25" bodyend="43"/>
+        <referencedby refid="class_player_1a2df419182d09c3c85109b3e7114d736a" compoundref="_player_8cpp" startline="70" endline="76">playerUpdate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1aee37a6a830cd71d1629fe2979c10b54b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::updateMousePos</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>updateMousePos</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="31" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.cpp" bodystart="45" bodyend="49"/>
+        <references refid="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" compoundref="_player_8h" startline="17">mouse</references>
+        <references refid="class_player_1a335a9024e30836f6a2b34ab04897fa77" compoundref="_player_8h" startline="21">player_position</references>
+        <referencedby refid="class_player_1adaa164efaced79188b42e3df82119614" compoundref="_player_8cpp" startline="51" endline="68">playerRotate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1adaa164efaced79188b42e3df82119614" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::playerRotate</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>playerRotate</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="32" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.cpp" bodystart="51" bodyend="68"/>
+        <references refid="class_player_1acdf217201e6fe6ed898c2e15292ef252" compoundref="_player_8h" startline="18">angle</references>
+        <references refid="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" compoundref="_player_8h" startline="17">mouse</references>
+        <references refid="class_player_1a335a9024e30836f6a2b34ab04897fa77" compoundref="_player_8h" startline="21">player_position</references>
+        <references refid="class_player_1aee37a6a830cd71d1629fe2979c10b54b" compoundref="_player_8cpp" startline="45" endline="49">updateMousePos</references>
+        <referencedby refid="class_player_1a2df419182d09c3c85109b3e7114d736a" compoundref="_player_8cpp" startline="70" endline="76">playerUpdate</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_player_1a2df419182d09c3c85109b3e7114d736a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::playerUpdate</definition>
+        <argsstring>(sf::RenderWindow &amp;window)</argsstring>
+        <name>playerUpdate</name>
+        <param>
+          <type>sf::RenderWindow &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="36" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.cpp" bodystart="70" bodyend="76"/>
+        <references refid="class_player_1a229682eedeae71a66cd9dc5945225438" compoundref="_player_8cpp" startline="25" endline="43">playerMove</references>
+        <references refid="class_player_1adaa164efaced79188b42e3df82119614" compoundref="_player_8cpp" startline="51" endline="68">playerRotate</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="37">
+        <label>Sprite</label>
+      </node>
+      <node id="36">
+        <label>Player</label>
+        <link refid="class_player"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="39">
+        <label>Sprite</label>
+      </node>
+      <node id="38">
+        <label>Player</label>
+        <link refid="class_player"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" line="15" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.h" bodystart="14" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_player_1ae041a56e63d392bfda3c7049e212a21f" prot="public" virt="non-virtual"><scope>Player</scope><name>aimDir</name></member>
+      <member refid="class_player_1adbd2a2da5ae75160190996ed35e2ebb2" prot="public" virt="non-virtual"><scope>Player</scope><name>aimDirNorm</name></member>
+      <member refid="class_player_1acdf217201e6fe6ed898c2e15292ef252" prot="private" virt="non-virtual"><scope>Player</scope><name>angle</name></member>
+      <member refid="class_player_1a2d0002782e8988efd903ea94eb20c34e" prot="private" virt="non-virtual"><scope>Player</scope><name>bullet_startPos</name></member>
+      <member refid="class_player_1afe84e9ff73bc2d371d3f639c1ea185ed" prot="public" virt="non-virtual"><scope>Player</scope><name>m_playerHealth</name></member>
+      <member refid="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" prot="private" virt="non-virtual"><scope>Player</scope><name>mouse</name></member>
+      <member refid="class_player_1ac3079b42e9fefa07912504b3d2481b36" prot="public" virt="non-virtual"><scope>Player</scope><name>mousePosWindow</name></member>
+      <member refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" prot="public" virt="non-virtual"><scope>Player</scope><name>Player</name></member>
+      <member refid="class_player_1a335a9024e30836f6a2b34ab04897fa77" prot="private" virt="non-virtual"><scope>Player</scope><name>player_position</name></member>
+      <member refid="class_player_1a33415a8ba44768cade0e2e5285af9d0c" prot="private" virt="non-virtual"><scope>Player</scope><name>player_startPosition</name></member>
+      <member refid="class_player_1af172f5419b96c2eff0ceda3e811d561a" prot="private" virt="non-virtual"><scope>Player</scope><name>player_texture</name></member>
+      <member refid="class_player_1a13605f26121059ac4ded558731b7a892" prot="public" virt="non-virtual"><scope>Player</scope><name>playerCenter</name></member>
+      <member refid="class_player_1a229682eedeae71a66cd9dc5945225438" prot="public" virt="non-virtual"><scope>Player</scope><name>playerMove</name></member>
+      <member refid="class_player_1adaa164efaced79188b42e3df82119614" prot="public" virt="non-virtual"><scope>Player</scope><name>playerRotate</name></member>
+      <member refid="class_player_1a2df419182d09c3c85109b3e7114d736a" prot="public" virt="non-virtual"><scope>Player</scope><name>playerUpdate</name></member>
+      <member refid="class_player_1aee37a6a830cd71d1629fe2979c10b54b" prot="public" virt="non-virtual"><scope>Player</scope><name>updateMousePos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

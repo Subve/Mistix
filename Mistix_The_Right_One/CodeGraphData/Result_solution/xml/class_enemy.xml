@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_enemy" kind="class" prot="public" abstract="yes">
+    <compoundname>Enemy</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Sprite</basecompoundref>
+    <derivedcompoundref refid="class_big_enemy" prot="public" virt="non-virtual">BigEnemy</derivedcompoundref>
+    <derivedcompoundref refid="class_little_enemy" prot="public" virt="non-virtual">LittleEnemy</derivedcompoundref>
+    <includes refid="_enemy_8h" local="no">Enemy.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_enemy_1a2a442a2db9ac5a6996125c71d1ee9ff1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Enemy::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="42" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1ab213cf1ef15c2b8e477d1c69ff2b8960" prot="public" static="no" mutable="no">
+        <type>sf::Vector2u</type>
+        <definition>sf::Vector2u Enemy::direction</definition>
+        <argsstring></argsstring>
+        <name>direction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="43" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a41c22aa9871eab6e369347f8f55fbbae" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Enemy::playerCenter</definition>
+        <argsstring></argsstring>
+        <name>playerCenter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="44" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a86f57cef74842f9d0ef8ca59aa8c3c74" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Enemy::mousePosWindow</definition>
+        <argsstring></argsstring>
+        <name>mousePosWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="45" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a8755a8d710930ee778ef842e30ea8ba6" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Enemy::aimDir</definition>
+        <argsstring></argsstring>
+        <name>aimDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="46" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a2c8973bb137c37ce4214d0b444bb3eda" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Enemy::aimDirNorm</definition>
+        <argsstring></argsstring>
+        <name>aimDirNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="47" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a7b6fb644ed8f128e12cd250e528b44da" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Enemy::enemyPos</definition>
+        <argsstring></argsstring>
+        <name>enemyPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="48" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a851f386dd173895ba6d221529b1b3b15" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Enemy::mobID</definition>
+        <argsstring></argsstring>
+        <name>mobID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="49" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a878e39c9cbe9eadcfef712dd8df9695a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Enemy::polaczone</definition>
+        <argsstring></argsstring>
+        <name>polaczone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="50" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a58dd78c40c9a16f4dd66101b79519e57" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Enemy::trafiony</definition>
+        <argsstring></argsstring>
+        <name>trafiony</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="51" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1aa239e6ce106e54f02750c13650c69c9a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Enemy::zabity</definition>
+        <argsstring></argsstring>
+        <name>zabity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="52" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_enemy_1a408105b89fbc65723fc1e1208b7fe2bc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Enemy::HP</definition>
+        <argsstring></argsstring>
+        <name>HP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="54" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_enemy_1a94f30d348b6d2840fd71675472ba38dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Enemy::Enemy</definition>
+        <argsstring>()</argsstring>
+        <name>Enemy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="25" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1aafb628c66008e33afdd750e2f492bd98" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Enemy::~Enemy</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Enemy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a6d512d3f2d4c47dbd8b9e7a35e8f2b48" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::Follow</definition>
+        <argsstring>()=0</argsstring>
+        <name>Follow</name>
+        <reimplementedby refid="class_little_enemy_1aa71d67b8c3a38aa82438a1a310dac5c8">Follow</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1a433204c917f741f9cfbf0d087112bd62">Follow</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a89a5afba8c05af383c988376056edbb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::Attack</definition>
+        <argsstring>(Player &amp;gracz, sf::Time &amp;elapsed_time, sf::Time &amp;delta_time)=0</argsstring>
+        <name>Attack</name>
+        <reimplementedby refid="class_little_enemy_1a3c6a14f2d1ef17d12770f0ed7dd84b96">Attack</reimplementedby>
+        <param>
+          <type><ref refid="class_player" kindref="compound">Player</ref> &amp;</type>
+          <declname>gracz</declname>
+        </param>
+        <param>
+          <type>sf::Time &amp;</type>
+          <declname>elapsed_time</declname>
+        </param>
+        <param>
+          <type>sf::Time &amp;</type>
+          <declname>delta_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a989db63499ca2dedc4c378e394716465" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::Rotate</definition>
+        <argsstring>(sf::Vector2f &amp;playermove)=0</argsstring>
+        <name>Rotate</name>
+        <reimplementedby refid="class_little_enemy_1a70c299533aa817f311cd72640af7d52b">Rotate</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1aa1e36855d1e88a6291780c4e3fe45d9a">Rotate</reimplementedby>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>playermove</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a5354bf2928be395d73d250fa2ec47979" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::adMove</definition>
+        <argsstring>(sf::Vector2f &amp;vektorRuchu)=0</argsstring>
+        <name>adMove</name>
+        <reimplementedby refid="class_little_enemy_1a269580aa7291f3a173442abbb717d36f">adMove</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1a30b0f40e972e43572ab6ae8732fec414">adMove</reimplementedby>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>vektorRuchu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a29e6dc0eb9a9a4a9885e741c0de2668a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::setDirection</definition>
+        <argsstring>(sf::Vector2u &amp;direction2)=0</argsstring>
+        <name>setDirection</name>
+        <reimplementedby refid="class_little_enemy_1ad96627da6b5fc10e6964574d53242294">setDirection</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1ad3b6c09752f9db99a5e637547d28502b">setDirection</reimplementedby>
+        <param>
+          <type>sf::Vector2u &amp;</type>
+          <declname>direction2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a13942e703c41473fe1dc20957cfc18e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::setMove</definition>
+        <argsstring>(sf::Vector2f &amp;playermove)=0</argsstring>
+        <name>setMove</name>
+        <reimplementedby refid="class_little_enemy_1a191c81422d4ec8ac14a072ac0946452c">setMove</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041">setMove</reimplementedby>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>playermove</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1afce1da6371d74ad0e152398d2534a96b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::killedZombie</definition>
+        <argsstring>(Score &amp;wynik, std::vector&lt; Bullet &gt; &amp;pociski, std::vector&lt; std::unique_ptr&lt; Enemy &gt;&gt; &amp;enemies)=0</argsstring>
+        <name>killedZombie</name>
+        <reimplementedby refid="class_little_enemy_1acf081ba5e86a4ea2834d13f02f633667">killedZombie</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673">killedZombie</reimplementedby>
+        <param>
+          <type><ref refid="class_score" kindref="compound">Score</ref> &amp;</type>
+          <declname>wynik</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_bullet" kindref="compound">Bullet</ref> &gt; &amp;</type>
+          <declname>pociski</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::unique_ptr&lt; <ref refid="class_enemy" kindref="compound">Enemy</ref> &gt;&gt; &amp;</type>
+          <declname>enemies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1ae3895590d7a7cbeaaa788be55f14e199" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::setTrafiony</definition>
+        <argsstring>()=0</argsstring>
+        <name>setTrafiony</name>
+        <reimplementedby refid="class_little_enemy_1a3998c9f6dceb8b77ea4b81baff61d534">setTrafiony</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1ada8c70420d450b49bb5507f86032b85c">setTrafiony</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a57f288226e09d333e9f01a31580eb393" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::setZabity</definition>
+        <argsstring>()=0</argsstring>
+        <name>setZabity</name>
+        <reimplementedby refid="class_little_enemy_1a26e35171350239289eecda211f37cc94">setZabity</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1a8f9c5357aa54aab0748898d5f9b3a217">setZabity</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_enemy_1a7127d2dccfe0e9162b564575e9377095" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Enemy::setID</definition>
+        <argsstring>(int &amp;i)=0</argsstring>
+        <name>setID</name>
+        <reimplementedby refid="class_little_enemy_1aea325e6e755a9b89d90fd93b6616a104">setID</reimplementedby>
+        <reimplementedby refid="class_big_enemy_1a37e93b3c57c659ef81747eb78658cd1c">setID</reimplementedby>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="36" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>LittleEnemy</label>
+        <link refid="class_little_enemy"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>sf::Sprite</label>
+      </node>
+      <node id="12">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>BigEnemy</label>
+        <link refid="class_big_enemy"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17">
+        <label>sf::Sprite</label>
+      </node>
+      <node id="16">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" line="19" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Enemy.h" bodystart="18" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_enemy_1a5354bf2928be395d73d250fa2ec47979" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>adMove</name></member>
+      <member refid="class_enemy_1a8755a8d710930ee778ef842e30ea8ba6" prot="public" virt="non-virtual"><scope>Enemy</scope><name>aimDir</name></member>
+      <member refid="class_enemy_1a2c8973bb137c37ce4214d0b444bb3eda" prot="public" virt="non-virtual"><scope>Enemy</scope><name>aimDirNorm</name></member>
+      <member refid="class_enemy_1a2a442a2db9ac5a6996125c71d1ee9ff1" prot="public" virt="non-virtual"><scope>Enemy</scope><name>angle</name></member>
+      <member refid="class_enemy_1a89a5afba8c05af383c988376056edbb7" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>Attack</name></member>
+      <member refid="class_enemy_1ab213cf1ef15c2b8e477d1c69ff2b8960" prot="public" virt="non-virtual"><scope>Enemy</scope><name>direction</name></member>
+      <member refid="class_enemy_1a94f30d348b6d2840fd71675472ba38dd" prot="public" virt="non-virtual"><scope>Enemy</scope><name>Enemy</name></member>
+      <member refid="class_enemy_1a7b6fb644ed8f128e12cd250e528b44da" prot="public" virt="non-virtual"><scope>Enemy</scope><name>enemyPos</name></member>
+      <member refid="class_enemy_1a6d512d3f2d4c47dbd8b9e7a35e8f2b48" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>Follow</name></member>
+      <member refid="class_enemy_1a408105b89fbc65723fc1e1208b7fe2bc" prot="public" virt="non-virtual"><scope>Enemy</scope><name>HP</name></member>
+      <member refid="class_enemy_1afce1da6371d74ad0e152398d2534a96b" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>killedZombie</name></member>
+      <member refid="class_enemy_1a851f386dd173895ba6d221529b1b3b15" prot="public" virt="non-virtual"><scope>Enemy</scope><name>mobID</name></member>
+      <member refid="class_enemy_1a86f57cef74842f9d0ef8ca59aa8c3c74" prot="public" virt="non-virtual"><scope>Enemy</scope><name>mousePosWindow</name></member>
+      <member refid="class_enemy_1a41c22aa9871eab6e369347f8f55fbbae" prot="public" virt="non-virtual"><scope>Enemy</scope><name>playerCenter</name></member>
+      <member refid="class_enemy_1a878e39c9cbe9eadcfef712dd8df9695a" prot="public" virt="non-virtual"><scope>Enemy</scope><name>polaczone</name></member>
+      <member refid="class_enemy_1a989db63499ca2dedc4c378e394716465" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>Rotate</name></member>
+      <member refid="class_enemy_1a29e6dc0eb9a9a4a9885e741c0de2668a" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>setDirection</name></member>
+      <member refid="class_enemy_1a7127d2dccfe0e9162b564575e9377095" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>setID</name></member>
+      <member refid="class_enemy_1a13942e703c41473fe1dc20957cfc18e3" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>setMove</name></member>
+      <member refid="class_enemy_1ae3895590d7a7cbeaaa788be55f14e199" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>setTrafiony</name></member>
+      <member refid="class_enemy_1a57f288226e09d333e9f01a31580eb393" prot="public" virt="pure-virtual"><scope>Enemy</scope><name>setZabity</name></member>
+      <member refid="class_enemy_1a58dd78c40c9a16f4dd66101b79519e57" prot="public" virt="non-virtual"><scope>Enemy</scope><name>trafiony</name></member>
+      <member refid="class_enemy_1aa239e6ce106e54f02750c13650c69c9a" prot="public" virt="non-virtual"><scope>Enemy</scope><name>zabity</name></member>
+      <member refid="class_enemy_1aafb628c66008e33afdd750e2f492bd98" prot="public" virt="virtual"><scope>Enemy</scope><name>~Enemy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

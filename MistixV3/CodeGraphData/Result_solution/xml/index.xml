@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_game" kind="class"><name>Game</name>
+    <member refid="class_game_1af00d15651edd39b7c28262b23bb50c7a" kind="variable"><name>window</name></member>
+    <member refid="class_game_1a0e54df902021fbf68140e4bee81ff369" kind="variable"><name>ev</name></member>
+    <member refid="class_game_1a65ca549b63b1bd9bc6dcb31cd840a9a3" kind="variable"><name>videMode</name></member>
+    <member refid="class_game_1ac375edce1ef244a1b4a0f9cceff950d3" kind="variable"><name>mousePosWindow</name></member>
+    <member refid="class_game_1a29e8570bcdc28dcc7ade33fd388bb313" kind="variable"><name>mousePosView</name></member>
+    <member refid="class_game_1a3d3e4d68aca0adb6422ea5799cf5ec18" kind="variable"><name>points</name></member>
+    <member refid="class_game_1a0a464b2dee4b5e28d3313782324695e8" kind="variable"><name>enemySpawnTimer</name></member>
+    <member refid="class_game_1aefb74723bcc4c5ad21ed4037fc4066b0" kind="variable"><name>enemySpawnTimerMax</name></member>
+    <member refid="class_game_1a059ae97b6e1a991e807f2ccefb9b9e7d" kind="variable"><name>maxEnemies</name></member>
+    <member refid="class_game_1a0704e238be545284943a9706fefde427" kind="variable"><name>enemy</name></member>
+    <member refid="class_game_1ac8413021c19dac3b7cc32aa0d87cdbc9" kind="variable"><name>playerTexture</name></member>
+    <member refid="class_game_1a26302add415e319e52451fb74e55bafa" kind="variable"><name>enemies</name></member>
+    <member refid="class_game_1adc16d4f982df0419f695c691f734ee6b" kind="variable"><name>players1</name></member>
+    <member refid="class_game_1aa7255464a62947a22ebcf9f0e5e6c52d" kind="function"><name>initVariables</name></member>
+    <member refid="class_game_1a15f85bb1959ffeae84f17c7f08db9018" kind="function"><name>initWindow</name></member>
+    <member refid="class_game_1aa79b8b669c7035b9bf95214be209743e" kind="function"><name>initEnemies</name></member>
+    <member refid="class_game_1a405c0bb8156590c93304f11cf1f08065" kind="function"><name>initPlayer</name></member>
+    <member refid="class_game_1ad59df6562a58a614fda24622d3715b65" kind="function"><name>Game</name></member>
+    <member refid="class_game_1ae3d112ca6e0e55150d2fdbc704474530" kind="function"><name>~Game</name></member>
+    <member refid="class_game_1afe97e9b7e83b19ab7e1502329e9aeab6" kind="function"><name>running</name></member>
+    <member refid="class_game_1a8ea4777fdc751b40f778997b76ee7cf9" kind="function"><name>pollEvents</name></member>
+    <member refid="class_game_1ad7a4181414089729ddea00c053f822c4" kind="function"><name>spawnEnemy</name></member>
+    <member refid="class_game_1a178767c8170eaf60bc566b4b67b1d622" kind="function"><name>updateMousePosition</name></member>
+    <member refid="class_game_1a0634553da4f33ed2c5a6f2cae6607ea5" kind="function"><name>updateEnemies</name></member>
+    <member refid="class_game_1a79df6376b332d63c9eca0dcee30305c3" kind="function"><name>update</name></member>
+    <member refid="class_game_1a703667da880dedf23935cef5427eec71" kind="function"><name>renderEnemies</name></member>
+    <member refid="class_game_1a2b4b0c9e3b4ac5ad789ec2e764b3d8f0" kind="function"><name>renderPlayer</name></member>
+    <member refid="class_game_1a15ddd769261d923827a3cdf41499c843" kind="function"><name>render</name></member>
+  </compound>
+  <compound refid="class_obiekt" kind="class"><name>Obiekt</name>
+    <member refid="class_obiekt_1ac8e27a872226e2b55c6f42c0677e5d00" kind="function"><name>Obiekt</name></member>
+    <member refid="class_obiekt_1a73430fdfcdf4b72dec57cd283bc833b0" kind="function"><name>~Obiekt</name></member>
+    <member refid="class_obiekt_1a65f1741902d00509064eef5f552c9bb8" kind="function"><name>Ruszaj</name></member>
+  </compound>
+  <compound refid="class_player" kind="class"><name>Player</name>
+    <member refid="class_player_1ad10e0970807043d46ae4998a386794be" kind="variable"><name>startPlayerPos</name></member>
+    <member refid="class_player_1a31b816df6cf3796054e2055cf9f2a85c" kind="variable"><name>body</name></member>
+    <member refid="class_player_1aaa23b3bf80e8c0267cf08d4fe4d6ddc1" kind="function"><name>Player</name></member>
+    <member refid="class_player_1af1d88b7ee66513d3426fc606ea88cb7f" kind="function"><name>Player</name></member>
+    <member refid="class_player_1a749d2c00e1fe0f5c2746f7505a58c062" kind="function"><name>~Player</name></member>
+    <member refid="class_player_1a2273be994c99f1c86fa25147b6551e8b" kind="function"><name>initPlayer</name></member>
+    <member refid="class_player_1a7733065f6843bba8b34d8174451ff39c" kind="function"><name>initPlayerVar</name></member>
+    <member refid="class_player_1a1cccc32baac4cc44b690edd033afc97b" kind="function"><name>playerUpdate</name></member>
+    <member refid="class_player_1a6435413a88749e18e104df827ee5a97a" kind="function"><name>playerRender</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_game_8cpp" kind="file"><name>Game.cpp</name>
+  </compound>
+  <compound refid="_game_8h" kind="file"><name>Game.h</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_obiekt_8cpp" kind="file"><name>Obiekt.cpp</name>
+  </compound>
+  <compound refid="_obiekt_8h" kind="file"><name>Obiekt.h</name>
+  </compound>
+  <compound refid="_ogi_8cpp" kind="file"><name>Ogi.cpp</name>
+  </compound>
+  <compound refid="_player_8cpp" kind="file"><name>Player.cpp</name>
+  </compound>
+  <compound refid="_player_8h" kind="file"><name>Player.h</name>
+  </compound>
+  <compound refid="dir_0b05f1f7051b89356c1d279ee3eecc9e" kind="dir"><name>C:/Users/milos/Documents</name>
+  </compound>
+  <compound refid="dir_3051034868ceb19d0117e2b2701e3a39" kind="dir"><name>C:/Users/milos</name>
+  </compound>
+  <compound refid="dir_ab61f4bfc4f326c23915636d5f76f596" kind="dir"><name>C:/Users/milos/Documents/Mistix</name>
+  </compound>
+  <compound refid="dir_e5abb65d8fc8c3a9e7b34c572708fe9b" kind="dir"><name>C:/Users/milos/Documents/Mistix/MistixV3</name>
+  </compound>
+  <compound refid="dir_d522931ffa1371640980b621734a4381" kind="dir"><name>C:/Users</name>
+  </compound>
+</doxygenindex>

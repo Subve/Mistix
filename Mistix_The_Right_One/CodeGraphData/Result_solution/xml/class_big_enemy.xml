@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_big_enemy" kind="class" prot="public">
+    <compoundname>BigEnemy</compoundname>
+    <basecompoundref refid="class_enemy" prot="public" virt="non-virtual">Enemy</basecompoundref>
+    <includes refid="_big_enemy_8h" local="no">BigEnemy.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_big_enemy_1a50fe75bdf076626a1d3cc8de7ce423f6" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture BigEnemy::bigenemy_Texture</definition>
+        <argsstring></argsstring>
+        <name>bigenemy_Texture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="20" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" compoundref="_big_enemy_8cpp" startline="3" endline="24">BigEnemy</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_big_enemy_1ac0ff78acbb91f42a0ab16519063bf955" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f BigEnemy::playerCenter</definition>
+        <argsstring></argsstring>
+        <name>playerCenter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="37" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" compoundref="_big_enemy_8cpp" startline="52" endline="62">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1a09a8824ea6f508de798edbf9e341c7d5" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f BigEnemy::mousePosWindow</definition>
+        <argsstring></argsstring>
+        <name>mousePosWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="38" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" compoundref="_big_enemy_8cpp" startline="52" endline="62">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1a3740e7c91a2ab137c044fdb5da747df7" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f BigEnemy::aimDir</definition>
+        <argsstring></argsstring>
+        <name>aimDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="39" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" compoundref="_big_enemy_8cpp" startline="52" endline="62">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1ac4b58f65d73829820a87d6804a25ed73" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f BigEnemy::aimDirNorm</definition>
+        <argsstring></argsstring>
+        <name>aimDirNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="40" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" compoundref="_big_enemy_8cpp" startline="52" endline="62">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1ab30d600cd7cd1d42e85e966f27375723" prot="public" static="no" mutable="no">
+        <type>sf::Vector2u</type>
+        <definition>sf::Vector2u BigEnemy::direction</definition>
+        <argsstring></argsstring>
+        <name>direction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="41" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1ad3b6c09752f9db99a5e637547d28502b" compoundref="_big_enemy_8cpp" startline="46" endline="50">setDirection</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1a3bb8997c9b54bddfc63a964721cb2028" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BigEnemy::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="42" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa1e36855d1e88a6291780c4e3fe45d9a" compoundref="_big_enemy_8cpp" startline="34" endline="39">Rotate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1a287b1b9bc82075f5278d67d7a9582a6a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BigEnemy::mobID</definition>
+        <argsstring></argsstring>
+        <name>mobID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="43" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1a37e93b3c57c659ef81747eb78658cd1c" compoundref="_big_enemy_8cpp" startline="121" endline="126">setID</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1afbe230aed662695bdc8431b352968f9d" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f BigEnemy::enemyPos</definition>
+        <argsstring></argsstring>
+        <name>enemyPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="44" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa1e36855d1e88a6291780c4e3fe45d9a" compoundref="_big_enemy_8cpp" startline="34" endline="39">Rotate</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BigEnemy::trafiony</definition>
+        <argsstring></argsstring>
+        <name>trafiony</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="45" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" compoundref="_big_enemy_8cpp" startline="3" endline="24">BigEnemy</referencedby>
+        <referencedby refid="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673" compoundref="_big_enemy_8cpp" startline="64" endline="107">killedZombie</referencedby>
+        <referencedby refid="class_big_enemy_1ada8c70420d450b49bb5507f86032b85c" compoundref="_big_enemy_8cpp" startline="109" endline="113">setTrafiony</referencedby>
+        <referencedby refid="class_big_enemy_1a8f9c5357aa54aab0748898d5f9b3a217" compoundref="_big_enemy_8cpp" startline="115" endline="119">setZabity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1a249253104d447747a14456d54598a328" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BigEnemy::zabity</definition>
+        <argsstring></argsstring>
+        <name>zabity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="46" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" compoundref="_big_enemy_8cpp" startline="3" endline="24">BigEnemy</referencedby>
+        <referencedby refid="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673" compoundref="_big_enemy_8cpp" startline="64" endline="107">killedZombie</referencedby>
+        <referencedby refid="class_big_enemy_1ada8c70420d450b49bb5507f86032b85c" compoundref="_big_enemy_8cpp" startline="109" endline="113">setTrafiony</referencedby>
+        <referencedby refid="class_big_enemy_1a8f9c5357aa54aab0748898d5f9b3a217" compoundref="_big_enemy_8cpp" startline="115" endline="119">setZabity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1accd9e2f20446de038a12165653d6d1fb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BigEnemy::polaczone</definition>
+        <argsstring></argsstring>
+        <name>polaczone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="47" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" compoundref="_big_enemy_8cpp" startline="3" endline="24">BigEnemy</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_big_enemy_1acb0bf9c1e6df878c10ad217e3da9c798" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BigEnemy::HP</definition>
+        <argsstring></argsstring>
+        <name>HP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="48" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673" compoundref="_big_enemy_8cpp" startline="64" endline="107">killedZombie</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BigEnemy::BigEnemy</definition>
+        <argsstring>()</argsstring>
+        <name>BigEnemy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="24" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="3" bodyend="24"/>
+        <references refid="class_big_enemy_1a50fe75bdf076626a1d3cc8de7ce423f6" compoundref="_big_enemy_8h" startline="20">bigenemy_Texture</references>
+        <references refid="class_big_enemy_1accd9e2f20446de038a12165653d6d1fb" compoundref="_big_enemy_8h" startline="47">polaczone</references>
+        <references refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" compoundref="_big_enemy_8h" startline="45">trafiony</references>
+        <references refid="class_big_enemy_1a249253104d447747a14456d54598a328" compoundref="_big_enemy_8h" startline="46">zabity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1a433204c917f741f9cfbf0d087112bd62" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::Follow</definition>
+        <argsstring>()</argsstring>
+        <name>Follow</name>
+        <reimplements refid="class_enemy_1a6d512d3f2d4c47dbd8b9e7a35e8f2b48">Follow</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="25" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="26" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1a982ff240a64026b39fb8f6719ba7e583" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::Attack</definition>
+        <argsstring>(Player &amp;gracz)</argsstring>
+        <name>Attack</name>
+        <param>
+          <type><ref refid="class_player" kindref="compound">Player</ref> &amp;</type>
+          <declname>gracz</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="26" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1aa1e36855d1e88a6291780c4e3fe45d9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::Rotate</definition>
+        <argsstring>(sf::Vector2f &amp;playerpos)</argsstring>
+        <name>Rotate</name>
+        <reimplements refid="class_enemy_1a989db63499ca2dedc4c378e394716465">Rotate</reimplements>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>playerpos</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="27" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="34" bodyend="39"/>
+        <references refid="class_big_enemy_1a3bb8997c9b54bddfc63a964721cb2028" compoundref="_big_enemy_8h" startline="42">angle</references>
+        <references refid="class_big_enemy_1afbe230aed662695bdc8431b352968f9d" compoundref="_big_enemy_8h" startline="44">enemyPos</references>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1a30b0f40e972e43572ab6ae8732fec414" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::adMove</definition>
+        <argsstring>(sf::Vector2f &amp;vektorRuchu)</argsstring>
+        <name>adMove</name>
+        <reimplements refid="class_enemy_1a5354bf2928be395d73d250fa2ec47979">adMove</reimplements>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>vektorRuchu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="28" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="41" bodyend="44"/>
+        <referencedby refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" compoundref="_big_enemy_8cpp" startline="52" endline="62">setMove</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1ad3b6c09752f9db99a5e637547d28502b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::setDirection</definition>
+        <argsstring>(sf::Vector2u &amp;direction2)</argsstring>
+        <name>setDirection</name>
+        <reimplements refid="class_enemy_1a29e6dc0eb9a9a4a9885e741c0de2668a">setDirection</reimplements>
+        <param>
+          <type>sf::Vector2u &amp;</type>
+          <declname>direction2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="29" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="46" bodyend="50"/>
+        <references refid="class_big_enemy_1ab30d600cd7cd1d42e85e966f27375723" compoundref="_big_enemy_8h" startline="41">direction</references>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::setMove</definition>
+        <argsstring>(sf::Vector2f &amp;playermove)</argsstring>
+        <name>setMove</name>
+        <reimplements refid="class_enemy_1a13942e703c41473fe1dc20957cfc18e3">setMove</reimplements>
+        <param>
+          <type>sf::Vector2f &amp;</type>
+          <declname>playermove</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="30" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="52" bodyend="62"/>
+        <references refid="class_big_enemy_1a30b0f40e972e43572ab6ae8732fec414" compoundref="_big_enemy_8cpp" startline="41" endline="44">adMove</references>
+        <references refid="class_big_enemy_1a3740e7c91a2ab137c044fdb5da747df7" compoundref="_big_enemy_8h" startline="39">aimDir</references>
+        <references refid="class_big_enemy_1ac4b58f65d73829820a87d6804a25ed73" compoundref="_big_enemy_8h" startline="40">aimDirNorm</references>
+        <references refid="class_big_enemy_1a09a8824ea6f508de798edbf9e341c7d5" compoundref="_big_enemy_8h" startline="38">mousePosWindow</references>
+        <references refid="class_big_enemy_1ac0ff78acbb91f42a0ab16519063bf955" compoundref="_big_enemy_8h" startline="37">playerCenter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::killedZombie</definition>
+        <argsstring>(Score &amp;wynik, std::vector&lt; Bullet &gt; &amp;pociski, std::vector&lt; std::unique_ptr&lt; Enemy &gt;&gt; &amp;enemies)</argsstring>
+        <name>killedZombie</name>
+        <reimplements refid="class_enemy_1afce1da6371d74ad0e152398d2534a96b">killedZombie</reimplements>
+        <param>
+          <type><ref refid="class_score" kindref="compound">Score</ref> &amp;</type>
+          <declname>wynik</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_bullet" kindref="compound">Bullet</ref> &gt; &amp;</type>
+          <declname>pociski</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::unique_ptr&lt; <ref refid="class_enemy" kindref="compound">Enemy</ref> &gt;&gt; &amp;</type>
+          <declname>enemies</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="31" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="64" bodyend="107"/>
+        <references refid="class_score_1a4214e1c3774fc4eb7cf3b23c6e0eeef8" compoundref="_score_8cpp" startline="50" endline="53">Score::addPoints</references>
+        <references refid="class_big_enemy_1acb0bf9c1e6df878c10ad217e3da9c798" compoundref="_big_enemy_8h" startline="48">HP</references>
+        <references refid="class_score_1ae1508009aec07d5353ceb36c3c9a1ac8" compoundref="_score_8cpp" startline="45" endline="48">Score::setaddPoint</references>
+        <references refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" compoundref="_big_enemy_8h" startline="45">trafiony</references>
+        <references refid="class_score_1acadffb62d3dac8295f0cd55b33e4e269" compoundref="_score_8cpp" startline="22" endline="28">Score::updateText</references>
+        <references refid="class_big_enemy_1a249253104d447747a14456d54598a328" compoundref="_big_enemy_8h" startline="46">zabity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1ada8c70420d450b49bb5507f86032b85c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::setTrafiony</definition>
+        <argsstring>()</argsstring>
+        <name>setTrafiony</name>
+        <reimplements refid="class_enemy_1ae3895590d7a7cbeaaa788be55f14e199">setTrafiony</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="32" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="109" bodyend="113"/>
+        <references refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" compoundref="_big_enemy_8h" startline="45">trafiony</references>
+        <references refid="class_big_enemy_1a249253104d447747a14456d54598a328" compoundref="_big_enemy_8h" startline="46">zabity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1a8f9c5357aa54aab0748898d5f9b3a217" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::setZabity</definition>
+        <argsstring>()</argsstring>
+        <name>setZabity</name>
+        <reimplements refid="class_enemy_1a57f288226e09d333e9f01a31580eb393">setZabity</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="33" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="115" bodyend="119"/>
+        <references refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" compoundref="_big_enemy_8h" startline="45">trafiony</references>
+        <references refid="class_big_enemy_1a249253104d447747a14456d54598a328" compoundref="_big_enemy_8h" startline="46">zabity</references>
+      </memberdef>
+      <memberdef kind="function" id="class_big_enemy_1a37e93b3c57c659ef81747eb78658cd1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BigEnemy::setID</definition>
+        <argsstring>(int &amp;i)</argsstring>
+        <name>setID</name>
+        <reimplements refid="class_enemy_1a7127d2dccfe0e9162b564575e9377095">setID</reimplements>
+        <param>
+          <type>int &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="34" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp" bodystart="121" bodyend="126"/>
+        <references refid="class_big_enemy_1a287b1b9bc82075f5278d67d7a9582a6a" compoundref="_big_enemy_8h" startline="43">mobID</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="4">
+        <label>sf::Sprite</label>
+      </node>
+      <node id="3">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BigEnemy</label>
+        <link refid="class_big_enemy"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="7">
+        <label>sf::Sprite</label>
+      </node>
+      <node id="6">
+        <label>Enemy</label>
+        <link refid="class_enemy"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>BigEnemy</label>
+        <link refid="class_big_enemy"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" line="18" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.h" bodystart="17" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_big_enemy_1a30b0f40e972e43572ab6ae8732fec414" prot="public" virt="virtual"><scope>BigEnemy</scope><name>adMove</name></member>
+      <member refid="class_big_enemy_1a3740e7c91a2ab137c044fdb5da747df7" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>aimDir</name></member>
+      <member refid="class_big_enemy_1ac4b58f65d73829820a87d6804a25ed73" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>aimDirNorm</name></member>
+      <member refid="class_big_enemy_1a3bb8997c9b54bddfc63a964721cb2028" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>angle</name></member>
+      <member refid="class_big_enemy_1a982ff240a64026b39fb8f6719ba7e583" prot="public" virt="virtual"><scope>BigEnemy</scope><name>Attack</name></member>
+      <member refid="class_enemy_1a89a5afba8c05af383c988376056edbb7" prot="public" virt="pure-virtual" ambiguityscope="Enemy::"><scope>BigEnemy</scope><name>Attack</name></member>
+      <member refid="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>BigEnemy</name></member>
+      <member refid="class_big_enemy_1a50fe75bdf076626a1d3cc8de7ce423f6" prot="private" virt="non-virtual"><scope>BigEnemy</scope><name>bigenemy_Texture</name></member>
+      <member refid="class_big_enemy_1ab30d600cd7cd1d42e85e966f27375723" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>direction</name></member>
+      <member refid="class_enemy_1a94f30d348b6d2840fd71675472ba38dd" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>Enemy</name></member>
+      <member refid="class_big_enemy_1afbe230aed662695bdc8431b352968f9d" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>enemyPos</name></member>
+      <member refid="class_big_enemy_1a433204c917f741f9cfbf0d087112bd62" prot="public" virt="virtual"><scope>BigEnemy</scope><name>Follow</name></member>
+      <member refid="class_big_enemy_1acb0bf9c1e6df878c10ad217e3da9c798" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>HP</name></member>
+      <member refid="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673" prot="public" virt="virtual"><scope>BigEnemy</scope><name>killedZombie</name></member>
+      <member refid="class_big_enemy_1a287b1b9bc82075f5278d67d7a9582a6a" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>mobID</name></member>
+      <member refid="class_big_enemy_1a09a8824ea6f508de798edbf9e341c7d5" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>mousePosWindow</name></member>
+      <member refid="class_big_enemy_1ac0ff78acbb91f42a0ab16519063bf955" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>playerCenter</name></member>
+      <member refid="class_big_enemy_1accd9e2f20446de038a12165653d6d1fb" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>polaczone</name></member>
+      <member refid="class_big_enemy_1aa1e36855d1e88a6291780c4e3fe45d9a" prot="public" virt="virtual"><scope>BigEnemy</scope><name>Rotate</name></member>
+      <member refid="class_big_enemy_1ad3b6c09752f9db99a5e637547d28502b" prot="public" virt="virtual"><scope>BigEnemy</scope><name>setDirection</name></member>
+      <member refid="class_big_enemy_1a37e93b3c57c659ef81747eb78658cd1c" prot="public" virt="virtual"><scope>BigEnemy</scope><name>setID</name></member>
+      <member refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" prot="public" virt="virtual"><scope>BigEnemy</scope><name>setMove</name></member>
+      <member refid="class_big_enemy_1ada8c70420d450b49bb5507f86032b85c" prot="public" virt="virtual"><scope>BigEnemy</scope><name>setTrafiony</name></member>
+      <member refid="class_big_enemy_1a8f9c5357aa54aab0748898d5f9b3a217" prot="public" virt="virtual"><scope>BigEnemy</scope><name>setZabity</name></member>
+      <member refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>trafiony</name></member>
+      <member refid="class_big_enemy_1a249253104d447747a14456d54598a328" prot="public" virt="non-virtual"><scope>BigEnemy</scope><name>zabity</name></member>
+      <member refid="class_enemy_1aafb628c66008e33afdd750e2f492bd98" prot="public" virt="virtual"><scope>BigEnemy</scope><name>~Enemy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

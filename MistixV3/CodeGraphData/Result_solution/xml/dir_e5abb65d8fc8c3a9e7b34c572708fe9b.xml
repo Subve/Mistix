@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_e5abb65d8fc8c3a9e7b34c572708fe9b" kind="dir">
+    <compoundname>C:/Users/milos/Documents/Mistix/MistixV3</compoundname>
+    <innerfile refid="_game_8cpp">Game.cpp</innerfile>
+    <innerfile refid="_game_8h">Game.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="_obiekt_8cpp">Obiekt.cpp</innerfile>
+    <innerfile refid="_obiekt_8h">Obiekt.h</innerfile>
+    <innerfile refid="_ogi_8cpp">Ogi.cpp</innerfile>
+    <innerfile refid="_player_8cpp">Player.cpp</innerfile>
+    <innerfile refid="_player_8h">Player.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/milos/Documents/Mistix/MistixV3/"/>
+  </compounddef>
+</doxygen>

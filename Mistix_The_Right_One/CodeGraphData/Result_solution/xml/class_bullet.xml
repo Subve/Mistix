@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_bullet" kind="class" prot="public">
+    <compoundname>Bullet</compoundname>
+    <includes refid="_bullet_8h" local="no">Bullet.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_bullet_1ac019b9e3d96fdc34a20f375c604cd626" prot="public" static="no" mutable="no">
+        <type>sf::CircleShape</type>
+        <definition>sf::CircleShape Bullet::bullet</definition>
+        <argsstring></argsstring>
+        <name>bullet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="21" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_bullet_1acfbb7387f8d53940b313192417e7ff73" compoundref="_bullet_8cpp" startline="3" endline="11">Bullet</referencedby>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_bullet_1aa2087d2259cdf16ebb99727e108ab408" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Bullet::currVelocity</definition>
+        <argsstring></argsstring>
+        <name>currVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="22" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_bullet_1a35d8cf63489cff15a4d7f4440ce078e3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Bullet::maxSpeed</definition>
+        <argsstring></argsstring>
+        <name>maxSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="23" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+        <referencedby refid="class_bullet_1a046b280041c1f9aeff6a4babc2d37122" compoundref="_bullet_8cpp" startline="17" endline="20">setSpeed</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_bullet_1ad898f0b72f77039c1127925f872bd2de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Bullet::bulletTimer</definition>
+        <argsstring></argsstring>
+        <name>bulletTimer</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="24" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_bullet_1a6cf592cdcd5b81ca640d4151eebc902f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Bullet::maxbulletTimer</definition>
+        <argsstring></argsstring>
+        <name>maxbulletTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="25" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+        <referencedby refid="class_bullet_1a9634c75730c3bcad18567e3fc6c262e6" compoundref="_bullet_8cpp" startline="13" endline="16">setAmmo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_bullet_1a2976a1d229513f664b8a6c6f682f4caf" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Bullet::playerCenter</definition>
+        <argsstring></argsstring>
+        <name>playerCenter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="31" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_bullet_1a9946e8a2dff22f46fd0d41d1bd0179d5" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Bullet::mousePosWindow</definition>
+        <argsstring></argsstring>
+        <name>mousePosWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="32" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_bullet_1adacb827f7fc87ef0a5b219cd7849a8e8" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Bullet::aimDir</definition>
+        <argsstring></argsstring>
+        <name>aimDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="33" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_bullet_1a321d807b3888253bfd01287a71fd450d" prot="public" static="no" mutable="no">
+        <type>sf::Vector2f</type>
+        <definition>sf::Vector2f Bullet::aimDirNorm</definition>
+        <argsstring></argsstring>
+        <name>aimDirNorm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="34" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bullet_1acfbb7387f8d53940b313192417e7ff73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Bullet::Bullet</definition>
+        <argsstring>(float radius)</argsstring>
+        <name>Bullet</name>
+        <param>
+          <type>float</type>
+          <declname>radius</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="26" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.cpp" bodystart="3" bodyend="11"/>
+        <references refid="class_bullet_1ac019b9e3d96fdc34a20f375c604cd626" compoundref="_bullet_8h" startline="21">bullet</references>
+      </memberdef>
+      <memberdef kind="function" id="class_bullet_1a9634c75730c3bcad18567e3fc6c262e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bullet::setAmmo</definition>
+        <argsstring>(int n)</argsstring>
+        <name>setAmmo</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="28" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.cpp" bodystart="13" bodyend="16"/>
+        <references refid="class_bullet_1a6cf592cdcd5b81ca640d4151eebc902f" compoundref="_bullet_8h" startline="25">maxbulletTimer</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_bullet_1a046b280041c1f9aeff6a4babc2d37122" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bullet::setSpeed</definition>
+        <argsstring>(float n)</argsstring>
+        <name>setSpeed</name>
+        <param>
+          <type>float</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="29" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.cpp" bodystart="17" bodyend="20"/>
+        <references refid="class_bullet_1a35d8cf63489cff15a4d7f4440ce078e3" compoundref="_bullet_8h" startline="23">maxSpeed</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" line="16" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Bullet.h" bodystart="15" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_bullet_1adacb827f7fc87ef0a5b219cd7849a8e8" prot="public" virt="non-virtual"><scope>Bullet</scope><name>aimDir</name></member>
+      <member refid="class_bullet_1a321d807b3888253bfd01287a71fd450d" prot="public" virt="non-virtual"><scope>Bullet</scope><name>aimDirNorm</name></member>
+      <member refid="class_bullet_1ac019b9e3d96fdc34a20f375c604cd626" prot="public" virt="non-virtual"><scope>Bullet</scope><name>bullet</name></member>
+      <member refid="class_bullet_1acfbb7387f8d53940b313192417e7ff73" prot="public" virt="non-virtual"><scope>Bullet</scope><name>Bullet</name></member>
+      <member refid="class_bullet_1ad898f0b72f77039c1127925f872bd2de" prot="public" virt="non-virtual"><scope>Bullet</scope><name>bulletTimer</name></member>
+      <member refid="class_bullet_1aa2087d2259cdf16ebb99727e108ab408" prot="public" virt="non-virtual"><scope>Bullet</scope><name>currVelocity</name></member>
+      <member refid="class_bullet_1a6cf592cdcd5b81ca640d4151eebc902f" prot="public" virt="non-virtual"><scope>Bullet</scope><name>maxbulletTimer</name></member>
+      <member refid="class_bullet_1a35d8cf63489cff15a4d7f4440ce078e3" prot="public" virt="non-virtual"><scope>Bullet</scope><name>maxSpeed</name></member>
+      <member refid="class_bullet_1a9946e8a2dff22f46fd0d41d1bd0179d5" prot="public" virt="non-virtual"><scope>Bullet</scope><name>mousePosWindow</name></member>
+      <member refid="class_bullet_1a2976a1d229513f664b8a6c6f682f4caf" prot="public" virt="non-virtual"><scope>Bullet</scope><name>playerCenter</name></member>
+      <member refid="class_bullet_1a9634c75730c3bcad18567e3fc6c262e6" prot="public" virt="non-virtual"><scope>Bullet</scope><name>setAmmo</name></member>
+      <member refid="class_bullet_1a046b280041c1f9aeff6a4babc2d37122" prot="public" virt="non-virtual"><scope>Bullet</scope><name>setSpeed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

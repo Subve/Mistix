@@ -43,6 +43,7 @@ public:
 	int mobID;
 	sf::Vector2f enemyPos;
 	bool trafiony;
+	bool ableToMove;
 	bool zabity;
 	bool polaczone;
 	int HP;

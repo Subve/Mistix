@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_big_enemy_8cpp" kind="file">
+    <compoundname>BigEnemy.cpp</compoundname>
+    <includes refid="_big_enemy_8h" local="yes">BigEnemy.h</includes>
+    <incdepgraph>
+      <node id="215">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="211">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="222">
+        <label>Score.h</label>
+        <link refid="_score_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+      </node>
+      <node id="223">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>cmath</label>
+      </node>
+      <node id="214">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="208">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp</label>
+        <link refid="BigEnemy.cpp"/>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="225">
+        <label>Enemy.h</label>
+        <link refid="_enemy_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>vector</label>
+      </node>
+      <node id="221">
+        <label>sstream</label>
+      </node>
+      <node id="219">
+        <label>math.h</label>
+      </node>
+      <node id="210">
+        <label>iostream</label>
+      </node>
+      <node id="212">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="220">
+        <label>memory</label>
+      </node>
+      <node id="224">
+        <label>Bullet.h</label>
+        <link refid="_bullet_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>BigEnemy.h</label>
+        <link refid="_big_enemy_8h"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_big_enemy_8h" kindref="compound">BigEnemy.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" refkind="member"><highlight class="normal"><ref refid="class_big_enemy_1aa3d74913e83acdf12de617630c1c11eb" kindref="member">BigEnemy::BigEnemy</ref>()<sp/>:<ref refid="class_enemy" kindref="compound">Enemy</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_big_enemy_1a50fe75bdf076626a1d3cc8de7ce423f6" kindref="member">bigenemy_Texture</ref>.loadFromFile(</highlight><highlight class="stringliteral">&quot;tekstury/Zombie_evolution.png&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Successfully<sp/>loaded<sp/>BigEnemy<sp/>Texture<sp/>\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;BigEnemy<sp/>texture<sp/>Failed<sp/>to<sp/>load\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_big_enemy_1a50fe75bdf076626a1d3cc8de7ce423f6" kindref="member">bigenemy_Texture</ref>.setRepeated(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;setTexture(<ref refid="class_big_enemy_1a50fe75bdf076626a1d3cc8de7ce423f6" kindref="member">bigenemy_Texture</ref>);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;setScale(sf::Vector2f(0.1f,<sp/>0.15f));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" kindref="member">trafiony</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1a249253104d447747a14456d54598a328" kindref="member">zabity</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1accd9e2f20446de038a12165653d6d1fb" kindref="member">polaczone</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_big_enemy_1a433204c917f741f9cfbf0d087112bd62" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1a433204c917f741f9cfbf0d087112bd62" kindref="member">BigEnemy::Follow</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_big_enemy_1a982ff240a64026b39fb8f6719ba7e583" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1a982ff240a64026b39fb8f6719ba7e583" kindref="member">BigEnemy::Attack</ref>(<ref refid="class_player" kindref="compound">Player</ref>&amp;<sp/>gracz)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_big_enemy_1aa1e36855d1e88a6291780c4e3fe45d9a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1aa1e36855d1e88a6291780c4e3fe45d9a" kindref="member">BigEnemy::Rotate</ref>(sf::Vector2f&amp;<sp/>playerpos)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1afbe230aed662695bdc8431b352968f9d" kindref="member">enemyPos</ref><sp/>=<sp/>this-&gt;getPosition();</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_big_enemy_1a3bb8997c9b54bddfc63a964721cb2028" kindref="member">angle</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(-atan2(<ref refid="class_big_enemy_1afbe230aed662695bdc8431b352968f9d" kindref="member">enemyPos</ref>.x<sp/>-<sp/>playerpos.x,<sp/><ref refid="class_big_enemy_1afbe230aed662695bdc8431b352968f9d" kindref="member">enemyPos</ref>.y<sp/>-<sp/>playerpos.y)<sp/>*<sp/>180<sp/>/<sp/>3.14159);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;setRotation(<ref refid="class_big_enemy_1a3bb8997c9b54bddfc63a964721cb2028" kindref="member">angle</ref><sp/>-<sp/>90);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_big_enemy_1a30b0f40e972e43572ab6ae8732fec414" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1a30b0f40e972e43572ab6ae8732fec414" kindref="member">BigEnemy::adMove</ref>(sf::Vector2f&amp;<sp/>vektorRuchu)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;move(-1<sp/>*<sp/>vektorRuchu.x,<sp/>-1<sp/>*<sp/>vektorRuchu.y);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="class_big_enemy_1ad3b6c09752f9db99a5e637547d28502b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1ad3b6c09752f9db99a5e637547d28502b" kindref="member">BigEnemy::setDirection</ref>(sf::Vector2u&amp;<sp/>direction2)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_big_enemy_1ab30d600cd7cd1d42e85e966f27375723" kindref="member">direction</ref>.x<sp/>=<sp/>-1<sp/>*<sp/>direction2.x;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_big_enemy_1ab30d600cd7cd1d42e85e966f27375723" kindref="member">direction</ref>.y<sp/>=<sp/>-1<sp/>*<sp/>direction2.y;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1aa18f3df71790b10867ee64d85e138041" kindref="member">BigEnemy::setMove</ref>(sf::Vector2f&amp;<sp/>playermove)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1ac0ff78acbb91f42a0ab16519063bf955" kindref="member">playerCenter</ref><sp/>=<sp/>playermove;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1a09a8824ea6f508de798edbf9e341c7d5" kindref="member">mousePosWindow</ref><sp/>=<sp/>this-&gt;getPosition();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1a3740e7c91a2ab137c044fdb5da747df7" kindref="member">aimDir</ref><sp/>=</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1a09a8824ea6f508de798edbf9e341c7d5" kindref="member">mousePosWindow</ref><sp/>-<sp/>this-&gt;<ref refid="class_big_enemy_1ac0ff78acbb91f42a0ab16519063bf955" kindref="member">playerCenter</ref>;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1ac4b58f65d73829820a87d6804a25ed73" kindref="member">aimDirNorm</ref><sp/>=<sp/>this-&gt;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_big_enemy_1a3740e7c91a2ab137c044fdb5da747df7" kindref="member">aimDir</ref><sp/>/<sp/>(sqrt(pow(this-&gt;<ref refid="class_big_enemy_1a3740e7c91a2ab137c044fdb5da747df7" kindref="member">aimDir</ref>.x,<sp/>2)<sp/>+<sp/>pow(this-&gt;<ref refid="class_big_enemy_1a3740e7c91a2ab137c044fdb5da747df7" kindref="member">aimDir</ref>.y,<sp/>2)));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*enemies[i]-&gt;move(-1*(enemies[i]-&gt;aimDirNorm.x),-1*(enemies[i]-&gt;aimDirNorm.y));*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1a30b0f40e972e43572ab6ae8732fec414" kindref="member">adMove</ref>(this-&gt;<ref refid="class_big_enemy_1ac4b58f65d73829820a87d6804a25ed73" kindref="member">aimDirNorm</ref>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1a1c7ab14b0dd14941afba30b9bdc01673" kindref="member">BigEnemy::killedZombie</ref>(<ref refid="class_score" kindref="compound">Score</ref>&amp;<sp/>wynik,<sp/>std::vector&lt;Bullet&gt;&amp;<sp/>pociski,<sp/>std::vector&lt;std::unique_ptr&lt;Enemy&gt;&gt;&amp;<sp/>enemies)</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j<sp/>=<sp/>0;j<sp/>&lt;<sp/>enemies.size();j++)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;i<sp/>&lt;<sp/>pociski.size();i++)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pociski[i].bullet.getGlobalBounds().intersects(enemies[j]-&gt;getGlobalBounds()))</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemies[j]-&gt;setTrafiony();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" kindref="member">trafiony</ref><sp/>&amp;&amp;<sp/>!<ref refid="class_big_enemy_1a249253104d447747a14456d54598a328" kindref="member">zabity</ref>)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Trafiony<sp/>zombiak&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pociski.erase(pociski.begin()<sp/>+<sp/>i);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemies[j]-&gt;HP<sp/>-=<sp/>1;;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*enemies.erase(enemies.begin()<sp/>+<sp/>j);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(enemies[j]-&gt;<ref refid="class_big_enemy_1acb0bf9c1e6df878c10ad217e3da9c798" kindref="member">HP</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemies[j]-&gt;setZabity();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" kindref="member">trafiony</ref><sp/>&amp;&amp;<sp/><ref refid="class_big_enemy_1a249253104d447747a14456d54598a328" kindref="member">zabity</ref>)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enemies.erase(enemies.begin()<sp/>+<sp/>j);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wynik.<ref refid="class_score_1ae1508009aec07d5353ceb36c3c9a1ac8" kindref="member">setaddPoint</ref>(1);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wynik.<ref refid="class_score_1a4214e1c3774fc4eb7cf3b23c6e0eeef8" kindref="member">addPoints</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wynik.<ref refid="class_score_1acadffb62d3dac8295f0cd55b33e4e269" kindref="member">updateText</ref>();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="class_big_enemy_1ada8c70420d450b49bb5507f86032b85c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1ada8c70420d450b49bb5507f86032b85c" kindref="member">BigEnemy::setTrafiony</ref>()</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" kindref="member">trafiony</ref><sp/>&amp;&amp;<sp/>!<ref refid="class_big_enemy_1a249253104d447747a14456d54598a328" kindref="member">zabity</ref>)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" kindref="member">trafiony</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_big_enemy_1a8f9c5357aa54aab0748898d5f9b3a217" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1a8f9c5357aa54aab0748898d5f9b3a217" kindref="member">BigEnemy::setZabity</ref>()</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_big_enemy_1aa2a42186a9adb2abde15ee5653f0e285" kindref="member">trafiony</ref><sp/>&amp;&amp;<sp/>!<ref refid="class_big_enemy_1a249253104d447747a14456d54598a328" kindref="member">zabity</ref>)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1a249253104d447747a14456d54598a328" kindref="member">zabity</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="class_big_enemy_1a37e93b3c57c659ef81747eb78658cd1c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_big_enemy_1a37e93b3c57c659ef81747eb78658cd1c" kindref="member">BigEnemy::setID</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>i)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_big_enemy_1a287b1b9bc82075f5278d67d7a9582a6a" kindref="member">mobID</ref><sp/>=<sp/>i;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/BigEnemy.cpp"/>
+  </compounddef>
+</doxygen>

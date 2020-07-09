@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_player_8cpp" kind="file">
+    <compoundname>Player.cpp</compoundname>
+    <includes refid="_player_8h" local="yes">Player.h</includes>
+    <incdepgraph>
+      <node id="568">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="564">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="575">
+        <label>Score.h</label>
+        <link refid="_score_8h"/>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="568" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="572" relation="include">
+        </childnode>
+        <childnode refid="573" relation="include">
+        </childnode>
+        <childnode refid="574" relation="include">
+        </childnode>
+      </node>
+      <node id="562">
+        <label>Player.h</label>
+        <link refid="_player_8h"/>
+        <childnode refid="563" relation="include">
+        </childnode>
+        <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="565" relation="include">
+        </childnode>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="568" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="572" relation="include">
+        </childnode>
+        <childnode refid="573" relation="include">
+        </childnode>
+        <childnode refid="574" relation="include">
+        </childnode>
+        <childnode refid="575" relation="include">
+        </childnode>
+      </node>
+      <node id="569">
+        <label>Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="564" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+      </node>
+      <node id="571">
+        <label>cmath</label>
+      </node>
+      <node id="567">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="566">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="570">
+        <label>vector</label>
+      </node>
+      <node id="574">
+        <label>sstream</label>
+      </node>
+      <node id="572">
+        <label>math.h</label>
+      </node>
+      <node id="563">
+        <label>iostream</label>
+      </node>
+      <node id="561">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.cpp</label>
+        <link refid="Player.cpp"/>
+        <childnode refid="562" relation="include">
+        </childnode>
+      </node>
+      <node id="565">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="573">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_8h" kindref="compound">Player.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" refkind="member"><highlight class="normal"><ref refid="class_player_1affe0cc3cb714f6deb4e62f0c0d3f1fd8" kindref="member">Player::Player</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_player_1af172f5419b96c2eff0ceda3e811d561a" kindref="member">player_texture</ref>.loadFromFile(</highlight><highlight class="stringliteral">&quot;tekstury/Player1.png&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Player1<sp/>texture<sp/>loaded<sp/>successfully!<sp/>\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Player1<sp/>texture<sp/>loaded<sp/>FAILED!!!\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;setTexture(<ref refid="class_player_1af172f5419b96c2eff0ceda3e811d561a" kindref="member">player_texture</ref>);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;setPosition(<ref refid="class_player_1a33415a8ba44768cade0e2e5285af9d0c" kindref="member">player_startPosition</ref>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;setOrigin(this-&gt;getGlobalBounds().width<sp/>/<sp/>2,<sp/>this-&gt;getGlobalBounds().height<sp/>/<sp/>2);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;scale(0.125f,<sp/>0.2f);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1afe84e9ff73bc2d371d3f639c1ea185ed" kindref="member">m_playerHealth</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_player_1a229682eedeae71a66cd9dc5945225438" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a229682eedeae71a66cd9dc5945225438" kindref="member">Player::playerMove</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sf::Keyboard::isKeyPressed(sf::Keyboard::W))</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;move(0.0f,<sp/>-1.0f);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sf::Keyboard::isKeyPressed(sf::Keyboard::S))</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;move(0.0f,<sp/>1.0f);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sf::Keyboard::isKeyPressed(sf::Keyboard::A))</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;move(-1.0f,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sf::Keyboard::isKeyPressed(sf::Keyboard::D))</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;move(1.0f,<sp/>0.0f);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_player_1aee37a6a830cd71d1629fe2979c10b54b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1aee37a6a830cd71d1629fe2979c10b54b" kindref="member">Player::updateMousePos</ref>(sf::RenderWindow&amp;<sp/>window)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" kindref="member">mouse</ref><sp/>=<sp/>sf::Mouse::getPosition(window);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1a335a9024e30836f6a2b34ab04897fa77" kindref="member">player_position</ref><sp/>=<sp/>this-&gt;getPosition();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_player_1adaa164efaced79188b42e3df82119614" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1adaa164efaced79188b42e3df82119614" kindref="member">Player::playerRotate</ref>(sf::RenderWindow&amp;<sp/>window)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*window.convertCoords(mouse);</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"></highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>//gets<sp/>sprite<sp/>origin<sp/>coordinates<sp/>and<sp/>mouse<sp/>coordinates</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;spritePosition<sp/>=<sp/>sprite.getPosition();</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;mouse<sp/>=<sp/>sf::Mouse::getPosition();</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"></highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>mouseAngle<sp/>=<sp/>-atan2(mouse.x<sp/>-<sp/>spritePosition.x,<sp/>mouse.y<sp/>-<sp/>spritePosition.y)<sp/>*<sp/>180<sp/>/<sp/>3.14159;<sp/>//angle<sp/>in<sp/>degrees<sp/>of<sp/>rotation<sp/>for<sp/>sprite</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"></highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/>playerSprite.setRotation(mouseAngle);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>window.mapPixelToCoords(<ref refid="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" kindref="member">mouse</ref>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*this-&gt;mouse<sp/>=<sp/>sf::Mouse::getPosition(window);</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;player_position<sp/>=<sp/>this-&gt;getPosition();*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1aee37a6a830cd71d1629fe2979c10b54b" kindref="member">updateMousePos</ref>(window);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_1acdf217201e6fe6ed898c2e15292ef252" kindref="member">angle</ref><sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">float</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(-atan2(<ref refid="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" kindref="member">mouse</ref>.x<sp/>-<sp/><ref refid="class_player_1a335a9024e30836f6a2b34ab04897fa77" kindref="member">player_position</ref>.x,<sp/><ref refid="class_player_1aedacfbf7ed9423c7e0d4f5e1ac05398b" kindref="member">mouse</ref>.y<sp/>-<sp/><ref refid="class_player_1a335a9024e30836f6a2b34ab04897fa77" kindref="member">player_position</ref>.y)<sp/>*<sp/>180<sp/>/<sp/>3.14159);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;setRotation(<ref refid="class_player_1acdf217201e6fe6ed898c2e15292ef252" kindref="member">angle</ref><sp/>+<sp/>90);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="class_player_1a2df419182d09c3c85109b3e7114d736a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_1a2df419182d09c3c85109b3e7114d736a" kindref="member">Player::playerUpdate</ref>(sf::RenderWindow&amp;<sp/>window)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1a229682eedeae71a66cd9dc5945225438" kindref="member">playerMove</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_player_1adaa164efaced79188b42e3df82119614" kindref="member">playerRotate</ref>(window);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Player.cpp"/>
+  </compounddef>
+</doxygen>

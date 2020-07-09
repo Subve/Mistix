@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_entity_manager" kind="class" prot="public">
+    <compoundname>EntityManager</compoundname>
+    <includes refid="_entity_manager_8h" local="no">EntityManager.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_entity_manager_1ad293a12747a8a15c01dc5ed862d17a62" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EntityManager::enemyTimer</definition>
+        <argsstring></argsstring>
+        <name>enemyTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" line="25" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_entity_manager_1a5c4b573f82a3f9e03e5b3b0e67e959b8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EntityManager::enemyTimerMax</definition>
+        <argsstring></argsstring>
+        <name>enemyTimerMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" line="26" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_entity_manager_1a7555637657d090171be6ceee8451de0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>EntityManager::EntityManager</definition>
+        <argsstring>()</argsstring>
+        <name>EntityManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" line="20" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_manager_1aba0224abe55e63bf5cefa6629bf0df14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityManager::SpawnEnemy</definition>
+        <argsstring>(std::vector&lt; std::unique_ptr&lt; Enemy &gt;&gt; &amp;enemies, int &amp;mobID, int &amp;iteracja_tworzenie_obiektow)</argsstring>
+        <name>SpawnEnemy</name>
+        <param>
+          <type>std::vector&lt; std::unique_ptr&lt; <ref refid="class_enemy" kindref="compound">Enemy</ref> &gt;&gt; &amp;</type>
+          <declname>enemies</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>mobID</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>iteracja_tworzenie_obiektow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" line="22" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.cpp" bodystart="7" bodyend="73"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_manager_1aa36b659d5623fdbb4b679d589f8bee3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityManager::RespawnEnemy</definition>
+        <argsstring>(std::vector&lt; std::unique_ptr&lt; Enemy &gt;&gt; &amp;enemies, int &amp;mobID1, int &amp;iteracja_tworzenie_obiektow)</argsstring>
+        <name>RespawnEnemy</name>
+        <param>
+          <type>std::vector&lt; std::unique_ptr&lt; <ref refid="class_enemy" kindref="compound">Enemy</ref> &gt;&gt; &amp;</type>
+          <declname>enemies</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>mobID1</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>iteracja_tworzenie_obiektow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" line="23" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.cpp" bodystart="75" bodyend="138"/>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_entity_manager_1a45d98ff6b1151f86631fefe97ee592fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void EntityManager::InitEnemy</definition>
+        <argsstring>(std::vector&lt; std::unique_ptr&lt; Enemy &gt;&gt; &amp;enemies, int &amp;mobID, int &amp;iteracja_tworzenie_obiektow)</argsstring>
+        <name>InitEnemy</name>
+        <param>
+          <type>std::vector&lt; std::unique_ptr&lt; <ref refid="class_enemy" kindref="compound">Enemy</ref> &gt;&gt; &amp;</type>
+          <declname>enemies</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>mobID</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>iteracja_tworzenie_obiektow</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" line="24" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.cpp" bodystart="140" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" line="15" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/EntityManager.h" bodystart="14" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_entity_manager_1ad293a12747a8a15c01dc5ed862d17a62" prot="public" virt="non-virtual"><scope>EntityManager</scope><name>enemyTimer</name></member>
+      <member refid="class_entity_manager_1a5c4b573f82a3f9e03e5b3b0e67e959b8" prot="public" virt="non-virtual"><scope>EntityManager</scope><name>enemyTimerMax</name></member>
+      <member refid="class_entity_manager_1a7555637657d090171be6ceee8451de0a" prot="public" virt="non-virtual"><scope>EntityManager</scope><name>EntityManager</name></member>
+      <member refid="class_entity_manager_1a45d98ff6b1151f86631fefe97ee592fa" prot="public" virt="non-virtual"><scope>EntityManager</scope><name>InitEnemy</name></member>
+      <member refid="class_entity_manager_1aa36b659d5623fdbb4b679d589f8bee3f" prot="public" virt="non-virtual"><scope>EntityManager</scope><name>RespawnEnemy</name></member>
+      <member refid="class_entity_manager_1aba0224abe55e63bf5cefa6629bf0df14" prot="public" virt="non-virtual"><scope>EntityManager</scope><name>SpawnEnemy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_custom_mouse_8cpp" kind="file">
+    <compoundname>CustomMouse.cpp</compoundname>
+    <includes refid="_custom_mouse_8h" local="yes">CustomMouse.h</includes>
+    <incdepgraph>
+      <node id="298">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="294">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="299">
+        <label>Menu.h</label>
+        <link refid="_menu_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="300" relation="include">
+        </childnode>
+      </node>
+      <node id="301">
+        <label>cmath</label>
+      </node>
+      <node id="297">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="296">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="292">
+        <label>CustomMouse.h</label>
+        <link refid="_custom_mouse_8h"/>
+        <childnode refid="293" relation="include">
+        </childnode>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+        <childnode refid="299" relation="include">
+        </childnode>
+        <childnode refid="301" relation="include">
+        </childnode>
+        <childnode refid="302" relation="include">
+        </childnode>
+        <childnode refid="303" relation="include">
+        </childnode>
+        <childnode refid="304" relation="include">
+        </childnode>
+      </node>
+      <node id="300">
+        <label>vector</label>
+      </node>
+      <node id="304">
+        <label>sstream</label>
+      </node>
+      <node id="302">
+        <label>math.h</label>
+      </node>
+      <node id="293">
+        <label>iostream</label>
+      </node>
+      <node id="291">
+        <label>C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.cpp</label>
+        <link refid="CustomMouse.cpp"/>
+        <childnode refid="292" relation="include">
+        </childnode>
+      </node>
+      <node id="295">
+        <label>SFML/System.hpp</label>
+      </node>
+      <node id="303">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_custom_mouse_8h" kindref="compound">CustomMouse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_custom_mouse_1a2b10a9c240c3eb34108229816716cb31" refkind="member"><highlight class="normal"><ref refid="class_custom_mouse_1a2b10a9c240c3eb34108229816716cb31" kindref="member">CustomMouse::CustomMouse</ref>()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_custom_mouse_1a0f8f088ed4bbb7f170c5fd086f0b17b7" kindref="member">m_mouseTexture</ref>.loadFromFile(</highlight><highlight class="stringliteral">&quot;tekstury/Aim.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_custom_mouse_1a0f8f088ed4bbb7f170c5fd086f0b17b7" kindref="member">m_mouseTexture</ref>.loadFromFile(</highlight><highlight class="stringliteral">&quot;tekstury/Aim.png&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Successfully<sp/>loaded<sp/>Cursor<sp/>Texture<sp/>\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_custom_mouse_1a0f8f088ed4bbb7f170c5fd086f0b17b7" kindref="member">m_mouseTexture</ref>.setRepeated(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kindref="member">m_mouseSprite</ref>.setTexture(<ref refid="class_custom_mouse_1a0f8f088ed4bbb7f170c5fd086f0b17b7" kindref="member">m_mouseTexture</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kindref="member">m_mouseSprite</ref>.setOrigin(this-&gt;<ref refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kindref="member">m_mouseSprite</ref>.getGlobalBounds().width<sp/>/<sp/>2,<sp/>this-&gt;<ref refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kindref="member">m_mouseSprite</ref>.getGlobalBounds().height<sp/>/<sp/>2);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kindref="member">m_mouseSprite</ref>.setScale(0.125f,<sp/>0.125f);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kindref="member">m_mouseSprite</ref>.setPosition(<ref refid="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" kindref="member">mousePosWindow</ref>.x,<sp/><ref refid="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" kindref="member">mousePosWindow</ref>.y);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_custom_mouse_1a6084dfa4b65a1ef5c71c335273fedbab" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_custom_mouse_1a6084dfa4b65a1ef5c71c335273fedbab" kindref="member">CustomMouse::mouseUpdate</ref>()</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kindref="member">m_mouseSprite</ref>.setPosition(<ref refid="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" kindref="member">mousePosWindow</ref>.x,<sp/><ref refid="class_custom_mouse_1ae26b44f9c6cdab26f1ccd7dc689673fa" kindref="member">mousePosWindow</ref>.y);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_custom_mouse_1ae5d0cdd67189a7f4a6ad06e2b146a3dd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_custom_mouse_1ae5d0cdd67189a7f4a6ad06e2b146a3dd" kindref="member">CustomMouse::mouseRender</ref>(sf::RenderWindow&amp;<sp/>window)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>window.draw(this-&gt;<ref refid="class_custom_mouse_1ad6b520ee04e9701ed7ea1fb711c82dfc" kindref="member">m_mouseSprite</ref>);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/CustomMouse.cpp"/>
+  </compounddef>
+</doxygen>

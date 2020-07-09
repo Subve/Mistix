@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_background" kind="class" prot="public">
+    <compoundname>Background</compoundname>
+    <includes refid="_background_8h" local="no">Background.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_background_1aca47e53286316c3a8fe956deb0932049" prot="private" static="no" mutable="no">
+        <type>sf::Texture</type>
+        <definition>sf::Texture Background::background</definition>
+        <argsstring></argsstring>
+        <name>background</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" line="16" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_background_1a0b0c31363be83b72b9a1d7cb57a891cc" compoundref="_background_8cpp" startline="14" endline="27">LoadBackgroundTexture</referencedby>
+        <referencedby refid="class_background_1a63befa27a1056aec139d9e77d535370f" compoundref="_background_8cpp" startline="29" endline="32">SetBackgroundSprite</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_background_1ad365ec9188ecea80e96a86a2a00dabbe" prot="private" static="no" mutable="no">
+        <type>sf::Sprite</type>
+        <definition>sf::Sprite Background::background_Sprite</definition>
+        <argsstring></argsstring>
+        <name>background_Sprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" line="17" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_background_1a9ebc35d6bcd689a305f7bb4043b39e89" compoundref="_background_8cpp" startline="34" endline="37">renderBackground</referencedby>
+        <referencedby refid="class_background_1a63befa27a1056aec139d9e77d535370f" compoundref="_background_8cpp" startline="29" endline="32">SetBackgroundSprite</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_background_1a05b686e4ce0cbdb3b1fa14a93fdf98a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Background::Background</definition>
+        <argsstring>()</argsstring>
+        <name>Background</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" line="26" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.cpp" bodystart="3" bodyend="6"/>
+        <references refid="class_background_1ad2b44598e222312315e21420b2933033" compoundref="_background_8cpp" startline="8" endline="12">initBackground</references>
+      </memberdef>
+      <memberdef kind="function" id="class_background_1ad2b44598e222312315e21420b2933033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Background::initBackground</definition>
+        <argsstring>()</argsstring>
+        <name>initBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" line="27" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.cpp" bodystart="8" bodyend="12"/>
+        <references refid="class_background_1a0b0c31363be83b72b9a1d7cb57a891cc" compoundref="_background_8cpp" startline="14" endline="27">LoadBackgroundTexture</references>
+        <references refid="class_background_1a63befa27a1056aec139d9e77d535370f" compoundref="_background_8cpp" startline="29" endline="32">SetBackgroundSprite</references>
+        <referencedby refid="class_background_1a05b686e4ce0cbdb3b1fa14a93fdf98a1" compoundref="_background_8cpp" startline="3" endline="6">Background</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_background_1a0b0c31363be83b72b9a1d7cb57a891cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Background::LoadBackgroundTexture</definition>
+        <argsstring>()</argsstring>
+        <name>LoadBackgroundTexture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" line="28" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.cpp" bodystart="14" bodyend="27"/>
+        <references refid="class_background_1aca47e53286316c3a8fe956deb0932049" compoundref="_background_8h" startline="16">background</references>
+        <referencedby refid="class_background_1ad2b44598e222312315e21420b2933033" compoundref="_background_8cpp" startline="8" endline="12">initBackground</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_background_1a63befa27a1056aec139d9e77d535370f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Background::SetBackgroundSprite</definition>
+        <argsstring>()</argsstring>
+        <name>SetBackgroundSprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" line="29" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.cpp" bodystart="29" bodyend="32"/>
+        <references refid="class_background_1aca47e53286316c3a8fe956deb0932049" compoundref="_background_8h" startline="16">background</references>
+        <references refid="class_background_1ad365ec9188ecea80e96a86a2a00dabbe" compoundref="_background_8h" startline="17">background_Sprite</references>
+        <referencedby refid="class_background_1ad2b44598e222312315e21420b2933033" compoundref="_background_8cpp" startline="8" endline="12">initBackground</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_background_1a9ebc35d6bcd689a305f7bb4043b39e89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Background::renderBackground</definition>
+        <argsstring>(sf::RenderTarget &amp;window)</argsstring>
+        <name>renderBackground</name>
+        <param>
+          <type>sf::RenderTarget &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" line="30" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.cpp" bodystart="34" bodyend="37"/>
+        <references refid="class_background_1ad365ec9188ecea80e96a86a2a00dabbe" compoundref="_background_8h" startline="17">background_Sprite</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="432" endline="708">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" line="14" column="1" bodyfile="C:/Users/milos/Documents/Mistix/Mistix_The_Right_One/Background.h" bodystart="13" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_background_1aca47e53286316c3a8fe956deb0932049" prot="private" virt="non-virtual"><scope>Background</scope><name>background</name></member>
+      <member refid="class_background_1a05b686e4ce0cbdb3b1fa14a93fdf98a1" prot="public" virt="non-virtual"><scope>Background</scope><name>Background</name></member>
+      <member refid="class_background_1ad365ec9188ecea80e96a86a2a00dabbe" prot="private" virt="non-virtual"><scope>Background</scope><name>background_Sprite</name></member>
+      <member refid="class_background_1ad2b44598e222312315e21420b2933033" prot="public" virt="non-virtual"><scope>Background</scope><name>initBackground</name></member>
+      <member refid="class_background_1a0b0c31363be83b72b9a1d7cb57a891cc" prot="public" virt="non-virtual"><scope>Background</scope><name>LoadBackgroundTexture</name></member>
+      <member refid="class_background_1a9ebc35d6bcd689a305f7bb4043b39e89" prot="public" virt="non-virtual"><scope>Background</scope><name>renderBackground</name></member>
+      <member refid="class_background_1a63befa27a1056aec139d9e77d535370f" prot="public" virt="non-virtual"><scope>Background</scope><name>SetBackgroundSprite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

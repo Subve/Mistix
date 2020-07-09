@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_obiekt_8cpp" kind="file">
+    <compoundname>Obiekt.cpp</compoundname>
+    <includes refid="_obiekt_8h" local="yes">Obiekt.h</includes>
+    <incdepgraph>
+      <node id="218">
+        <label>SFML/Network.hpp</label>
+      </node>
+      <node id="214">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="217">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="212">
+        <label>Obiekt.h</label>
+        <link refid="_obiekt_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>C:/Users/milos/Documents/Mistix/MistixV3/Obiekt.cpp</label>
+        <link refid="Obiekt.cpp"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>SFML/Window.hpp</label>
+      </node>
+      <node id="219">
+        <label>ctime</label>
+      </node>
+      <node id="213">
+        <label>iostream</label>
+      </node>
+      <node id="215">
+        <label>SFML/System.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_obiekt_8h" kindref="compound">Obiekt.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/milos/Documents/Mistix/MistixV3/Obiekt.cpp"/>
+  </compounddef>
+</doxygen>

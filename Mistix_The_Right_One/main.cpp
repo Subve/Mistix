@@ -446,6 +446,7 @@ int main()
 	//Creating enemies
 	int iteracja_tworzenie_obiektow = 0;
 	std::vector<std::unique_ptr<Enemy>> enemies;
+
 	int newmobID;
 	int howmanyenemies;
 	entityManager.SpawnEnemy(enemies, mobIDLicznik,iteracja_tworzenie_obiektow);
@@ -465,20 +466,33 @@ int main()
 	m_scorePoints.setValue(0);
 	m_scorePoints.setaddPoint(1);
 	HighScore m_highscore;
-		b1.setAmmo(20);
-		b1.setSpeed(5.f);
+		b1.setAmmo(50);
+		
+		b1.setSpeed(2.f);
 	//Timer
-		sf::Time elapsed_time;
+		sf::Time elapsed_time, temp_time;
 		sf::Clock r;
-		sf::Time elapsed_time_player;
+		sf::Time elapsed_time_player, temp_player;
 		sf::Clock r_player;
-		bool pause=false;
+		sf::Time elapsed_time_pause, temp_pause;
+		sf::Clock r_pause;
+		bool pause;
+		pause = false;
 	while (window.isOpen())
 	{
 		sf::Time delta_time = sf::milliseconds(1000);
-		elapsed_time += r.restart();
 		sf::Time delta_time_player = sf::milliseconds(5000);
-		elapsed_time_player += r_player.restart();
+		sf::Time delta_time_pause = sf::milliseconds(1000);
+		elapsed_time_pause += r_pause.restart();
+		temp_time= r.restart();
+		temp_player= r_player.restart();
+
+		if(!pause)
+		{
+			elapsed_time += temp_time;
+
+			elapsed_time_player += temp_player;
+		}
 
 		
 		sf::Event ev;
@@ -535,13 +549,14 @@ int main()
 				if (ev.key.code == sf::Keyboard::P&&!pause)
 				{
 					pause = true;
-					
+					break;
 					
 				}
-				if (ev.key.code == sf::Keyboard::O&&pause)
+				if (ev.key.code == sf::Keyboard::P&&pause&&(elapsed_time_pause>=delta_time_pause))
 				{
 					pause = false;
-
+					elapsed_time_pause -= delta_time_pause;
+					break;
 				}
 
 				break;
@@ -629,10 +644,11 @@ int main()
 						std::cout << "Polaczone\n";
 						enemies[i]->polaczone = true;
 						enemies[j]->polaczone = true;
-						/*enemies.erase(enemies.begin()+j);*/
+						enemies[i]->HP+=1;
 
-						enemies[i]->HP += 1;
+						enemies.erase(enemies.begin()+j);
 
+						
 						/*enemies[i]->setScale(2.0, 2.0);*/
 
 					}
@@ -649,12 +665,16 @@ int main()
 			{
 
 				sf::Vector2f playerpos = sf::Vector2f(player.getPosition());
-				enemies[i]->setMove(playerpos);
-				enemies[i]->Rotate(playerpos);
+				if(enemies[i]->ableToMove==true)
+				{
+					enemies[i]->setMove(playerpos);
+					enemies[i]->Rotate(playerpos);
+				}
 
 				/*enemies[i]->setID(enemies);*/
 
 			}
+			
 
 		}
 
