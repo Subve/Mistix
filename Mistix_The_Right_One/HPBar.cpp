@@ -59,8 +59,15 @@ void HPBar::UpdateHP(Player& gracz)
 	hpBarString.clear();
 	this->hpBarString << "HP : " << gracz.m_playerHealth << " / 100 ";
 	this->hpBarText.setString(hpBarString.str());
+	if(gracz.m_playerHealth>=100)
+		this->hpBarFront.setSize(sf::Vector2f(300 * 100 / 100, 64));
 	this->hpBarFront.setSize(sf::Vector2f(300*gracz.m_playerHealth/100,64));
-	this->hpBarFront.setFillColor(sf::Color::Green);
+	if (gracz.m_playerHealth > 50)
+		this->hpBarFront.setFillColor(sf::Color::Green);
+	else if (gracz.m_playerHealth > 20)
+		this->hpBarFront.setFillColor(sf::Color(255, 127, 80));
+	else
+		this->hpBarFront.setFillColor(sf::Color::Red);
 	
 }
 

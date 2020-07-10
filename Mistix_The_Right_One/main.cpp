@@ -463,7 +463,16 @@ int main()
 
 	//Creating upgrade Button
 	Button m_button;
-
+	//Music
+	sf::SoundBuffer buffer;
+	if (!buffer.loadFromFile("data/music.wav"))
+	{
+		std::cout << "Failed to load Music \n";
+	}
+	sf::Sound m_sound;
+	m_sound.setBuffer(buffer);
+	m_sound.setLoop(true);
+	m_sound.play();
 	//Creating window
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	window.setFramerateLimit(144);
@@ -722,7 +731,7 @@ int main()
 
 			}
 			if(player.m_playerHealth<=0)
-			{
+			{	
 				std::cout << "Koniec gry\n";
 				window.close();
 			}
