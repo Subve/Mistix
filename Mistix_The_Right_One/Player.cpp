@@ -27,6 +27,7 @@ void Player::playerMove()
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
 	{
 		this->move(0.0f, -1.0f);
+		
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 	{

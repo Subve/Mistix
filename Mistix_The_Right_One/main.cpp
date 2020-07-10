@@ -19,6 +19,7 @@
 #include "CustomMouse.h"
 #include "Background.h"
 #include "HighScore.h"
+#include "Button.h"
 
 #define VIEW_HEIGHT 600
 
@@ -451,10 +452,13 @@ int main()
 	int howmanyenemies;
 	entityManager.SpawnEnemy(enemies, mobIDLicznik,iteracja_tworzenie_obiektow);
 
+
+	//Creating upgrade Button
+	Button m_button;
+
 	//Creating window
 	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	window.setFramerateLimit(144);
-
 	//Creating cursor
 	window.setMouseCursorVisible(false);
 	CustomMouse custom_mouse;
@@ -476,6 +480,8 @@ int main()
 		sf::Clock r_player;
 		sf::Time elapsed_time_pause, temp_pause;
 		sf::Clock r_pause;
+		sf::Time elapsed_upgrades_time, temp_upgrades;
+		sf::Clock r_upgrades;
 		bool pause;
 		pause = false;
 	while (window.isOpen())
@@ -483,15 +489,19 @@ int main()
 		sf::Time delta_time = sf::milliseconds(1000);
 		sf::Time delta_time_player = sf::milliseconds(1000);
 		sf::Time delta_time_pause = sf::milliseconds(1000);
+		sf::Time delta_time_upgrades = sf::milliseconds(1000);
 		elapsed_time_pause += r_pause.restart();
 		temp_time= r.restart();
 		temp_player= r_player.restart();
+		temp_upgrades = r_upgrades.restart();
 
 		if(!pause)
 		{
 			elapsed_time += temp_time;
 
 			elapsed_time_player += temp_player;
+			
+			elapsed_upgrades_time += temp_upgrades;
 		}
 
 		
@@ -590,6 +600,20 @@ int main()
 
 
 			/*std::cout << aimDirNorm.x << " " << aimDirNorm.y << std::endl;*/
+
+			//GUI
+			
+			if(elapsed_upgrades_time >= delta_time_upgrades)
+			{
+				if(m_button.isClicked(window,m_scorePoints))
+				{
+				m_button.UpgradeBulletSpeed(b1, m_scorePoints);
+					m_scorePoints.updateText();
+					std::cout << "Upgrade\n";
+				}
+				elapsed_upgrades_time -= delta_time_upgrades;
+			}
+			
 			//Shooting
 
 			if (b1.bulletTimer < b1.maxbulletTimer)
@@ -684,7 +708,7 @@ int main()
 				std::cout << "Koniec gry\n";
 				window.close();
 			}
-
+			m_scorePoints.updateText();
 		}
 
 		//Clear the window
@@ -705,11 +729,14 @@ int main()
 		{
 			window.draw(*enemies[i]);
 		}
+		//Update the record
+		m_highscore.updateHighScore(m_scorePoints);
 		//Draw the cursor
 		custom_mouse.mouseRender(window);
 		m_scorePoints.pointsRender(window);
-		m_highscore.updateHighScore(m_scorePoints);
+		
 		m_highscore.renderHighscore(window);
+		m_button.RenderUpgradeButton(window,m_scorePoints,b1);
 		//
 		/*menu.draw(window);*/
 

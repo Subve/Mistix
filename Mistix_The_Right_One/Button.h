@@ -27,9 +27,9 @@ private:
 public:
 	Button();
 	~Button();
-	bool isClicked(sf::RenderWindow& window,sf::Event& eventt);
-	void UpgradeBulletSpeed(Bullet&pocisk);
-	void ShowUpgradeButton(sf::RenderTarget& window,Score&wynik);
-	int UpgradeCost = 30;
+	bool isClicked(sf::RenderWindow& window,Score&wynik);
+	void UpgradeBulletSpeed(Bullet&pocisk, Score& wynik);
+	void RenderUpgradeButton(sf::RenderTarget& window, Score& wynik, Bullet& pocisk);
+	int UpgradeCost = 1;
 };
 
