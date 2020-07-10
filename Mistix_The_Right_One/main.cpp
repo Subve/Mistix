@@ -481,7 +481,7 @@ int main()
 	while (window.isOpen())
 	{
 		sf::Time delta_time = sf::milliseconds(1000);
-		sf::Time delta_time_player = sf::milliseconds(5000);
+		sf::Time delta_time_player = sf::milliseconds(1000);
 		sf::Time delta_time_pause = sf::milliseconds(1000);
 		elapsed_time_pause += r_pause.restart();
 		temp_time= r.restart();
@@ -631,7 +631,7 @@ int main()
 
 			for (int i = 0;i < enemies.size();i++)
 			{
-				enemies[i]->Attack(player, delta_time_player, delta_time_player);
+				enemies[i]->Attack(player, elapsed_time_player, delta_time_player);
 				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 			}
 			for (int i = 0;i < enemies.size();i++)
@@ -679,7 +679,11 @@ int main()
 				/*enemies[i]->setID(enemies);*/
 
 			}
-			
+			if(player.m_playerHealth<=0)
+			{
+				std::cout << "Koniec gry\n";
+				window.close();
+			}
 
 		}
 

@@ -147,6 +147,7 @@
     <ClCompile Include="Background.cpp" />
     <ClCompile Include="BigEnemy.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="CustomMouse.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EntityManager.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="Background.h" />
     <ClInclude Include="BigEnemy.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="CustomMouse.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EntityManager.h" />
