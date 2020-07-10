@@ -9,9 +9,9 @@ Button::Button()
 	}
 
 
-	button_texture.setRepeated(true);
+	button_texture.setSmooth(true);
 	this->button_sprite.setTexture(button_texture);
-	this->button_sprite.setPosition(100.0f, 100.0f);
+	this->button_sprite.setPosition(0.0f, 536.0f);
 }
 
 

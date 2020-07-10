@@ -20,6 +20,8 @@
 #include "Background.h"
 #include "HighScore.h"
 #include "Button.h"
+#include "Apple.h"
+#include  "AppleManager.h"
 
 #define VIEW_HEIGHT 600
 
@@ -434,6 +436,7 @@ int main()
 {
 	std::srand(static_cast<unsigned>(time(NULL)));
 	EntityManager entityManager;
+	AppleManager apple_manager;
 	Background background;
 	
 	//Creating player
@@ -444,14 +447,17 @@ int main()
 	std::vector<Bullet> bulets;
 	bulets.push_back(Bullet(b1));
 	int mobIDLicznik=0;
+	int jablkaLicznik = 0;
 	//Creating enemies
 	int iteracja_tworzenie_obiektow = 0;
 	std::vector<std::unique_ptr<Enemy>> enemies;
+	std::vector<std::unique_ptr<Apple>> jablka;
 
 	int newmobID;
 	int howmanyenemies;
 	entityManager.SpawnEnemy(enemies, mobIDLicznik,iteracja_tworzenie_obiektow);
-
+	//Spawn an apple
+	
 
 	//Creating upgrade Button
 	Button m_button;
@@ -482,6 +488,8 @@ int main()
 		sf::Clock r_pause;
 		sf::Time elapsed_upgrades_time, temp_upgrades;
 		sf::Clock r_upgrades;
+		sf::Time elapsed_apples_time, temp_apples;
+		sf::Clock r_apple;
 		bool pause;
 		pause = false;
 	while (window.isOpen())
@@ -490,10 +498,12 @@ int main()
 		sf::Time delta_time_player = sf::milliseconds(1000);
 		sf::Time delta_time_pause = sf::milliseconds(1000);
 		sf::Time delta_time_upgrades = sf::milliseconds(1000);
+		sf::Time delta_time_apple = sf::seconds(10);
 		elapsed_time_pause += r_pause.restart();
 		temp_time= r.restart();
 		temp_player= r_player.restart();
 		temp_upgrades = r_upgrades.restart();
+		temp_apples = r_apple.restart();
 
 		if(!pause)
 		{
@@ -502,6 +512,8 @@ int main()
 			elapsed_time_player += temp_player;
 			
 			elapsed_upgrades_time += temp_upgrades;
+
+			elapsed_apples_time += temp_apples;
 		}
 
 		
@@ -614,6 +626,7 @@ int main()
 				elapsed_upgrades_time -= delta_time_upgrades;
 			}
 			
+			
 			//Shooting
 
 			if (b1.bulletTimer < b1.maxbulletTimer)
@@ -710,6 +723,11 @@ int main()
 			}
 			m_scorePoints.updateText();
 		}
+		
+		
+			apple_manager.SpawnApple(jablka, elapsed_apples_time, delta_time_apple);
+		
+		
 
 		//Clear the window
 
@@ -718,25 +736,30 @@ int main()
 		//Draw current Frame
 		//Draw Player
 
-		window.draw(player);
+		
+		
+
+		//Draw Enemies
 		for (int i = 0;i < bulets.size();i++)
 		{
 			window.draw(bulets[i].bullet);
 		}
-
-		//Draw Enemies
-		for (int i=0;i<enemies.size();i++)
-		{
-			window.draw(*enemies[i]);
-		}
+		entityManager.RenderEnemies(window, enemies);
+		
+		apple_manager.RenderApples(window, jablka);
+		window.draw(player);
+		
+		//Draw Apples
+		
 		//Update the record
 		m_highscore.updateHighScore(m_scorePoints);
 		//Draw the cursor
-		custom_mouse.mouseRender(window);
+		
 		m_scorePoints.pointsRender(window);
 		
 		m_highscore.renderHighscore(window);
 		m_button.RenderUpgradeButton(window,m_scorePoints,b1);
+		custom_mouse.mouseRender(window);
 		//
 		/*menu.draw(window);*/
 

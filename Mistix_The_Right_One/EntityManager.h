@@ -23,6 +23,7 @@ public:
 	void RespawnEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID1, int& iteracja_tworzenie_obiektow);
 	void InitEnemy(std::vector<std::unique_ptr<Enemy>>& enemies, int& mobID, int& iteracja_tworzenie_obiektow);
 	void keepEnemies(std::vector<std::unique_ptr<Enemy>>& enemies,int&mobID, int&iteracja_tworzenie_obiektow);
+	void RenderEnemies(sf::RenderTarget& window, std::vector < std::unique_ptr< Enemy >> &enemies);
 	int enemyTimer;
 	int enemyTimerMax;
 };

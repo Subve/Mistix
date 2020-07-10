@@ -176,5 +176,13 @@ void EntityManager::keepEnemies(std::vector<std::unique_ptr<Enemy>>& enemies, in
 		iteracja_tworzenie_obiektow += 1;
 	}
 }
+
+void EntityManager::RenderEnemies(sf::RenderTarget& window, std::vector<std::unique_ptr<Enemy>>& enemies)
+{
+	for(int i=0;i<enemies.size();i++)
+	{
+		window.draw(*enemies[i]);
+	}
+}
 	
 
