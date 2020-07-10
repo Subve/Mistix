@@ -22,6 +22,7 @@
 #include "Button.h"
 #include "Apple.h"
 #include  "AppleManager.h"
+#include "HPBar.h"
 
 #define VIEW_HEIGHT 600
 
@@ -438,10 +439,11 @@ int main()
 	EntityManager entityManager;
 	AppleManager apple_manager;
 	Background background;
+	HPBar m_hp_bar;
 	
 	//Creating player
 	Player player;
-
+	m_hp_bar.initHPBAR(player);
 	//Creating bullets
 	Bullet b1(5.f);
 	std::vector<Bullet> bulets;
@@ -659,6 +661,7 @@ int main()
 			{
 				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 				enemies[i]->killedZombie(m_scorePoints, bulets, enemies);
+				m_hp_bar.UpdateHP(player);
 				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 
 
@@ -669,6 +672,7 @@ int main()
 			for (int i = 0;i < enemies.size();i++)
 			{
 				enemies[i]->Attack(player, elapsed_time_player, delta_time_player);
+				m_hp_bar.UpdateHP(player);
 				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 			}
 			for (int i = 0;i < enemies.size();i++)
@@ -697,6 +701,7 @@ int main()
 				}
 			}
 			apple_manager.CollisionApple(player, jablka);
+			m_hp_bar.UpdateHP(player);
 			if (elapsed_time >= delta_time)
 			{
 				entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
@@ -759,6 +764,7 @@ int main()
 		
 		m_highscore.renderHighscore(window);
 		m_button.RenderUpgradeButton(window,m_scorePoints,b1);
+		m_hp_bar.RenderHPBar(window);
 		custom_mouse.mouseRender(window);
 		//
 		/*menu.draw(window);*/
