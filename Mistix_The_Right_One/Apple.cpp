@@ -23,6 +23,8 @@ Apple::~Apple()
 
 void Apple::addPlayerHP(Player& gracz)
 {
-	
+	gracz.m_playerHealth += 1;
 }
+
+
 

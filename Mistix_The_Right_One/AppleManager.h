@@ -28,7 +28,9 @@ public:
 	AppleManager();
 
 	void SpawnApple(std::vector<std::unique_ptr<Apple>>& jablka,sf::Time&elapsed_jablka, sf::Time&delta_jablka);
+	void CollisionApple(Player& gracz, std::vector<std::unique_ptr<Apple>>& jablka);
 	void RenderApples(sf::RenderTarget& window, std::vector<std::unique_ptr<Apple>>& jablka);
+	
 	
 	
 	

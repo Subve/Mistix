@@ -696,7 +696,7 @@ int main()
 
 				}
 			}
-
+			apple_manager.CollisionApple(player, jablka);
 			if (elapsed_time >= delta_time)
 			{
 				entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
@@ -734,8 +734,6 @@ int main()
 		window.clear();
 		background.renderBackground(window);
 		//Draw current Frame
-		//Draw Player
-
 		
 		
 
@@ -745,12 +743,14 @@ int main()
 			window.draw(bulets[i].bullet);
 		}
 		entityManager.RenderEnemies(window, enemies);
-		
-		apple_manager.RenderApples(window, jablka);
+		//Draw Player
+
 		window.draw(player);
 		
-		//Draw Apples
 		
+		
+		//Draw Apples
+		apple_manager.RenderApples(window, jablka);
 		//Update the record
 		m_highscore.updateHighScore(m_scorePoints);
 		//Draw the cursor

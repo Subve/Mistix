@@ -14,10 +14,28 @@ void AppleManager::SpawnApple(std::vector<std::unique_ptr<Apple>>& jablka, sf::T
 		jablka.emplace_back(std::make_unique<Apple>());
 		jablka[numer]->setOrigin((jablka[numer]->getPosition().x + jablka[numer]->getGlobalBounds().width) / 2, (jablka[numer]->getPosition().y + jablka[numer]->getGlobalBounds().height) / 2);
 		jablka[numer]->setPosition(apple_pozycja_x, apple_pozycja_y);
+		jablka[numer]->eaten = false;
 		elapsed_jablka -= delta_jablka;
 	}
 	
 	
+	
+}
+
+void AppleManager::CollisionApple(Player& gracz, std::vector<std::unique_ptr<Apple>>& jablka)
+{
+	for(int i=0;i<jablka.size();i++)
+	{
+		if (jablka[i]->getGlobalBounds().intersects(gracz.getGlobalBounds()))
+		{
+			jablka[i]->eaten = true;
+		}
+		if (jablka[i]->eaten)
+		{
+			gracz.m_playerHealth += 5;
+			jablka.erase(jablka.begin() + i);
+		}
+	}
 	
 }
 

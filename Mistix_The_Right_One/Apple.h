@@ -32,8 +32,10 @@ public:
 	
 	void addPlayerHP(Player& gracz);
 	void renderApple(sf::RenderTarget&window);
-
 	
+	
+
+	bool eaten;
 	
 	sf::Texture apple_texture;
 	sf::Sprite apple_sprite;
