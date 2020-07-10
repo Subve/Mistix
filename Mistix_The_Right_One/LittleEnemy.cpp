@@ -44,8 +44,8 @@ void LittleEnemy::Rotate(sf::Vector2f& playerpos)
 }
 
 void LittleEnemy::adMove(sf::Vector2f& vektorRuchu)
-{
-	this->move(-1 * vektorRuchu.x, -1 * vektorRuchu.y);
+{	
+	{this->move(-1 * vektorRuchu.x, -1 * vektorRuchu.y);}
 }
 
 void LittleEnemy::setDirection(sf::Vector2u& direction2)

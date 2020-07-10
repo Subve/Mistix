@@ -171,6 +171,7 @@ void EntityManager::keepEnemies(std::vector<std::unique_ptr<Enemy>>& enemies, in
 		mobID1 += 1;
 		enemies[numer]->zabity = false;
 		enemies[numer]->trafiony = false;
+		
 		/*sf::Vector2u e_direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow]->getPosition());*/
 		/*enemies[iteracja_tworzenie_obiektow]->move(enemies[iteracja_tworzenie_obiektow]->direction = normalize(player.getPosition() - enemies[iteracja_tworzenie_obiektow].getPosition()));*/
 		iteracja_tworzenie_obiektow += 1;
