@@ -661,7 +661,7 @@ int main()
 			{
 				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 				enemies[i]->killedZombie(m_scorePoints, bulets, enemies);
-				m_hp_bar.UpdateHP(player);
+				
 				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 
 
@@ -672,7 +672,7 @@ int main()
 			for (int i = 0;i < enemies.size();i++)
 			{
 				enemies[i]->Attack(player, elapsed_time_player, delta_time_player);
-				m_hp_bar.UpdateHP(player);
+				
 				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 			}
 			for (int i = 0;i < enemies.size();i++)
@@ -701,7 +701,7 @@ int main()
 				}
 			}
 			apple_manager.CollisionApple(player, jablka);
-			m_hp_bar.UpdateHP(player);
+			
 			if (elapsed_time >= delta_time)
 			{
 				entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
@@ -727,10 +727,12 @@ int main()
 				window.close();
 			}
 			m_scorePoints.updateText();
+			m_hp_bar.UpdateHP(player);
+			apple_manager.SpawnApple(jablka, elapsed_apples_time, delta_time_apple);
 		}
 		
 		
-			apple_manager.SpawnApple(jablka, elapsed_apples_time, delta_time_apple);
+			
 		
 		
 

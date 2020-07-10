@@ -37,7 +37,7 @@ void HPBar::inithpbarback()
 	float y = 536;
 	float x = 0;
 	this->hpBarBack.setSize(sf::Vector2f(width, height));
-	this->hpBarBack.setFillColor(sf::Color(128, 128, 128, 128));
+	this->hpBarBack.setFillColor(sf::Color(125,125,125,200));
 	this->hpBarBack.setPosition(x, y);	
 }
 
@@ -47,9 +47,9 @@ void HPBar::inithpbarfront()
 	float height = 64;
 	float y = 536;
 	float x = 0;
-	this->hpBarBack.setSize(sf::Vector2f(width, height));
-	this->hpBarBack.setFillColor(sf::Color::Green);
-	this->hpBarBack.setPosition(x, y);
+	this->hpBarFront.setSize(sf::Vector2f(width, height));
+	this->hpBarFront.setFillColor(sf::Color::Green);
+	this->hpBarFront.setPosition(x, y);
 }
 
 void HPBar::UpdateHP(Player& gracz)
@@ -59,6 +59,8 @@ void HPBar::UpdateHP(Player& gracz)
 	hpBarString.clear();
 	this->hpBarString << "HP : " << gracz.m_playerHealth << " / 100 ";
 	this->hpBarText.setString(hpBarString.str());
+	this->hpBarFront.setSize(sf::Vector2f(300*gracz.m_playerHealth/100,64));
+	this->hpBarFront.setFillColor(sf::Color::Green);
 	
 }
 
