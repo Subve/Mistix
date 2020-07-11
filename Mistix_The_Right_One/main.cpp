@@ -404,11 +404,14 @@ void Options_Running()
 				{
 
 					//MENU Option switch
-
+				case sf::Event::Closed:
+					options_window.close();
+					break;
 				case sf::Event::KeyPressed:
 				{
 					{	switch (options_ev.key.code)
 					{
+					
 					case sf::Keyboard::Up:
 						m_optionsmenu.MoveUp();
 						break;
@@ -487,11 +490,15 @@ int main()
 			{
 
 				//MENU Option switch
+				case sf::Event::Closed:
+						menu_window.close();
+						break;
 
 			case sf::Event::KeyPressed:
 				{
 					{	switch (memu_ev.key.code)
 					{
+					
 					case sf::Keyboard::Up:
                         m_menu.MoveUp();
 						break;
