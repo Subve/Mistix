@@ -23,6 +23,7 @@
 #include "Apple.h"
 #include  "AppleManager.h"
 #include "HPBar.h"
+#include "OptionsMenu.h"
 
 #define VIEW_HEIGHT 600
 
@@ -388,6 +389,90 @@ void Game_Running()
 	m_highscore.saveHighScore(m_scorePoints);
 	
 }
+void Options_Running()
+{
+	
+	
+		sf::RenderWindow options_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
+		OptionsMenu m_optionsmenu(VIEW_WIDTH, VIEW_HEIGHT);
+
+		while (options_window.isOpen())
+		{
+			sf::Event options_ev;
+			while (options_window.pollEvent(options_ev))
+				switch (options_ev.type)
+				{
+
+					//MENU Option switch
+
+				case sf::Event::KeyPressed:
+				{
+					{	switch (options_ev.key.code)
+					{
+					case sf::Keyboard::Up:
+						m_optionsmenu.MoveUp();
+						break;
+					case sf::Keyboard::Down:
+						m_optionsmenu.MoveDown();
+						break;
+					case sf::Keyboard::Return:
+						switch (m_optionsmenu.GetPressedItem())
+						{
+							{
+						case 0:
+							std::cout << "Valume button has been pressed\n";
+							
+
+							break;
+						case 1:
+						{
+							{
+								std::cout << "Map button has been pressed\n";
+
+
+								break;
+							}
+						}
+						case 2:
+						{
+							std::cout << "Save button has been pressed\n";
+							
+
+							break;
+						}
+						case 3:
+						{
+							std::cout << "Quit button has been pressed\n";
+							options_window.close();
+
+							break;
+						}
+
+						default:
+						{
+							break;
+						}
+							}
+						}
+					}
+
+					break;
+					}
+				}
+				}
+
+			//Update
+
+			//Draw
+			m_optionsmenu.RenderOptions(options_window);
+
+			//Display the window
+			options_window.display();
+
+		}
+		
+	
+}
 
 int main()
 {
@@ -423,14 +508,14 @@ int main()
 
 	                        	break;
 	                        	case 1:
-	                        		{
+	                        		
 	                        			{
 	                        				std::cout << "Option button has been pressed\n";
-
-
+											Options_Running();
+											
 	                        				break;
 	                        			}
-	                        		}
+	                        		
 	                        	case 2:
 	                        		{
 	                        			std::cout << "Quit button has been pressed\n";
