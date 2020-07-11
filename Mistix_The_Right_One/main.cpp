@@ -25,6 +25,7 @@
 #include "HPBar.h"
 #include "OptionsMenu.h"
 #include "OptionsMenuSelect.h"
+#include <fstream>
 
 #define VIEW_HEIGHT 600
 
@@ -74,6 +75,7 @@ void Game_Running()
 	m_sound.setBuffer(buffer);
 	m_sound.setLoop(true);
 	m_sound.play();
+	
 	//Creating game_window
 	sf::RenderWindow game_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	game_window.setFramerateLimit(144);
@@ -392,6 +394,7 @@ void Game_Running()
 }
 void Options_Running()
 {
+	int sound_volume=100;
 	
 	
 		sf::RenderWindow options_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
@@ -432,13 +435,15 @@ void Options_Running()
 							{
 						case 0:
 							std::cout << "1 button has been pressed\n";
-							
+							sound_volume = 0;
+								
 
 							break;
 						case 1:
 						{
 							{
 								std::cout << "2 button has been pressed\n";
+								sound_volume = 50;
 
 
 								break;
@@ -447,7 +452,7 @@ void Options_Running()
 						case 2:
 						{
 							std::cout << "3 button has been pressed\n";
-							
+							sound_volume = 100;
 
 							break;
 						}
@@ -468,7 +473,7 @@ void Options_Running()
 						case 5:
 						{
 							std::cout << "6 button has been pressed\n";
-							options_window.close();
+							
 
 							break;
 						}
@@ -479,12 +484,37 @@ void Options_Running()
 						}
 							}
 						}
+						switch (m_optionsmenu.GetPressedItem())
+						{
+						case 2:
+							{
+							std::fstream setting;
+							setting.open("data/Setting.txt",std::ios::out);
+								if(setting.is_open())
+								{
+									setting << sound_volume << std::endl;
+								}
+								setting.close();
+							
+								std::cout << "Successfully saved sound volume \n";
+								
+							}
+							break;
+						case 3:
+								options_window.close();
+							break;
+							default:
+							{
+								break;
+							}
+						}
 					}
 
 					break;
 					}
 				}
 				}
+			
 
 			//Update
 
