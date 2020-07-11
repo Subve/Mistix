@@ -159,6 +159,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="OptionsMenu.cpp" />
+    <ClCompile Include="OptionsMenuSelect.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Score.cpp" />
   </ItemGroup>
@@ -177,6 +178,7 @@
     <ClInclude Include="LittleEnemy.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="OptionsMenu.h" />
+    <ClInclude Include="OptionsMenuSelect.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Score.h" />
   </ItemGroup>

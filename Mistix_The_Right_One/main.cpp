@@ -24,6 +24,7 @@
 #include  "AppleManager.h"
 #include "HPBar.h"
 #include "OptionsMenu.h"
+#include "OptionsMenuSelect.h"
 
 #define VIEW_HEIGHT 600
 
@@ -395,6 +396,7 @@ void Options_Running()
 	
 		sf::RenderWindow options_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 		OptionsMenu m_optionsmenu(VIEW_WIDTH, VIEW_HEIGHT);
+		OptionsMenuSelect menu_select(VIEW_WIDTH, VIEW_HEIGHT);
 
 		while (options_window.isOpen())
 		{
@@ -413,24 +415,30 @@ void Options_Running()
 					{
 					
 					case sf::Keyboard::Up:
-						m_optionsmenu.MoveUp();
+						m_optionsmenu.MoveUp(menu_select);
 						break;
 					case sf::Keyboard::Down:
-						m_optionsmenu.MoveDown();
+						m_optionsmenu.MoveDown(menu_select);
+						break;
+					case sf::Keyboard::Left:
+						menu_select.MoveLeft();
+						break;
+					case sf::Keyboard::Right:
+						menu_select.MoveRight();
 						break;
 					case sf::Keyboard::Return:
-						switch (m_optionsmenu.GetPressedItem())
+						switch (menu_select.GetPressedItem())
 						{
 							{
 						case 0:
-							std::cout << "Valume button has been pressed\n";
+							std::cout << "1 button has been pressed\n";
 							
 
 							break;
 						case 1:
 						{
 							{
-								std::cout << "Map button has been pressed\n";
+								std::cout << "2 button has been pressed\n";
 
 
 								break;
@@ -438,14 +446,28 @@ void Options_Running()
 						}
 						case 2:
 						{
-							std::cout << "Save button has been pressed\n";
+							std::cout << "3 button has been pressed\n";
 							
 
 							break;
 						}
 						case 3:
 						{
-							std::cout << "Quit button has been pressed\n";
+							std::cout << "4 button has been pressed\n";
+							
+
+							break;
+						}
+						case 4:
+						{
+							std::cout << "5 button has been pressed\n";
+							
+
+							break;
+						}
+						case 5:
+						{
+							std::cout << "6 button has been pressed\n";
 							options_window.close();
 
 							break;
@@ -468,6 +490,7 @@ void Options_Running()
 
 			//Draw
 			m_optionsmenu.RenderOptions(options_window);
+			menu_select.RenderOptions(options_window);
 
 			//Display the window
 			options_window.display();

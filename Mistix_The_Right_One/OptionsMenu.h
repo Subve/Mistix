@@ -2,6 +2,7 @@
 #include  "iostream"
 #include <SFML/Graphics.hpp>
 #include <vector>
+#include "OptionsMenuSelect.h"
 /*#pragma warning(disable : 4996)*/
 #define MAX_NUMBER_OF_ITEMS 4
 
@@ -12,8 +13,8 @@ public:
 	~OptionsMenu();
 
 	
-	void MoveUp();
-	void MoveDown();
+	void MoveUp(OptionsMenuSelect&select);
+	void MoveDown(OptionsMenuSelect&select);
 	int GetPressedItem() { return selectedItemIndex; };
 	std::vector<OptionsMenu> optionsmenus;
 	void loadConfig();
