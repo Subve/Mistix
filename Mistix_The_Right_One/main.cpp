@@ -26,6 +26,8 @@
 #include "OptionsMenu.h"
 #include "OptionsMenuSelect.h"
 #include <fstream>
+#include "Barricade.h"
+#include "BarricadeManager.h"
 
 #define VIEW_HEIGHT 600
 
@@ -40,6 +42,8 @@ void Game_Running()
 	std::srand(static_cast<unsigned>(time(NULL)));
 	EntityManager entityManager;
 	AppleManager apple_manager;
+	BarricadeManager barricade_manager;
+	
 	Background background;
 	HPBar m_hp_bar;
 
@@ -56,7 +60,8 @@ void Game_Running()
 	int iteracja_tworzenie_obiektow = 0;
 	std::vector<std::unique_ptr<Enemy>> enemies;
 	std::vector<std::unique_ptr<Apple>> jablka;
-
+	std::vector<std::unique_ptr<Barricade>> barykady;
+	
 	int newmobID;
 	int howmanyenemies;
 	entityManager.SpawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
@@ -75,7 +80,31 @@ void Game_Running()
 	m_sound.setBuffer(buffer);
 	m_sound.setLoop(true);
 	m_sound.play();
+	int barricade_start_amount = 5;
+	int volume=100;
+	std::fstream plik;
+	plik.open("data/Setting.txt");
+	if(plik.good()==false)
+	{
+		std::cout << "Plik nie istnieje!\n";
+		
+	}
+	std::string linia;
+	int nr_linii=1;
+	while(std::getline(plik,linia))
+	{
+		switch (nr_linii)
+		{
+		case 1:
+			volume = std::stoi(linia);
+		}
+		
+		
+		nr_linii++;
+	}
 	
+	barricade_manager.SpawnBarricades(barykady, barricade_start_amount);
+	m_sound.setVolume(volume);
 	//Creating game_window
 	sf::RenderWindow game_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	game_window.setFramerateLimit(144);
@@ -93,7 +122,11 @@ void Game_Running()
 	b1.setAmmo(50);
 
 	b1.setSpeed(2.f);
-	//Timer
+
+
+
+
+	//Timers
 	sf::Time elapsed_time, temp_time;
 	sf::Clock r;
 	sf::Time elapsed_time_player, temp_player;
@@ -104,15 +137,27 @@ void Game_Running()
 	sf::Clock r_upgrades;
 	sf::Time elapsed_apples_time, temp_apples;
 	sf::Clock r_apple;
+	sf::Time elapsed_barricade_time, temp_barricade;
+	sf::Clock r_barricade;
+	sf::Time elapsed_barricade_respawn, temp_barricade_respawn;
+	sf::Clock r_barricade_respawn;
 	bool pause;
-	pause = false;
-	while (game_window.isOpen())
-	{
+
+
+
+	//How many seconds to do sth
+	sf::Time delta_time_barricade_respawn = sf::seconds(10);
+		sf::Time delta_time_barricade = sf::seconds(10);
 		sf::Time delta_time = sf::milliseconds(1000);
 		sf::Time delta_time_player = sf::milliseconds(1000);
 		sf::Time delta_time_pause = sf::milliseconds(1000);
 		sf::Time delta_time_upgrades = sf::milliseconds(1000);
 		sf::Time delta_time_apple = sf::seconds(10);
+	pause = false;
+	while (game_window.isOpen())
+	{
+		temp_barricade_respawn = r_barricade_respawn.restart();
+		temp_barricade = r_barricade.restart();
 		elapsed_time_pause += r_pause.restart();
 		temp_time = r.restart();
 		temp_player = r_player.restart();
@@ -121,6 +166,10 @@ void Game_Running()
 
 		if (!pause)
 		{
+			elapsed_barricade_respawn += temp_barricade_respawn;
+			
+			elapsed_barricade_time += temp_barricade;
+			
 			elapsed_time += temp_time;
 
 			elapsed_time_player += temp_player;
@@ -240,7 +289,8 @@ void Game_Running()
 				elapsed_upgrades_time -= delta_time_upgrades;
 			}
 
-
+			
+			
 			//Shooting
 
 			if (b1.bulletTimer < b1.maxbulletTimer)
@@ -341,6 +391,21 @@ void Game_Running()
 			m_scorePoints.updateText();
 			m_hp_bar.UpdateHP(player);
 			apple_manager.SpawnApple(jablka, elapsed_apples_time, delta_time_apple);
+
+			if (elapsed_barricade_respawn >= delta_time_barricade_respawn)
+			{
+				
+				barricade_manager.RespawnBarricades(barykady);
+			elapsed_barricade_respawn -= delta_time_barricade_respawn;
+			}
+				
+				
+			
+			
+			barricade_manager.StopEnemy(barykady, enemies,elapsed_barricade_time);
+			barricade_manager.LetEnemyGo(barykady, enemies, elapsed_barricade_time, delta_time_barricade);
+			barricade_manager.KillBarricades(barykady);
+			
 		}
 
 
@@ -370,6 +435,7 @@ void Game_Running()
 
 		//Draw Apples
 		apple_manager.RenderApples(game_window, jablka);
+		barricade_manager.renderBarricade(game_window, barykady);
 		//Update the record
 		m_highscore.updateHighScore(m_scorePoints);
 		//Draw the cursor

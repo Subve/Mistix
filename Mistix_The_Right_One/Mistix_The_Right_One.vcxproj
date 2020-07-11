@@ -147,6 +147,8 @@
     <ClCompile Include="Apple.cpp" />
     <ClCompile Include="AppleManager.cpp" />
     <ClCompile Include="Background.cpp" />
+    <ClCompile Include="Barricade.cpp" />
+    <ClCompile Include="BarricadeManager.cpp" />
     <ClCompile Include="BigEnemy.cpp" />
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Button.cpp" />
@@ -167,6 +169,8 @@
     <ClInclude Include="Apple.h" />
     <ClInclude Include="AppleManager.h" />
     <ClInclude Include="Background.h" />
+    <ClInclude Include="Barricade.h" />
+    <ClInclude Include="BarricadeManager.h" />
     <ClInclude Include="BigEnemy.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Button.h" />
