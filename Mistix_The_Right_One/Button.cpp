@@ -56,12 +56,13 @@ void Button::UpgradeBulletSpeed(Bullet& pocisk,Score& wynik)
 		if (pocisk.maxbulletTimer >= 20)
 		{
 			pocisk.maxbulletTimer -= 4;
+			wynik.setValue(wynik.getScore() - this->UpgradeCost);
 		}
 		else
 		{
 			std::cout << "Max amount of upgrades bought\n";
 		}
-		wynik.setValue(wynik.getScore() - this->UpgradeCost);
+		
 
 	}
 

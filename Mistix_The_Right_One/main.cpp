@@ -71,9 +71,9 @@ public:
 	{
 		value = n;
 	}
-	void pointsRender(sf::RenderWindow& window)
+	void pointsRender(sf::RenderWindow& game_window)
 	{
-		window.draw(this->score_Text);
+		game_window.draw(this->score_Text);
 	}
 	void setaddPoint(float n)
 	{
@@ -140,14 +140,14 @@ public:
 			this->move(1.0f, 0.0f);
 		}
 	}
-	void updateMousePos(sf::RenderWindow& window)
+	void updateMousePos(sf::RenderWindow& game_window)
 	{
-		this->mouse = sf::Mouse::getPosition(window);
+		this->mouse = sf::Mouse::getPosition(game_window);
 		this->player_position = this->getPosition();
 	}
-	void playerRotate(sf::RenderWindow &window)
+	void playerRotate(sf::RenderWindow &game_window)
 	{
-		/ *window.convertCoords(mouse);
+		/ *game_window.convertCoords(mouse);
 
 		//gets sprite origin coordinates and mouse coordinates
 		this->spritePosition = sprite.getPosition();
@@ -156,20 +156,20 @@ public:
 		mouseAngle = -atan2(mouse.x - spritePosition.x, mouse.y - spritePosition.y) * 180 / 3.14159; //angle in degrees of rotation for sprite
 
 		playerSprite.setRotation(mouseAngle);* /
-		window.mapPixelToCoords(mouse);
-		/ *this->mouse = sf::Mouse::getPosition(window);
+		game_window.mapPixelToCoords(mouse);
+		/ *this->mouse = sf::Mouse::getPosition(game_window);
 		this->player_position = this->getPosition();* /
-		this->updateMousePos(window);
+		this->updateMousePos(game_window);
 		angle = static_cast<float>(-atan2(mouse.x - player_position.x, mouse.y - player_position.y) * 180 / 3.14159);
 		this->setRotation(angle+90);
 	}
 	
 	
 	
-	void playerUpdate(sf::RenderWindow& window)
+	void playerUpdate(sf::RenderWindow& game_window)
 	{
 		this->playerMove();
-		this->playerRotate(window);
+		this->playerRotate(game_window);
 		
 		
 	}
@@ -374,9 +374,9 @@ public:
 	{
 		this->m_mouseSprite.setPosition(mousePosWindow.x, mousePosWindow.y);
 	}
-	void mouseRender(sf::RenderWindow& window)
+	void mouseRender(sf::RenderWindow& game_window)
 	{
-		window.draw(this->m_mouseSprite);
+		game_window.draw(this->m_mouseSprite);
 	}
 
 };*/
@@ -426,9 +426,9 @@ public:
 	{
 		this->background_Sprite.setTexture(this->background);
 	}
-	void renderBackground(sf::RenderTarget&window)
+	void renderBackground(sf::RenderTarget&game_window)
 	{
-		window.draw(this->background_Sprite);
+		game_window.draw(this->background_Sprite);
 	}
 	
 };*/
@@ -473,11 +473,11 @@ int main()
 	m_sound.setBuffer(buffer);
 	m_sound.setLoop(true);
 	m_sound.play();
-	//Creating window
-	sf::RenderWindow window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
-	window.setFramerateLimit(144);
+	//Creating game_window
+	sf::RenderWindow game_window(sf::VideoMode(VIEW_WIDTH,VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
+	game_window.setFramerateLimit(144);
 	//Creating cursor
-	window.setMouseCursorVisible(false);
+	game_window.setMouseCursorVisible(false);
 	CustomMouse custom_mouse;
 
 	/*Menu menu(VIEW_WIDTH, VIEW_HEIGHT);*/
@@ -503,7 +503,7 @@ int main()
 		sf::Clock r_apple;
 		bool pause;
 		pause = false;
-	while (window.isOpen())
+	while (game_window.isOpen())
 	{
 		sf::Time delta_time = sf::milliseconds(1000);
 		sf::Time delta_time_player = sf::milliseconds(1000);
@@ -529,7 +529,7 @@ int main()
 
 		
 		sf::Event ev;
-		while(window.pollEvent(ev))
+		while(game_window.pollEvent(ev))
 			switch (ev.type)
 			{	
 			//MENU Option switch
@@ -558,7 +558,7 @@ int main()
 				}
 				case 2:
 					std::cout << "Quit button has been pressed\n";
-					window.close();
+					game_window.close();
 					
 					break;
 
@@ -572,9 +572,9 @@ int main()
 			
 
 
-				//Closing the window
+				//Closing the game_window
 			case sf::Event::Closed:
-				window.close();
+				game_window.close();
 				break;
 			case sf::Event::KeyPressed:
 				
@@ -601,9 +601,9 @@ int main()
 		//Update the game
 		if(!pause)
 		{
-			player.playerUpdate(window);
+			player.playerUpdate(game_window);
 			player.playerCenter = sf::Vector2f(player.getPosition().x, player.getPosition().y);
-			player.mousePosWindow = sf::Vector2f(sf::Mouse::getPosition(window));
+			player.mousePosWindow = sf::Vector2f(sf::Mouse::getPosition(game_window));
 			player.aimDir = player.mousePosWindow - player.playerCenter;
 			player.aimDirNorm = player.aimDir / (sqrt(pow(player.aimDir.x, 2) + pow(player.aimDir.y, 2)));
 
@@ -628,7 +628,7 @@ int main()
 			
 			if(elapsed_upgrades_time >= delta_time_upgrades)
 			{
-				if(m_button.isClicked(window,m_scorePoints))
+				if(m_button.isClicked(game_window,m_scorePoints))
 				{
 				m_button.UpgradeBulletSpeed(b1, m_scorePoints);
 					m_scorePoints.updateText();
@@ -733,7 +733,7 @@ int main()
 			if(player.m_playerHealth<=0)
 			{	
 				std::cout << "Koniec gry\n";
-				window.close();
+				game_window.close();
 			}
 			m_scorePoints.updateText();
 			m_hp_bar.UpdateHP(player);
@@ -745,10 +745,10 @@ int main()
 		
 		
 
-		//Clear the window
+		//Clear the game_window
 
-		window.clear();
-		background.renderBackground(window);
+		game_window.clear();
+		background.renderBackground(game_window);
 		//Draw current Frame
 		
 		
@@ -756,33 +756,33 @@ int main()
 		//Draw Enemies
 		for (int i = 0;i < bulets.size();i++)
 		{
-			window.draw(bulets[i].bullet);
+			game_window.draw(bulets[i].bullet);
 		}
-		entityManager.RenderEnemies(window, enemies);
+		entityManager.RenderEnemies(game_window, enemies);
 		//Draw Player
 
-		window.draw(player);
+		game_window.draw(player);
 		
 		
 		
 		//Draw Apples
-		apple_manager.RenderApples(window, jablka);
+		apple_manager.RenderApples(game_window, jablka);
 		//Update the record
 		m_highscore.updateHighScore(m_scorePoints);
 		//Draw the cursor
 		
-		m_scorePoints.pointsRender(window);
+		m_scorePoints.pointsRender(game_window);
 		
-		m_highscore.renderHighscore(window);
-		m_button.RenderUpgradeButton(window,m_scorePoints,b1);
-		m_hp_bar.RenderHPBar(window);
-		custom_mouse.mouseRender(window);
+		m_highscore.renderHighscore(game_window);
+		m_button.RenderUpgradeButton(game_window,m_scorePoints,b1);
+		m_hp_bar.RenderHPBar(game_window);
+		custom_mouse.mouseRender(game_window);
 		//
-		/*menu.draw(window);*/
+		/*menu.draw(game_window);*/
 
 		//Display everything
 
-		window.display();
+		game_window.display();
 		
 	}
 
