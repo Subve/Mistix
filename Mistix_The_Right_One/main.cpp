@@ -147,7 +147,7 @@ void Game_Running()
 
 	//How many seconds to do sth
 	sf::Time delta_time_barricade_respawn = sf::seconds(10);
-		sf::Time delta_time_barricade = sf::seconds(10);
+		sf::Time delta_time_barricade = sf::seconds(4);
 		sf::Time delta_time = sf::milliseconds(1000);
 		sf::Time delta_time_player = sf::milliseconds(1000);
 		sf::Time delta_time_pause = sf::milliseconds(1000);
@@ -155,7 +155,10 @@ void Game_Running()
 		sf::Time delta_time_apple = sf::seconds(10);
 	pause = false;
 	while (game_window.isOpen())
+	{	for(int i=0;i<barykady.size();i++)
 	{
+		barykady[i]->temp_barricade = r_barricade.restart();
+	}
 		temp_barricade_respawn = r_barricade_respawn.restart();
 		temp_barricade = r_barricade.restart();
 		elapsed_time_pause += r_pause.restart();
@@ -166,6 +169,10 @@ void Game_Running()
 
 		if (!pause)
 		{
+			for (int i = 0;i < barykady.size();i++)
+			{
+				barykady[i]->elapsed_barricade_time += barykady[i]->temp_barricade;
+			}
 			elapsed_barricade_respawn += temp_barricade_respawn;
 			
 			elapsed_barricade_time += temp_barricade;
@@ -403,7 +410,7 @@ void Game_Running()
 			
 			
 			barricade_manager.StopEnemy(barykady, enemies,elapsed_barricade_time);
-			barricade_manager.LetEnemyGo(barykady, enemies, elapsed_barricade_time, delta_time_barricade);
+			barricade_manager.LetEnemyGo(barykady, enemies, delta_time_barricade);
 			barricade_manager.KillBarricades(barykady);
 			
 		}

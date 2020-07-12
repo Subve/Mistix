@@ -37,8 +37,7 @@ public:
 	~BarricadeManager();
 	void SpawnBarricades(std::vector<std::unique_ptr<Barricade>>& barykady, int& barricade_startamount);
 	void StopEnemy(std::vector<std::unique_ptr<Barricade>>& barykady, std::vector<std::unique_ptr<Enemy>>& enemies,sf::Time &elapsed_time);
-	void LetEnemyGo(std::vector<std::unique_ptr<Barricade>>& barykady, std::vector<std::unique_ptr<Enemy>>& enemies, sf::Time& elapsed_barricade,
-		sf::Time& delta_barricade);
+	void LetEnemyGo(std::vector<std::unique_ptr<Barricade>>& barykady, std::vector<std::unique_ptr<Enemy>>& enemies,sf::Time& delta_barricade);
 	void RespawnBarricades(std::vector<std::unique_ptr<Barricade>>& barykady);
 	void KillBarricades(std::vector < std::unique_ptr < Barricade>> &barykady);
 	void renderBarricade(sf::RenderTarget& window, std::vector<std::unique_ptr<Barricade>>& barykady);

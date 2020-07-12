@@ -42,11 +42,11 @@ void BarricadeManager::StopEnemy(std::vector<std::unique_ptr<Barricade>>& baryka
 	{
 		for (int j = 0;j < enemies.size();j++)
 		{
-			if (barykady[i]->getGlobalBounds().intersects(enemies[j]->getGlobalBounds()) && barykady[i]->used == false)
+			if (barykady[i]->getGlobalBounds().intersects(enemies[j]->getGlobalBounds()) && barykady[i]->used == false&&enemies[j]->ableToMove==true)
 			{
 				enemies[j]->ableToMove = false;
 				barykady[i]->used = true;
-				
+				barykady[i]->elapsed_barricade_time = sf::milliseconds(0);
 				
 			}
 		}
@@ -54,21 +54,21 @@ void BarricadeManager::StopEnemy(std::vector<std::unique_ptr<Barricade>>& baryka
 }
 
 void BarricadeManager::LetEnemyGo(std::vector<std::unique_ptr<Barricade>>& barykady,
-	std::vector<std::unique_ptr<Enemy>>& enemies, sf::Time& elapsed_barricade, sf::Time& delta_barricade)
+	std::vector<std::unique_ptr<Enemy>>& enemies, sf::Time& delta_barricade)
 {
 	
 		for (int i = 0;i < barykady.size();i++)
 		{
 			for (int j = 0;j < enemies.size();j++)
-			{if (elapsed_barricade >= delta_barricade)
+			{if (barykady[i]->elapsed_barricade_time >= delta_barricade)
 			{
 			
 				{
-					if (barykady[i]->getGlobalBounds().intersects(enemies[j]->getGlobalBounds()) && barykady[i]->used == true)
+					if (barykady[i]->getGlobalBounds().intersects(enemies[j]->getGlobalBounds()) && barykady[i]->used == true && enemies[j]->ableToMove == false)
 					{
 						enemies[j]->ableToMove = true;
 						barykady[i]->used_kill = true;
-						elapsed_barricade -= delta_barricade;
+						barykady[i]->elapsed_barricade_time -= delta_barricade;
 
 					}
 				
@@ -87,7 +87,7 @@ void BarricadeManager::KillBarricades(std::vector<std::unique_ptr<Barricade>>& b
 {
 	for(int i=0;i<barykady.size();i++)
 	{
-		if(barykady[i]->used_kill==true)
+		if(barykady[i]->used_kill==true||barykady[i]->elapsed_barricade_time>sf::seconds(9))
 		{
 			barykady.erase(barykady.begin() + i);
 		}

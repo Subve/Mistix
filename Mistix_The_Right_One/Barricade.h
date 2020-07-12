@@ -39,7 +39,7 @@ public:
 
 	bool used;
 	bool used_kill;
-	
+	sf::Time elapsed_barricade_time, temp_barricade;
 
 	sf::Texture barricade_texture;
 	sf::Sprite barricade_sprite;
