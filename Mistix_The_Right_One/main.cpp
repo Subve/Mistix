@@ -28,7 +28,7 @@
 #include <fstream>
 #include "Barricade.h"
 #include "BarricadeManager.h"
-
+#include "BigEnemy.h"
 #define VIEW_HEIGHT 600
 
 #define  VIEW_WIDTH 800
@@ -139,7 +139,7 @@ void Game_Running()
 	m_scorePoints.setValue(0);
 	m_scorePoints.setaddPoint(1);
 	HighScore m_highscore;
-	b1.setAmmo(50);
+	b1.setAmmo(70);
 
 	b1.setSpeed(2.f);
 
@@ -168,7 +168,7 @@ void Game_Running()
 	//How many seconds to do sth
 	sf::Time delta_time_barricade_respawn = sf::seconds(barricade_start_respawn);
 		sf::Time delta_time_barricade = sf::seconds(4);
-		sf::Time delta_time = sf::milliseconds(1000);
+		sf::Time delta_time = sf::seconds(2);
 		sf::Time delta_time_player = sf::milliseconds(1000);
 		sf::Time delta_time_pause = sf::milliseconds(1000);
 		sf::Time delta_time_upgrades = sf::milliseconds(1000);
@@ -356,6 +356,10 @@ void Game_Running()
 
 
 			}
+			
+				
+				
+			
 			howmanyenemies = enemies.size();
 			/*entityManager.RespawnEnemy(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);*/
 

@@ -107,11 +107,13 @@ void BigEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vec
 
 					}
 					if (enemies[j]->trafiony && enemies[j]->zabity)
+						
 					{
 						std::cout << "Zabity\n";
 						if (enemies.size() > 2)
 							enemies.erase(enemies.begin() + j);
-
+						
+							
 						wynik.setaddPoint(3);
 						wynik.addPoints();
 						wynik.updateText();

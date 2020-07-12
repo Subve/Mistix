@@ -53,7 +53,7 @@ void Button::UpgradeBulletSpeed(Bullet& pocisk,Score& wynik)
 {
 	if (wynik.getScore() >= this->UpgradeCost)
 	{
-		if (pocisk.maxbulletTimer >= 20)
+		if (pocisk.maxbulletTimer >= 30)
 		{
 			pocisk.maxbulletTimer -= 4;
 			wynik.setValue(wynik.getScore() - this->UpgradeCost);

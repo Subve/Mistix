@@ -105,7 +105,15 @@ void LittleEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::
 						std::cout << "Zabity\n";
 						if(enemies.size()>2)
 							enemies.erase(enemies.begin() + j);
-
+						/*if (dynamic_cast<BigEnemy*> (enemies[i].get())!=NULL)
+						{
+							wynik.setaddPoint(3);
+						}else if (dynamic_cast<LittleEnemy*> (enemies[i].get())!=NULL)
+						{
+							wynik.setaddPoint(1);
+						}*/
+						
+						
 							wynik.setaddPoint(1);
 							wynik.addPoints();
 							wynik.updateText();
