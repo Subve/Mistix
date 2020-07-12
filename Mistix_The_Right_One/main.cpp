@@ -174,6 +174,7 @@ void Game_Running()
 		sf::Time delta_time_upgrades = sf::milliseconds(1000);
 		sf::Time delta_time_apple = sf::seconds(10);
 	pause = false;
+	
 	while (game_window.isOpen())
 	{	for(int i=0;i<barykady.size();i++)
 	{
@@ -425,6 +426,7 @@ void Game_Running()
 					}
 				}
 			}
+			
 			if(player.m_playerHealth==4)
 			{
 				
