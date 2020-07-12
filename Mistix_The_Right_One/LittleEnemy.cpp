@@ -76,7 +76,7 @@ void LittleEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::
 				if (pociski[i].bullet.getGlobalBounds().intersects(enemies[j]->getGlobalBounds()))
 				{
 					enemies[j]->setTrafiony();
-					if (trafiony&&!zabity)
+					if (trafiony)
 					{
 						std::cout << "Trafiony zombiak" << "\n";
 

@@ -104,6 +104,9 @@ void Game_Running()
 			break;
 		case 3:
 			barricade_start_amount = std::stoi(linia);
+		case 4:
+			player.m_playerHealth = std::stoi(linia);
+	
 		}
 		
 		
@@ -396,7 +399,22 @@ void Game_Running()
 				}
 
 				/*enemies[i]->setID(enemies);*/
-
+				for (int i = 0;i < enemies.size();i++)
+				{
+					if (enemies[i]->HP<=0)
+					{
+						enemies[i]->setZabity();
+						
+					}
+				}
+				for(int i=0;i<enemies.size();i++)
+				{
+					if(enemies[i]->zabity)
+					{
+						enemies.erase(enemies.begin() + i);
+						i--;
+					}
+				}
 			}
 			if (player.m_playerHealth <= 0)
 			{
@@ -478,6 +496,7 @@ void Options_Running()
 	int sound_volume=100;
 	int barricade_start_respawn = 9;
 	int barricade_start_amount = 5;
+	int player_health = 100;
 	
 		sf::RenderWindow options_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 		OptionsMenu m_optionsmenu(VIEW_WIDTH, VIEW_HEIGHT);
@@ -541,16 +560,20 @@ void Options_Running()
 						case 3:
 						{
 							std::cout << "4 button has been pressed\n";
-							barricade_start_respawn = 9;
-							barricade_start_amount = 5;
+							barricade_start_respawn = 15;
+							barricade_start_amount = 10;
+							player_health = 100;
 
 							break;
 						}
 						case 4:
 						{
 							std::cout << "5 button has been pressed\n";
-							barricade_start_respawn = 15;
-							barricade_start_amount = 10;
+							barricade_start_respawn = 9;
+							barricade_start_amount = 5;
+							player_health = 60;
+								
+							
 
 							break;
 						}
@@ -579,6 +602,7 @@ void Options_Running()
 									setting << sound_volume << std::endl;
 									setting << barricade_start_respawn << std::endl;
 									setting << barricade_start_amount << std::endl;
+									setting << player_health << std::endl;
 								}
 								setting.close();
 							
