@@ -16,19 +16,30 @@ BigEnemy::BigEnemy() :Enemy()
 
 	bigenemy_Texture.setSmooth(true);
 	this->setTexture(bigenemy_Texture);
-	this->setScale(sf::Vector2f(0.1f, 0.15f));
+	this->setScale(0.2, 0.2);
+	//this->setScale(sf::Vector2f(0.1f, 0.15f));
 	this->trafiony = false;
 	this->zabity = false;
-
+	this->HP = 5;
 	this->polaczone = true;
+	
 }
 
 void BigEnemy::Follow()
 {
 }
 
-void BigEnemy::Attack(Player& gracz)
+void BigEnemy::Attack(Player& gracz, sf::Time& elapsed_time, sf::Time& delta_time)
 {
+	if (this->getGlobalBounds().intersects(gracz.getGlobalBounds()))
+	{
+		if (elapsed_time >= delta_time)
+		{
+			gracz.m_playerHealth -= 1;
+			elapsed_time -= delta_time;
+		}
+
+	}
 }
 
 void BigEnemy::Rotate(sf::Vector2f& playerpos)
@@ -70,8 +81,8 @@ void BigEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vec
 			{
 				if (pociski[i].bullet.getGlobalBounds().intersects(enemies[j]->getGlobalBounds()))
 				{
-					enemies[j]->setTrafiony();
-					if (trafiony && !zabity)
+					enemies[j]->trafiony = true;
+					if (enemies[j]->trafiony == true)
 					{
 						std::cout << "Trafiony zombiak" << "\n";
 
@@ -83,18 +94,25 @@ void BigEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vec
 
 
 						/*enemies.erase(enemies.begin() + j);*/
+						if (enemies[j]->HP <= 0)
+						{
+							enemies[j]->zabity = true;
+						}
 
 
 					}
-					if (enemies[j]->HP == 0)
+					//if(enemies.size()>2)
 					{
-						enemies[j]->setZabity();
-					}
-					if (trafiony && zabity)
-					{
-						enemies.erase(enemies.begin() + j);
 
-						wynik.setaddPoint(1);
+
+					}
+					if (enemies[j]->trafiony && enemies[j]->zabity)
+					{
+						std::cout << "Zabity\n";
+						if (enemies.size() > 2)
+							enemies.erase(enemies.begin() + j);
+
+						wynik.setaddPoint(3);
 						wynik.addPoints();
 						wynik.updateText();
 					}

@@ -366,13 +366,13 @@ void Game_Running()
 				entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 			}
 			for (int i = 0;i < enemies.size();i++)
-
+				
 			{
 				for (int j = 0;j < enemies.size();j++)
 				{
 						int int_enemyposx_i=static_cast<int>(enemies[j]->enemyPos.x);
 						int int_enemyposy_i = static_cast<int>(enemies[j]->enemyPos.y);
-					if (enemies[i]->getLocalBounds().contains(int_enemyposx_i,int_enemyposy_i) && (enemies[i]->mobID != enemies[j]->mobID) && (enemies[i]->polaczone==false) && (enemies[j]->polaczone==false)&&enemies[i]->enemyPos!=sf::Vector2f(0.0f,0.0f))
+					if (enemies[i]->getLocalBounds().intersects(enemies[j]->getGlobalBounds()) && (enemies[i]->mobID != enemies[j]->mobID) && (enemies[i]->polaczone==false) && (enemies[j]->polaczone==false)&&enemies[i]->getPosition().x>1)
 					{
 
 
@@ -380,17 +380,33 @@ void Game_Running()
 						enemies[i]->polaczone = true;
 						enemies[j]->polaczone = true;
 						//enemies[i]->HP += 1;
+						
+						auto BigEnemy_pozycja_x = static_cast<float>(700);
+						auto BigEnemy_pozycja_y = static_cast<float>(rand() % 500 + 100);
 
-						//enemies.erase(enemies.begin() + j);
+						int numer = enemies.size();
+						enemies.push_back(std::make_unique<BigEnemy>());
+						enemies[numer]->setPosition(BigEnemy_pozycja_x, BigEnemy_pozycja_y);
+						enemies[numer]->ableToMove = true;
+						enemies[numer]->polaczone = true;
+						enemies[numer]->zabity = false;
+						enemies[numer]->HP = 5;
+						enemies[numer]->mobID = mobIDLicznik;
+						mobIDLicznik++;
+						
+
+						
 						entityManager.keepEnemies(enemies, newmobID, iteracja_tworzenie_obiektow);
 
 
 						/*enemies[i]->setScale(2.0, 2.0);*/
 
 					}
+					
 
 				}
 			}
+			
 			apple_manager.CollisionApple(player, jablka);
 
 			if (elapsed_time >= delta_time)

@@ -14,6 +14,7 @@
 #include "Player.h"
 #include "Bullet.h"
 #include "Enemy.h"
+#include  "BigEnemy.h"
 class LittleEnemy :public Enemy
 {
 private:

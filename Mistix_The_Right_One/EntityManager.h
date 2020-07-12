@@ -11,6 +11,7 @@
 #include <sstream>
 #include "Enemy.h"
 #include "LittleEnemy.h"
+#include  "BigEnemy.h"
 class EntityManager
 {
 private:

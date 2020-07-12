@@ -23,7 +23,7 @@ private:
 public:
 	BigEnemy();
 	virtual void Follow();
-	virtual void Attack(Player& gracz);
+	virtual void Attack(Player& gracz, sf::Time& elapsed_time, sf::Time& delta_time);
 	virtual void Rotate(sf::Vector2f& playerpos);
 	virtual void adMove(sf::Vector2f& vektorRuchu);
 	virtual void setDirection(sf::Vector2u& direction2);
