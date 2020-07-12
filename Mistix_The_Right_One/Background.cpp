@@ -1,20 +1,20 @@
 #include "Background.h"
 
-Background::Background()
+Background::Background(const std::string& filename)
 {
-	this->initBackground();
+	this->initBackground(filename);
 }
 
-void Background::initBackground()
+void Background::initBackground(const std::string& filename)
 {
-	this->LoadBackgroundTexture();
+	this->LoadBackgroundTexture(filename);
 	this->SetBackgroundSprite();
 }
 
-void Background::LoadBackgroundTexture()
+void Background::LoadBackgroundTexture(const std::string& filename)
 {
-	this->background.loadFromFile("tekstury/Background_Desert.png");
-	if (this->background.loadFromFile("tekstury/Background_Desert.png"))
+	this->background.loadFromFile(filename);
+	if (this->background.loadFromFile(filename))
 	{
 		std::cout << "Background texture successfully loaded\n";
 	}

@@ -14,7 +14,7 @@ class Background
 {
 private:
 	sf::Texture background;
-	sf::Sprite background_Sprite;
+	
 public:
 	/*if (background.loadFromFile("tekstury/Background_Desert.png"))
 	{
@@ -23,11 +23,11 @@ public:
 	background.setSmooth(true);
 	sf::Sprite background_Sprite;
 	background_Sprite.setTexture(background);*/
-	Background();
-	void initBackground();
-	void LoadBackgroundTexture();
+	Background(const std::string& filename);
+	void initBackground(const std::string& filename);
+	void LoadBackgroundTexture(const std::string& filename);
 	void SetBackgroundSprite();
 	void renderBackground(sf::RenderTarget& window);
-
+	sf::Sprite background_Sprite;
 };
 

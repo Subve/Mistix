@@ -44,7 +44,7 @@ void Game_Running()
 	AppleManager apple_manager;
 	BarricadeManager barricade_manager;
 	
-	Background background;
+	Background background("tekstury/Background_Desert.png");
 	HPBar m_hp_bar;
 
 	//Creating player
@@ -477,6 +477,9 @@ void Game_Running()
 			game_window.draw(bulets[i].bullet);
 		}
 		entityManager.RenderEnemies(game_window, enemies);
+		//Render barricades
+		barricade_manager.renderBarricade(game_window, barykady);
+
 		//Draw Player
 
 		game_window.draw(player);
@@ -518,7 +521,8 @@ void Options_Running()
 		sf::RenderWindow options_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 		OptionsMenu m_optionsmenu(VIEW_WIDTH, VIEW_HEIGHT);
 		OptionsMenuSelect menu_select(VIEW_WIDTH, VIEW_HEIGHT);
-
+		Background background("tekstury/Screen.png");
+		background.background_Sprite.setScale(1.3333, 1.5748);
 		while (options_window.isOpen())
 		{
 			sf::Event options_ev;
@@ -646,6 +650,7 @@ void Options_Running()
 			//Update
 
 			//Draw
+				background.renderBackground(options_window);
 			m_optionsmenu.RenderOptions(options_window);
 			menu_select.RenderOptions(options_window);
 
@@ -661,7 +666,11 @@ int main()
 {
 	sf::RenderWindow menu_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 	Menu m_menu(VIEW_WIDTH,VIEW_HEIGHT);
+	Background background("tekstury/Screen.png");
+	background.background_Sprite.setScale(1.3333, 1.5748);
 
+
+	
 	while (menu_window.isOpen())
 	{
 		sf::Event memu_ev;
@@ -727,6 +736,7 @@ int main()
 		//Update
 
 		//Draw
+		background.renderBackground(menu_window);
 		m_menu.draw(menu_window);
 
 		//Display the window
