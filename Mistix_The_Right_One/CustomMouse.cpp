@@ -8,7 +8,7 @@ CustomMouse::CustomMouse()
 		std::cout << "Successfully loaded Cursor Texture \n";
 
 	}
-	m_mouseTexture.setRepeated(true);
+	m_mouseTexture.setSmooth(true);
 	this->m_mouseSprite.setTexture(m_mouseTexture);
 	this->m_mouseSprite.setOrigin(this->m_mouseSprite.getGlobalBounds().width / 2, this->m_mouseSprite.getGlobalBounds().height / 2);
 	this->m_mouseSprite.setScale(0.125f, 0.125f);

@@ -14,7 +14,7 @@ BigEnemy::BigEnemy() :Enemy()
 	}
 
 
-	bigenemy_Texture.setRepeated(true);
+	bigenemy_Texture.setSmooth(true);
 	this->setTexture(bigenemy_Texture);
 	this->setScale(sf::Vector2f(0.1f, 0.15f));
 	this->trafiony = false;

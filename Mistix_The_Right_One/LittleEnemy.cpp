@@ -10,7 +10,7 @@ LittleEnemy::LittleEnemy() : zabity(false),trafiony(false)
 	}
 	
 
-	littleenemy_Texture.setRepeated(true);
+	littleenemy_Texture.setSmooth(true);
 	this->setTexture(littleenemy_Texture);
 	this->setScale(sf::Vector2f(0.1f, 0.15f));
 	this->trafiony = false;
