@@ -370,17 +370,18 @@ void Game_Running()
 			{
 				for (int j = 0;j < enemies.size();j++)
 				{
-
-					if (enemies[i]->getLocalBounds().intersects(enemies[j]->getLocalBounds()) && (enemies[i]->mobID != enemies[j]->mobID) && (!enemies[i]->polaczone) && (!enemies[j]->polaczone))
+						int int_enemyposx_i=static_cast<int>(enemies[j]->enemyPos.x);
+						int int_enemyposy_i = static_cast<int>(enemies[j]->enemyPos.y);
+					if (enemies[i]->getLocalBounds().contains(int_enemyposx_i,int_enemyposy_i) && (enemies[i]->mobID != enemies[j]->mobID) && (enemies[i]->polaczone==false) && (enemies[j]->polaczone==false)&&enemies[i]->enemyPos!=sf::Vector2f(0.0f,0.0f))
 					{
 
 
 						std::cout << "Polaczone\n";
 						enemies[i]->polaczone = true;
 						enemies[j]->polaczone = true;
-						enemies[i]->HP += 1;
+						//enemies[i]->HP += 1;
 
-						enemies.erase(enemies.begin() + j);
+						//enemies.erase(enemies.begin() + j);
 						entityManager.keepEnemies(enemies, newmobID, iteracja_tworzenie_obiektow);
 
 
@@ -408,22 +409,26 @@ void Game_Running()
 					entityManager.keepEnemies(enemies, mobIDLicznik, iteracja_tworzenie_obiektow);
 				}
 
-				/*enemies[i]->setID(enemies);*/
-				for (int i = 0;i < enemies.size();i++)
+			}
+			for(int i=0;i<enemies.size();i++)
+			{
+				
+					
+					
+						if (enemies[i]->HP <= 0)
+						{
+							enemies[i]->setZabity();
+
+						}
+					
+				
+			}
+			for (int i = 0;i < enemies.size();i++)
+			{
+				if (enemies[i]->zabity)
 				{
-					if (enemies[i]->HP<=0)
-					{
-						enemies[i]->setZabity();
-						
-					}
-				}
-				for(int i=0;i<enemies.size();i++)
-				{
-					if(enemies[i]->zabity)
-					{
-						enemies.erase(enemies.begin() + i);
-						i--;
-					}
+					enemies.erase(enemies.begin() + i);
+
 				}
 			}
 			

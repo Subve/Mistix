@@ -75,8 +75,8 @@ void LittleEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::
 			{
 				if (pociski[i].bullet.getGlobalBounds().intersects(enemies[j]->getGlobalBounds()))
 				{
-					enemies[j]->setTrafiony();
-					if (trafiony)
+					enemies[j]->trafiony = true;
+					if (enemies[j]->trafiony==true)
 					{
 						std::cout << "Trafiony zombiak" << "\n";
 
@@ -88,24 +88,28 @@ void LittleEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::
 
 						
 						/*enemies.erase(enemies.begin() + j);*/
+						if (enemies[j]->HP <= 0)
+						{
+							enemies[j]->zabity = true;
+						}
 
 
 					}
-					if(enemies.size()>2)
+					//if(enemies.size()>2)
 					{
-						if (enemies[j]->HP <= 0)
-						{
-							enemies[j]->setZabity();
-						}
-						if (trafiony && zabity)
-						{
+						
+						
+					}
+					if (enemies[j]->trafiony && enemies[j]->zabity)
+					{
+						std::cout << "Zabity\n";
+						if(enemies.size()>2)
 							enemies.erase(enemies.begin() + j);
 
 							wynik.setaddPoint(1);
 							wynik.addPoints();
 							wynik.updateText();
 						}
-					}
 
 
 				}
