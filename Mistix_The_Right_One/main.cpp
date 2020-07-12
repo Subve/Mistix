@@ -81,6 +81,7 @@ void Game_Running()
 	m_sound.setLoop(true);
 	m_sound.play();
 	int barricade_start_amount = 5;
+	int barricade_start_respawn = 9;
 	int volume=100;
 	std::fstream plik;
 	plik.open("data/Setting.txt");
@@ -97,7 +98,14 @@ void Game_Running()
 		{
 		case 1:
 			volume = std::stoi(linia);
+			break;
+		case 2:
+			barricade_start_respawn = std::stoi(linia);
+			break;
+		case 3:
+			barricade_start_amount = std::stoi(linia);
 		}
+		
 		
 		
 		nr_linii++;
@@ -146,7 +154,7 @@ void Game_Running()
 
 
 	//How many seconds to do sth
-	sf::Time delta_time_barricade_respawn = sf::seconds(10);
+	sf::Time delta_time_barricade_respawn = sf::seconds(barricade_start_respawn);
 		sf::Time delta_time_barricade = sf::seconds(4);
 		sf::Time delta_time = sf::milliseconds(1000);
 		sf::Time delta_time_player = sf::milliseconds(1000);
@@ -468,7 +476,8 @@ void Game_Running()
 void Options_Running()
 {
 	int sound_volume=100;
-	
+	int barricade_start_respawn = 9;
+	int barricade_start_amount = 5;
 	
 		sf::RenderWindow options_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 		OptionsMenu m_optionsmenu(VIEW_WIDTH, VIEW_HEIGHT);
@@ -532,14 +541,16 @@ void Options_Running()
 						case 3:
 						{
 							std::cout << "4 button has been pressed\n";
-							
+							barricade_start_respawn = 9;
+							barricade_start_amount = 5;
 
 							break;
 						}
 						case 4:
 						{
 							std::cout << "5 button has been pressed\n";
-							
+							barricade_start_respawn = 15;
+							barricade_start_amount = 10;
 
 							break;
 						}
@@ -566,6 +577,8 @@ void Options_Running()
 								if(setting.is_open())
 								{
 									setting << sound_volume << std::endl;
+									setting << barricade_start_respawn << std::endl;
+									setting << barricade_start_amount << std::endl;
 								}
 								setting.close();
 							
