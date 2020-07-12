@@ -425,7 +425,7 @@ void Game_Running()
 					}
 				}
 			}
-			if(player.m_playerHealth==50)
+			if(player.m_playerHealth==4)
 			{
 				
 				m_death_sound.play();
