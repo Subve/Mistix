@@ -43,6 +43,17 @@ void Player::playerMove()
 	}
 }
 
+void Player::playerJump(sf::Time& elapsed_time, sf::Time& delta_time)
+{	if(elapsed_time>=delta_time)
+{
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
+	{
+		this->move(400*aimDirNorm.x, 400*aimDirNorm.y);
+		elapsed_time -= delta_time;
+	}
+}
+}
+
 void Player::updateMousePos(sf::RenderWindow& window)
 {
 	this->mouse = sf::Mouse::getPosition(window);
@@ -68,9 +79,10 @@ void Player::playerRotate(sf::RenderWindow& window)
 	this->setRotation(angle + 90);
 }
 
-void Player::playerUpdate(sf::RenderWindow& window)
+void Player::playerUpdate(sf::RenderWindow& window,sf::Time &elapsed_time,sf::Time&delta_time)
 {
 	this->playerMove();
+	this->playerJump(elapsed_time,delta_time);
 	this->playerRotate(window);
 
 

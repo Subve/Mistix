@@ -139,7 +139,7 @@ void Game_Running()
 	m_scorePoints.setValue(0);
 	m_scorePoints.setaddPoint(1);
 	HighScore m_highscore;
-	b1.setAmmo(70);
+	b1.setAmmo(90);
 
 	b1.setSpeed(2.f);
 
@@ -161,6 +161,8 @@ void Game_Running()
 	sf::Clock r_barricade;
 	sf::Time elapsed_barricade_respawn, temp_barricade_respawn;
 	sf::Clock r_barricade_respawn;
+	sf::Time elapsed_teleport_time, temp_teleport;
+	sf::Clock r_teleport;
 	bool pause;
 
 
@@ -173,6 +175,7 @@ void Game_Running()
 		sf::Time delta_time_pause = sf::milliseconds(1000);
 		sf::Time delta_time_upgrades = sf::milliseconds(1000);
 		sf::Time delta_time_apple = sf::seconds(10);
+		sf::Time delta_time_teleport = sf::seconds(7);
 	pause = false;
 	
 	while (game_window.isOpen())
@@ -187,9 +190,12 @@ void Game_Running()
 		temp_player = r_player.restart();
 		temp_upgrades = r_upgrades.restart();
 		temp_apples = r_apple.restart();
+		temp_teleport = r_teleport.restart();
 
 		if (!pause)
 		{
+			elapsed_teleport_time += temp_teleport;
+			
 			for (int i = 0;i < barykady.size();i++)
 			{
 				barykady[i]->elapsed_barricade_time += barykady[i]->temp_barricade;
@@ -281,7 +287,7 @@ void Game_Running()
 		//Update the game
 		if (!pause)
 		{
-			player.playerUpdate(game_window);
+			player.playerUpdate(game_window,elapsed_teleport_time,delta_time_teleport);
 			player.playerCenter = sf::Vector2f(player.getPosition().x, player.getPosition().y);
 			player.mousePosWindow = sf::Vector2f(sf::Mouse::getPosition(game_window));
 			player.aimDir = player.mousePosWindow - player.playerCenter;
@@ -325,6 +331,7 @@ void Game_Running()
 			{
 				b1.bulletTimer++;
 			}
+		
 
 
 			if (sf::Mouse::isButtonPressed(sf::Mouse::Left) && b1.bulletTimer >= b1.maxbulletTimer)

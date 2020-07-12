@@ -28,12 +28,13 @@ public:
 
 	Player();
 	void playerMove();
+	void playerJump(sf::Time& elapsed_time, sf::Time& delta_time);
 	void updateMousePos(sf::RenderWindow& window);
 	void playerRotate(sf::RenderWindow& window);
 
 
 
-	void playerUpdate(sf::RenderWindow& window);
+	void playerUpdate(sf::RenderWindow& window, sf::Time& elapsed_time, sf::Time& delta_time);
 	sf::Vector2f playerCenter;
 	sf::Vector2f mousePosWindow;
 	sf::Vector2f aimDir;

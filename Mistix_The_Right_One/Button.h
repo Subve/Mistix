@@ -30,6 +30,6 @@ public:
 	bool isClicked(sf::RenderWindow& window,Score&wynik);
 	void UpgradeBulletSpeed(Bullet&pocisk, Score& wynik);
 	void RenderUpgradeButton(sf::RenderTarget& window, Score& wynik, Bullet& pocisk);
-	int UpgradeCost = 1;
+	int UpgradeCost = 20;
 };
 
