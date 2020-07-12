@@ -92,6 +92,7 @@ void Game_Running()
 	int barricade_start_amount = 5;
 	int barricade_start_respawn = 9;
 	int volume=100;
+	int teleport_time = 7;
 	std::fstream plik;
 	plik.open("data/Setting.txt");
 	if(plik.good()==false)
@@ -115,6 +116,8 @@ void Game_Running()
 			barricade_start_amount = std::stoi(linia);
 		case 4:
 			player.m_playerHealth = std::stoi(linia);
+		case 5:
+			teleport_time = std::stoi(linia);
 	
 		}
 		
@@ -175,7 +178,7 @@ void Game_Running()
 		sf::Time delta_time_pause = sf::milliseconds(1000);
 		sf::Time delta_time_upgrades = sf::milliseconds(1000);
 		sf::Time delta_time_apple = sf::seconds(10);
-		sf::Time delta_time_teleport = sf::seconds(7);
+		sf::Time delta_time_teleport = sf::seconds(teleport_time);
 	pause = false;
 	
 	while (game_window.isOpen())
@@ -549,6 +552,7 @@ void Options_Running()
 	int barricade_start_respawn = 9;
 	int barricade_start_amount = 5;
 	int player_health = 100;
+	int teleport_time = 7;
 	
 		sf::RenderWindow options_window(sf::VideoMode(VIEW_WIDTH, VIEW_HEIGHT), "Mistix", sf::Style::Close | sf::Style::Titlebar);
 		OptionsMenu m_optionsmenu(VIEW_WIDTH, VIEW_HEIGHT);
@@ -616,6 +620,7 @@ void Options_Running()
 							barricade_start_respawn = 15;
 							barricade_start_amount = 10;
 							player_health = 100;
+							teleport_time = 7;
 
 							break;
 						}
@@ -625,6 +630,7 @@ void Options_Running()
 							barricade_start_respawn = 9;
 							barricade_start_amount = 5;
 							player_health = 60;
+							teleport_time = 13;
 								
 							
 
@@ -656,6 +662,7 @@ void Options_Running()
 									setting << barricade_start_respawn << std::endl;
 									setting << barricade_start_amount << std::endl;
 									setting << player_health << std::endl;
+									setting << teleport_time << std::endl;
 								}
 								setting.close();
 							
