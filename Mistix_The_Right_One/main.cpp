@@ -80,6 +80,15 @@ void Game_Running()
 	m_sound.setBuffer(buffer);
 	m_sound.setLoop(true);
 	m_sound.play();
+	sf::SoundBuffer death_buffer;
+	if (!death_buffer.loadFromFile("data/Dying.wav"))
+	{
+		std::cout << "Failed to load death sound \n";
+	}
+	sf::Sound m_death_sound;
+	m_death_sound.setBuffer(death_buffer);
+	m_death_sound.setMinDistance(2);
+	
 	int barricade_start_amount = 5;
 	int barricade_start_respawn = 9;
 	int volume=100;
@@ -415,6 +424,12 @@ void Game_Running()
 						i--;
 					}
 				}
+			}
+			if(player.m_playerHealth==50)
+			{
+				
+				m_death_sound.play();
+				
 			}
 			if (player.m_playerHealth <= 0)
 			{
