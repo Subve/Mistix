@@ -70,7 +70,7 @@ void Button::UpgradeBulletSpeed(Bullet& pocisk,Score& wynik)
 }
 void Button::RenderUpgradeButton(sf::RenderTarget& window,Score&wynik, Bullet& pocisk)
 {
-	if (pocisk.maxbulletTimer >= 20)
+	if (pocisk.maxbulletTimer >= 45)
 	{
 		if(wynik.getScore() >= this->UpgradeCost)
 			window.draw(this->button_sprite);

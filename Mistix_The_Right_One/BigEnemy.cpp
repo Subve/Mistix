@@ -114,7 +114,7 @@ void BigEnemy::killedZombie(Score& wynik, std::vector<Bullet>& pociski, std::vec
 							enemies.erase(enemies.begin() + j);
 						
 							
-						wynik.setaddPoint(3);
+						wynik.setaddPoint(2);
 						wynik.addPoints();
 						wynik.updateText();
 					}

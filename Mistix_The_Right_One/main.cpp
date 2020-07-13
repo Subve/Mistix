@@ -29,6 +29,7 @@
 #include "Barricade.h"
 #include "BarricadeManager.h"
 #include "BigEnemy.h"
+
 #define VIEW_HEIGHT 600
 
 #define  VIEW_WIDTH 800
@@ -221,43 +222,7 @@ void Game_Running()
 		while (game_window.pollEvent(ev))
 			switch (ev.type)
 			{
-				//MENU Option switch
-				/*case sf::Event::KeyPressed:
-				{	switch (ev.key.code)
-				{
-				case sf::Keyboard::Up:
-						menu.MoveUp();
-						break;
-				case sf::Keyboard::Down:
-						menu.MoveDown();
-						break;
-				case sf::Keyboard::Return:
-					switch (menu.GetPressedItem())
-					{
-					case 0:
-						std::cout << "Play button has been pressed\n";
-
-						break;
-					case 1:
-					{
-						std::cout << "Option button has been pressed\n";
-
-
-						break;
-					}
-					case 2:
-						std::cout << "Quit button has been pressed\n";
-						game_window.close();
-
-						break;
-
-					default:
-						break;
-					}
-				}
-
-					break;
-				}*/
+		
 
 
 
@@ -271,12 +236,14 @@ void Game_Running()
 				if (ev.key.code == sf::Keyboard::P && !pause)
 				{
 					pause = true;
+					m_sound.pause();
 					break;
 
 				}
 				if (ev.key.code == sf::Keyboard::P && pause && (elapsed_time_pause >= delta_time_pause))
 				{
 					pause = false;
+					m_sound.play();
 					elapsed_time_pause -= delta_time_pause;
 					break;
 				}
@@ -462,7 +429,7 @@ void Game_Running()
 				}
 			}
 			
-			if(player.m_playerHealth==4)
+			if(player.m_playerHealth==6)
 			{
 				
 				m_death_sound.play();
@@ -617,7 +584,7 @@ void Options_Running()
 						case 3:
 						{
 							std::cout << "4 button has been pressed\n";
-							barricade_start_respawn = 15;
+							barricade_start_respawn = 9;
 							barricade_start_amount = 10;
 							player_health = 100;
 							teleport_time = 7;
@@ -627,7 +594,7 @@ void Options_Running()
 						case 4:
 						{
 							std::cout << "5 button has been pressed\n";
-							barricade_start_respawn = 9;
+							barricade_start_respawn = 15;
 							barricade_start_amount = 5;
 							player_health = 60;
 							teleport_time = 13;

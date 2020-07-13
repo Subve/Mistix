@@ -2,17 +2,19 @@
  
 
 
-Deleting the previous project coz of it's advanced type.
+Deleting the previous project coz of its type.
 
-Mistix_The_Right_One is the the right project.
+Mistix_The_Right_One on github is the the right project.
 
 
 
-Buying upgrades with the right mouse button
+Buying upgrades with the right mouse button- keep holding it on the button - it's possible to buy for 20 points.
 Shooting with the left mouse button
 Move your character with W,S,A,D
 
-The zombie can evolve- if they meet each other they are healing a little.
+Press E to teleport in the way of the mouse- delay 6 sec.
+
+The zombie can evolve- if they meet each other they spawn a stronger zombie.
 
 Barricades are spawning time to time, they can stop zombie for a while
 Apples can heal you up.
@@ -28,8 +30,7 @@ it will not be distributed for commercial purposes.
 The rest of resources is "royalty free".
 
 
-The zombie evolution sometimes bug, just keep running away and shooting(making circles with your character often help)
-your score will be updated after a short while.
+
 
 
 Project created by Milosz Gorny
